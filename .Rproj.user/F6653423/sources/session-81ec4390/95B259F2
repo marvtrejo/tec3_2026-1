@@ -3,7 +3,7 @@
     "path": "F:/Github/taller3_2026-1/_output.yml",
     "project_path": "_output.yml",
     "type": "yaml",
-    "hash": "3579900336",
+    "hash": "3244924481",
     "contents": "",
     "dirty": false,
     "created": 1755122585054.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "1,2",
+        "cursorPosition": "9,56",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1755123660,
+    "lastKnownWriteTime": 1755126540,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1755123660294,
+    "last_content_update": 1755126540925,
     "read_only": false,
     "read_only_alternatives": []
 }
