@@ -1,10 +1,9 @@
 ---
 title: "Taller de Economía Cuantitativa III"
-author: "Marvin Ivan Trejo Mendez, Eduardo Castro Rabadán"
-date: "`r Sys.Date()`"
-site: bookdown::book_site
-documentclass: book
-description: Cuaderno de notas y ejercicios para la clase de Taller de Economía Cuantitativa III de la licenciatura en economía de la Facultad de Economía de la UNAM
+author: "Eduardo Castro Rabadán | Marvin Ivan Trejo Mendez"
+subtitle: "Facultad de Economía. Semestre 2026-I"
+output:
+  bookdown::gitbook: default
 ---
 
 ```{r, include = FALSE}
@@ -16,36 +15,51 @@ library(shiny)
 
 # Introducción
 
-Bienvenidas y bienvenidos a las notas de clase y ejercicios del **Taller de Economía Cuantitativa III.** En este sitio proporcionaremos
-
-## Descripción del curso
-
-Las y los estudiantes conocerán las propiedades matriciales, así como su operación y aplicaciones a la economía. Estudiarán la terminología y métodos del álgebra matricial para formular y resolver modelos económicos que se expresen mediante relaciones lineales.
-
-## Objetivos de la asignatura
+Bienvenidas y bienvenidos a las notas de clase y ejercicios del **Taller de Economía Cuantitativa III.**. A lo largo del curso las y los estudiantes conocerán las propiedades matriciales, así como su operación y aplicaciones a la economía, además de estudiar la terminología y métodos del álgebra matricial para formular y resolver modelos económicos que se expresen mediante relaciones lineales.
 
 Al finalizar el semestre, las y los alumnos estarán capacitados para entender y resolver sistemas de ecuaciones lineales a través de métodos de álgebra lineal. Además, utilizarán los métodos matemáticos del álgebra lineal para analizar y resolver problemas económicos.
 
 ## Profesores
 
 ```{r, echo = FALSE}
-card(
-  layout_column_wrap(
-  width = 1/2,
-  tags$div(
-      h4("Eduardo Castro Rabadán"),
-      p("eduardo.castro@comunidad.unam.mx"),
-      tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
-      "Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en monitoreo y evaluación de indicadores en política pública. Mis principales líneas de investigación son el mercado laboral, las políticas públicas sobre violencia, salud mental y adicciones. Actualmente, trabajo en el INEGI como Jefe de la Oficina de Apoyo Estratégico en la Dirección General de Integración, Análisis e Investigación."
-      ),
-    tags$div(
-      h4("Marvin Ivan Trejo Mendez"),
-      p("marvtrejo@comunidad.unam.mx"),
-      tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
-      "Licenciado en Antropología Social por la Universidad Autónoma de Querétaro, así como licenciado y maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. He sido profesor en las materias de Desarrollo Económico y Teoría Microeconómica. Asimismo, me desempeñé como Subdirector de Política Pública Comparada en la Coordinación de Evaluación del CONEVAL."
-      )
+# card(
+#   layout_column_wrap(
+#   width = 1/2,
+#   tags$div(
+#       h4("Eduardo Castro Rabadán"),
+#       p("eduardo.castro@comunidad.unam.mx"),
+#       tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
+#       "Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en monitoreo y evaluación de indicadores en política pública. Mis principales líneas de investigación son el mercado laboral, las políticas públicas sobre violencia, salud mental y adicciones. Actualmente, trabajo en el INEGI como Jefe de la Oficina de Apoyo Estratégico en la Dirección General de Integración, Análisis e Investigación."
+#       ),
+#     tags$div(
+#       h4("Marvin Ivan Trejo Mendez"),
+#       p("marvtrejo@comunidad.unam.mx"),
+#       tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
+#       "Licenciado en Antropología Social por la Universidad Autónoma de Querétaro, así como licenciado y maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. He sido profesor en las materias de Desarrollo Económico y Teoría Microeconómica. Asimismo, me desempeñé como Subdirector de Política Pública Comparada en la Coordinación de Evaluación del CONEVAL."
+#       )
+#   )
+#   )
+
+
+tags$div(
+  style = "display: flex; gap: 20px; flex-wrap: wrap;",
+  tags$div(class = "card",
+    style = "flex: 1 1 300px;",  
+    tags$h3("Eduardo Castro Rabadán"),
+    tags$p("Profesor titular"),
+    tags$p("eduardo.castro@comunidad.unam.mx"),
+    tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
+    tags$p("Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en monitoreo y evaluación de indicadores en política pública. Mis principales líneas de investigación son el mercado laboral, las políticas públicas sobre violencia, salud mental y adicciones. Actualmente, trabajo en el INEGI como Jefe de la Oficina de Apoyo Estratégico en la Dirección General de Integración, Análisis e Investigación.")
+  ),
+  tags$div(class = "card",
+    style = "flex: 1 1 300px;",
+    tags$h3("Marvin Ivan Trejo Mendez"),
+    tags$p("Profesor adjunto"),
+    tags$p("marvtrejo@comunidad.unam.mx"),
+    tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
+    tags$p("Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. Mis principales líneas de investigación son la política social, monitoreo y evaluación, pobreza y desarrollo económico. Anteriormente me desempeñé como Subdirector de Política Pública Comparada en la Coordinación de Evaluación del CONEVAL y he sido profesor en las materias de Desarrollo Económico y Teoría Microeconómica.")
   )
-  )
+)
 ```
 
 ## Metodología del curso
@@ -74,7 +88,7 @@ Aquellas personas que no aprueben y/o no entreguen alguno de los DOS exámenes p
 
 La participación en clase enriquecerá las sesiones, hará más dinámico el desarrollo de éstas y se tomará en cuenta para la evaluación final (se incluyen ejercicios y aportaciones).
 
-### **Ponderación de la evaluación**
+### Ponderación de la evaluación
 
 -   Exámenes parciales/final: 70%
 
@@ -140,19 +154,19 @@ La participación en clase enriquecerá las sesiones, hará más dinámico el de
 
 ## Bibliografía
 
-1.  Kolman, Bernard & Hill, David R.. (2006) Álgebra lineal. 8va. Edición Ed. Pearson Educación, México.
+-   Kolman, Bernard & Hill, David R.. (2006) Álgebra lineal. 8va. Edición Ed. Pearson Educación, México.
 
-2.  Grossman, Stanley I.. (1980) Elementary Linear Algebra, International Student Edition.
+-   Grossman, Stanley I.. (1980) Elementary Linear Algebra, International Student Edition.
 
-3.  Grossman, Stanley I.. (1993) Álgebra lineal con aplicaciones. 4a edición. Ed. Mc. Graw-Hill. México D.F.
+-   Grossman, Stanley I.. (1993) Álgebra lineal con aplicaciones. 4a edición. Ed. Mc. Graw-Hill. México D.F.
 
-4.  Aleskerov, F. T., Ersel, H., & Piontkovski, D. (2011). Linear algebra for economists. Springer Verlag.
+-   Aleskerov, F. T., Ersel, H., & Piontkovski, D. (2011). Linear algebra for economists. Springer Verlag.
 
-5.  Anton, H., & Rorres, C. (2014). Elementary linear álgebra: applications version (11th edition). Wiley.
+-   Anton, H., & Rorres, C. (2014). Elementary linear álgebra: applications version (11th edition). Wiley.
 
-6.  Stewart, J., María del Carmen Rodríguez Pedroza, & Stewart, J. (2013). Cálculo de una variable: trascendentes tempranas (Séptima edición). Cengage Learning.
+-   Stewart, J., María del Carmen Rodríguez Pedroza, & Stewart, J. (2013). Cálculo de una variable: trascendentes tempranas (Séptima edición). Cengage Learning.
 
-7.  Lipschutz, S., Martinez Ontalba, C., & Lipschutz, S. (1992). Algebra lineal (2nd ed.). McGraw-Hill.
+-   Lipschutz, S., Martinez Ontalba, C., & Lipschutz, S. (1992). Algebra lineal (2nd ed.). McGraw-Hill.
 
 La bibliografía se encuentran disponible a través del siguiente código o enlace
 
