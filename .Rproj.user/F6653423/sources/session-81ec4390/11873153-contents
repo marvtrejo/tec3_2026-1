@@ -1,8 +1,0 @@
-bookdown::gitbook:
-  css: style.css 
-  config:
-    toc:
-      collapse: subsection
-    toolbar:
-      position: fixed
-    download: ["pdf"]
