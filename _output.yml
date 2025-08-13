@@ -7,4 +7,4 @@ bookdown::gitbook:
       after: ""
     download: ["pdf"]
     relative_urls: true
-    site_url: "https://github.com/marvtrejo/tec3_2026-1"
+    site_url: "https://marvtrejo.github.io/tec3_2026-1/"
