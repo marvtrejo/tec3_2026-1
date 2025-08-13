@@ -1,0 +1,180 @@
+# Librerías ----
+if (!require(pacman)) install.packages("pacman")
+
+library(pacman)
+p_load(readxl,
+      tidyverse,
+      ggplot2,
+      dplyr,
+      bslib,
+      scales,
+      plotly,
+      DT,
+      shinycssloaders,
+      shiny,
+      shinyjs,
+      bsicons,
+      fontawesome,
+      tidyr,
+      highcharter)
+
+
+# Datos ----
+inv_fed <- read_excel("inv_fed.xlsx", sheet = "inv_fed") %>%
+  mutate(across(all_of(c("po_cantidad",
+                         "pa_cantidad",
+                         "pob_prog",
+                         "p_aprobado",
+                         "p_ejercido",
+                         "cobertura",
+                         "eficiencia")
+                       ),
+                ~ as.numeric(ifelse(as.character(.) %in% c("NA", "ND", "-"), 
+                                     NA, 
+                                     as.character(.))),
+                .names = "{.col}")) %>% 
+  mutate(across(all_of(c("po_cantidad",
+                         "pa_cantidad",
+                         "p_aprobado",
+                         "p_ejercido",
+                         "cobertura",
+                         "eficiencia")
+                       ),
+                ~ as.character(.),
+                .names = "{.col}_txt")) %>% 
+  mutate(modcve = paste0(mod, cve),
+         ciclo  = factor(ciclo),
+         derecho_directo = case_when(
+           derecho_directo == "Bienestar económico" ~ "Bienestar Económico",
+           derecho_directo == "No discriminación" ~ "No Discriminación",
+           TRUE ~ derecho_directo),
+         icon_ds = case_when(
+           derecho_directo == "No Discriminación" ~ "person-half-dress",
+           derecho_directo == "Bienestar Económico" ~ "piggy-bank",
+           derecho_directo == "Educación" ~ "graduation-cap",
+           derecho_directo == "Trabajo" ~ "briefcase",
+           derecho_directo == "Alimentación" ~ "utensils",
+           derecho_directo == "Salud" ~ "heart-circle-check",
+           derecho_directo == "Vivienda" ~ "person-shelter",
+           derecho_directo == "Medio Ambiente Sano" ~ "seedling",
+           derecho_directo == "Seguridad Social" ~ "hands-holding-child",
+           derecho_directo == "-" ~ "question")
+         )
+
+evaluaciones <- read_excel("inv_fed.xlsx", sheet = "evaluaciones") %>% 
+  mutate(costo2 = as.character(costo2))
+
+
+evolucion <- read_excel("inv_fed.xlsx", sheet = "evolucion") %>%
+  arrange(id_if, ciclo) %>%
+  group_by(id_if) %>%
+  mutate(cambio_lag = lag(cambio),
+         ciclo_lag = lag(ciclo),
+         grupo = cumsum(cambio != cambio_lag | ciclo != ciclo_lag +1 | is.na(cambio_lag))) %>%
+  group_by(id_if, cambio, grupo) %>%
+  mutate(año_fin = if_else(n()>1, max(ciclo), NA_integer_),
+         año_fin = coalesce(año_fin,ciclo)) %>%
+  ungroup() %>%
+  select(-cambio_lag, -ciclo_lag, -grupo)
+
+deflactores <- read_excel("inv_fed.xlsx", sheet = "deflactores") %>% 
+  mutate(ciclo = factor(ciclo),
+         deflactor = as.numeric(deflactor))
+
+# Tema ----
+invfed_theme <- bs_theme(
+  version = 5,
+  bootswatch = "flatly",  
+  primary = "#1a4146", 
+  secondary = "#297272",
+  base_font = font_google("DM Sans"),      
+  heading_font = font_google("Outfit"),   
+  font_scale = 1.05,
+  bg = "#ffffff",          
+  fg = "#2c3e50", 
+  border_radius = "0.4rem"
+  )
+
+hc_tema <- hc_theme(
+  chart = list(style = list(fontFamily = "Outfit, DM Sans, sans-serif")),
+  title = list(align = "left",
+               x = 0,
+               y = 5,
+               style = list(fontWeight = "bold",
+                            fontSize = "18px")),
+  subtitle = list(align = "left",
+                  x = 0,
+                  y = 25,
+                  style = list(fontWeight = "normal",
+                               fontSize = "16px")),
+  colors = c("#1a4146",
+             "#297272",
+             "#e8e0c8",
+             "#d3a446",
+             "#b66d2f")
+)
+
+
+card_info <- function(icono = "info-circle",
+                      titulo = "Título",
+                      output_id,
+                      tipo_output = c("ui", "text"),
+                      fondo = "#f8f9fa",
+                      color_texto = "#333",
+                      footer = NULL,
+                      watermark = TRUE,
+                      watermark_size = "4rem",
+                      watermark_opacity = 0.1,
+                      color_titulo = NULL,
+                      max_height = 200) {
+  
+  tipo_output <- match.arg(tipo_output)
+  
+  contenido <- if (tipo_output == "ui") {
+    uiOutput(output_id)
+  } else {
+    textOutput(output_id)
+  }
+  
+  watermark_div <- if (watermark) {
+    tags$div(
+      icon(icono),
+      style = paste0(
+        "position: absolute; top: 70%; right: 1rem; transform: translateY(-50%); ",
+        "font-size: ", watermark_size, "; ",
+        "opacity: ", watermark_opacity, "; ",
+        "z-index: 0;"
+      )
+    )
+  }
+  
+  card_content <- tags$div(
+    style = "position: relative; z-index: 1;",
+    tags$h5(titulo, style = paste0("text-align: center; font-weight: bold; margin: 0; ", 
+           if (!is.null(color_titulo)) paste0("color: ", color_titulo, ";"))
+           ),
+    tags$hr(style = "border-top: 4px solid #ccc; margin: 0.25rem 0 0.75rem 0;"),
+    tags$div(contenido, style = "text-align: left; margin-top: 0; margin-bottom: 1rem;")
+  )
+  
+  card(
+    full_screen = FALSE,
+    fill = TRUE,
+    style = paste0(
+      "background-color: ", fondo, "; ",
+      "border-radius: 12px; ",
+      "box-shadow: 0 2px 6px rgba(0,0,0,0.08); ",
+      "padding: 1.5rem; position: relative;"
+    ),
+    watermark_div,
+    card_content,
+    if (!is.null(footer)) card_footer(footer)
+  )
+}
+
+separador <- function() {
+  tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;")
+}
+
+
+

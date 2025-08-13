@@ -1,0 +1,146 @@
+# Tarjetas ----
+tarjeta <- card(
+  layout_column_wrap(
+    width = 1/6,
+    tags$div(
+      "Año de inicio",
+      separador(),
+      tags$h4(uiOutput("ainicio_srv"),
+              style = "color: #297272; font-weight: bold;")
+      ),
+    
+    tags$div(
+      "Derecho asociado",
+      separador(),
+      tags$h4(uiOutput("derecho_srv"),
+              style = "color: #297272; font-weight: bold;"
+              )
+      ),
+    
+    tags$div(
+      "Tipo de apoyos",
+      separador(),
+      tags$h4(uiOutput("apoyos_srv"),
+              style = "color: #297272; font-weight: bold;"
+              )
+      ),
+    
+    tags$div(
+      "Tipo de población atendida",
+      separador(),
+      tags$h4(uiOutput("rankpres1_srv"),
+              style = "color: #297272; font-weight: bold;"
+              )
+      ),
+    
+    tags$div(
+      "Rank de presupuesto",
+      separador(),
+      tags$h4(uiOutput("rankpres2_srv"),
+              style = "color: #297272; font-weight: bold;"
+              )
+      ),
+    
+    tags$div(
+      "Número de evaluaciones",
+      separador(),
+      tags$h4(uiOutput("noeval_srv"),
+              style = "color: #297272; font-weight: bold;"
+              )
+      )
+    )
+)
+
+
+
+# UI_PPcards <- layout_column_wrap(
+#   heights_equal = "row",
+# 
+#   card_info("calendar-days", "Inicio de operaciones", "ainicio_srv", fondo = "#fafafa"),
+#   
+#   card(full_screen = FALSE, 
+#        fill = TRUE,
+#        style = "background-color: #fafafa; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); padding: 1.5rem; position: relative;",
+#        tags$div(uiOutput("dericon_srv"),
+#                 style = "position: absolute; top: 70%; right: 1rem; transform: translateY(-50%);font-size: 4rem; opacity: 0.1; z-index: 0;"),
+#        tags$div(style = "position: relative; z-index: 1;",
+#                 tags$h5("Derecho asociado", style = "text-align: center; font-weight: bold; color: #b66d2f"),
+#                 tags$hr(style = "border-top: 4px solid #ccc; margin-top: 0; margin-bottom: 1rem;"),
+#                 uiOutput("derecho_srv"))
+#        ),
+# 
+#   card_info("dolly", "Tipo de apoyos", "apoyos_srv", fondo = "#fafafa", color_titulo = "#297272"),
+#   card_info("boxes-stacked", "Tipo de población atendida", "rankpres1_srv", fondo = "#d8d8d6", color_titulo = "#297272"),
+#   card_info("box-open", "Rank presupuesto", "rankpres2_srv", fondo = "#a0b3c1", color_titulo = "#1a4146"),
+#   card_info("rectangle-list", "Número de evaluaciones", "noeval_srv", fondo = "#fafafa", color_titulo = "#b66d2f")
+# )
+
+
+# Datos generales ----
+UI_PPresumen<- 
+  navset_card_pill(
+    nav_panel(tags$div(icon("indent"),
+                       " Descripción"),
+              textOutput("descr_srv")),
+    nav_panel(tags$div(icon("rectangle-list"),
+                       "Resumen narrativo"),
+              tableOutput("mir_srv")),
+  height = "400px",
+  full_screen = TRUE
+  )
+
+# Gráficas ----
+UI_PPgraficas <-   navset_card_pill(
+  nav_panel(tags$div(icon("money-bill-trend-up"),
+                     "Presupuesto"),
+            highchartOutput("hcpres_srv")
+            ),
+  
+  nav_panel(tags$div(icon("users-viewfinder"),
+                     "Poblaciones"),
+            highchartOutput("hcpob_srv")
+            ),
+  
+  nav_panel(tags$div(icon("timeline"),
+                     "Cambios"),
+            highchartOutput("hcevprog_srv")
+            ),
+  
+  nav_panel(tags$div(icon("clipboard-check"),
+                     "Evaluaciones"),
+            highchartOutput("hc_eval_srv")
+            ),
+  full_screen = TRUE
+  )
+
+# Layout ----
+pp_layout <- nav_panel(
+  title = "Programas sociales",
+  layout_sidebar(
+    sidebar = sidebar(
+      tags$div(
+        tags$h4(icon("sliders"),
+                tags$strong("Filtros"),
+                class = "mt-2 mb-3 text-center"
+                # style = "color: #2c3e50;"
+                ),
+        tags$hr(style = "border-top: 4px solid #ccc; margin-top: 0; margin-bottom: 1rem;")
+        ),
+      uiOutput("selCiclo"),
+      uiOutput("selRamo"),
+      uiOutput("selPP"),
+      open = "open"
+      # bg = "#fafafa"
+      ),
+    
+    uiOutput("titulopp_srv"),
+    # br(),
+    tarjeta,
+    # UI_PPcards,
+    layout_column_wrap(
+      width = 1/2,
+      UI_PPresumen,
+      UI_PPgraficas 
+      )
+    )
+  )

@@ -1,0 +1,13 @@
+introducción
+descripción-del-curso
+objetivos-de-la-asignatura
+profesores
+metodología-del-curso
+reglamento-interno
+criterios-de-evaluación
+ponderación-de-la-evaluación
+contenido-temático
+bibliografía
+sistemas-lineales
+r-markdown
+including-plots

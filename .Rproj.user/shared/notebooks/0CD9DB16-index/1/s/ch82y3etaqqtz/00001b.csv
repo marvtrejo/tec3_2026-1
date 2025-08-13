@@ -1,0 +1,7 @@
+"0",""
+"0","# plot(qr_code)"
+"0",""
+"0","# # Guardar el código QR como una imagen PNG"
+"0","# png(""qr_code.png"")"
+"0","# plot(qr_code)"
+"0","# dev.off()"

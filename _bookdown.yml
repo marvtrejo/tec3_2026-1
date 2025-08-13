@@ -1,0 +1,6 @@
+book_filename: "tec3_2026-I"
+output_dir: "docs" 
+rmd_files: [
+  "index.Rmd",
+  "01_sistemaslineales.Rmd"
+]

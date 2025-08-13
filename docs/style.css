@@ -1,0 +1,38 @@
+/* Tipografía global */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  color: #004d66;
+  font-weight: bold;
+}
+
+/* Links */
+a {
+  color: #008080;
+}
+a:hover {
+  color: #004d66;
+  text-decoration: underline;
+}
+
+/* Otros */
+
+p {
+  font-family: 'Nunito', serif;
+  color: lightgrey;
+}
+
+/* Tarjetas de presentación */
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  margin-bottom: 1rem;
+}
