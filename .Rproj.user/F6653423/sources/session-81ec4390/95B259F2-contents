@@ -5,6 +5,6 @@ bookdown::gitbook:
       collapse: section
       before: ""
       after: ""
-    download: ["pdf"]
+    download: ["pdf", "epub"]
     relative_urls: true
-    site_url: "https://marvtrejo.github.io/tec3_2026-1/"
+  site_url: "https://marvtrejo.github.io/tec3_2026-1/"
