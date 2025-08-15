@@ -1,0 +1,27 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Taller de Economía Cuantitativa III"
+  author: 
+    - name: "Eduardo Castro Rabadán"
+    - name: "Marvin Ivan Trejo Mendez"
+  search: true
+  navbar:
+    background: "#003366"
+    foreground: "white"
+  sidebar: 
+   style: "docked"
+   background: "#f5f5f5"
+   collapse-level: 1
+  chapters: 
+    - index.qmd
+    - 01_vectores.qmd
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-location: right

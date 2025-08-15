@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eduardo Castro Rabadán">
-<meta name="author" content="Marvin Ivan Trejo Mendez">
 
-<title>Taller de Economía Cuantitativa III</title>
+<title>2&nbsp; Vectores – Taller de Economía Cuantitativa III</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_vectores.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -95,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Presentación del Taller de Economía Cuantitativa III</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_vectores.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Vectores</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -109,13 +141,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Presentación del Taller de Economía Cuantitativa III</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_vectores.html" class="sidebar-item-text sidebar-link">
+  <a href="./01_vectores.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Vectores</span></span></a>
   </div>
 </li>
@@ -129,16 +161,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#bienvenida" id="toc-bienvenida" class="nav-link active" data-scroll-target="#bienvenida"><span class="header-section-number">1</span> Bienvenida</a></li>
-  <li><a href="#profesores" id="toc-profesores" class="nav-link" data-scroll-target="#profesores"><span class="header-section-number">2</span> Profesores</a></li>
-  <li><a href="#metodología-del-curso" id="toc-metodología-del-curso" class="nav-link" data-scroll-target="#metodología-del-curso"><span class="header-section-number">3</span> Metodología del curso</a></li>
-  <li><a href="#reglamento-interno" id="toc-reglamento-interno" class="nav-link" data-scroll-target="#reglamento-interno"><span class="header-section-number">4</span> Reglamento interno</a></li>
-  <li><a href="#criterios-de-evaluación" id="toc-criterios-de-evaluación" class="nav-link" data-scroll-target="#criterios-de-evaluación"><span class="header-section-number">5</span> Criterios de evaluación</a>
+  <li><a href="#vectores" id="toc-vectores" class="nav-link active" data-scroll-target="#vectores"><span class="header-section-number">2.1</span> Vectores</a>
   <ul class="collapse">
-  <li><a href="#ponderación" id="toc-ponderación" class="nav-link" data-scroll-target="#ponderación"><span class="header-section-number">5.1</span> Ponderación</a></li>
+  <li><a href="#ejemplo-en-r" id="toc-ejemplo-en-r" class="nav-link" data-scroll-target="#ejemplo-en-r"><span class="header-section-number">2.1.1</span> Ejemplo en R</a></li>
   </ul></li>
-  <li><a href="#contenido-temático" id="toc-contenido-temático" class="nav-link" data-scroll-target="#contenido-temático"><span class="header-section-number">6</span> Contenido temático</a></li>
-  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía"><span class="header-section-number">7</span> Bibliografía</a></li>
   </ul>
 </nav>
     </div>
@@ -147,20 +173,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Taller de Economía Cuantitativa III</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Vectores</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Eduardo Castro Rabadán </p>
-             <p>Marvin Ivan Trejo Mendez </p>
-          </div>
-  </div>
     
   
     
@@ -171,125 +190,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bienvenida" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Bienvenida</h1>
-<p>Bienvenidas y bienvenidos a las notas de clase y ejercicios del <strong>Taller de Economía Cuantitativa III.</strong> A lo largo del curso las y los estudiantes conocerán las propiedades matriciales, así como su operación y aplicaciones a la economía, además de estudiar la terminología y métodos del álgebra matricial para formular y resolver modelos económicos que se expresen mediante relaciones lineales.</p>
-<p>Al finalizar el semestre, las y los alumnos estarán capacitados para entender y resolver sistemas de ecuaciones lineales a través de métodos de álgebra lineal. Además, utilizarán los métodos matemáticos del álgebra lineal para analizar y resolver problemas económicos.</p>
-<p>Este curso está diseñado para estudiantes de la <strong>Licenciatura en Economía</strong> y combina teoría con ejercicios prácticos en <strong>R y RStudio</strong>. En este sitio encontrarás:</p>
-<ul>
-<li><p>Apuntes de clase</p></li>
-<li><p>Ejercicios interactivos</p></li>
-<li><p>Recursos adicionales</p></li>
-</ul>
-</section>
-<section id="profesores" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Profesores</h1>
+<section id="vectores" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="vectores"><span class="header-section-number">2.1</span> Vectores</h2>
+<p>Los vectores son elementos fundamentales del álgebra lineal.</p>
+<section id="ejemplo-en-r" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="ejemplo-en-r"><span class="header-section-number">2.1.1</span> Ejemplo en R</h3>
 <div class="cell">
-<div class="cell-output-display">
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-<div class="card" style="flex: 1 1 300px;">
-<h3 class="anchored" data-anchor-id="profesores">Eduardo Castro Rabadán</h3>
-<p>Profesor titular</p>
-<p>eduardo.castro@comunidad.unam.mx</p>
-<div style="border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"></div>
-<p>Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en monitoreo y evaluación de indicadores en política pública. Mis principales líneas de investigación son el mercado laboral, las políticas públicas sobre violencia, salud mental y adicciones. Actualmente, trabajo en el INEGI como Jefe de la Oficina de Apoyo Estratégico en la Dirección General de Integración, Análisis e Investigación.</p>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">2</span>, <span class="at">yend =</span> <span class="dv">3</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.2</span>, <span class="st">"inches"</span>)),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom_segment(aes(x = 0, y = 0, xend = 2, yend = 3), arrow = arrow(length = unit(0.2, : All aesthetics have length 1, but the data has 2 rows.
+ℹ Please consider using `annotate()` or provide this layer with data containing
+  a single row.</code></pre>
 </div>
-<div class="card" style="flex: 1 1 300px;">
-<h3 class="anchored">Marvin Ivan Trejo Mendez</h3>
-<p>Profesor adjunto</p>
-<p>marvtrejo@comunidad.unam.mx</p>
-<div style="border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"></div>
-<p>Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. Mis principales líneas de investigación son la política social, monitoreo y evaluación, pobreza y desarrollo económico. Anteriormente me desempeñé como Subdirector de Política Pública Comparada en la Coordinación de Evaluación del CONEVAL y he sido profesor en las materias de Desarrollo Económico y Teoría Microeconómica.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="metodología-del-curso" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Metodología del curso</h1>
-<p>El curso consta de 16 sesiones los viernes a lo largo del semestre, comenzando el 15 de agosto de 2025 y concluyendo el 28 de noviembre de 2025. Las clases se realizarán de manera presencial en la Facultad de Economía, en un horario de 7:00 a 9:00 a.m. Las y los estudiantes deberán presentarse con los temas previamente estudiados de acuerdo con lo acordado en las clases.</p>
-</section>
-<section id="reglamento-interno" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Reglamento interno</h1>
-<ul>
-<li><p>Es requisito indispensable que las y los alumnos se conduzcan con absoluto respeto con sus compañeras y compañeros, así como con los profesores.</p></li>
-<li><p>Toda persona que se presente al curso será calificada. Sólo la que se presente a 3 o menos clases y no presente ningún trabajo será calificada con NP.</p></li>
-<li><p>Ambos profesores estamos para ayudarles, no duden en preguntar.</p></li>
-<li><p>Entregar en tiempo y forma las actividades. No hay entrega extemporánea de actividades.</p></li>
-<li><p>Por planeación de la materia y por respeto a las personas asistentes a la clase, no hay espacio para temas ajenos a la materia.</p></li>
-<li><p>En caso de detectar plagio en alguna tarea y/o trabajo, perderá la posibilidad de acreditar el curso.</p></li>
-</ul>
-</section>
-<section id="criterios-de-evaluación" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Criterios de evaluación</h1>
-<p>Habrá <strong>DOS</strong> exámenes parciales con igual ponderación que se presentarán de manera individual. Fechas tentativas: <strong>3 de octubre y 28 de noviembre.</strong></p>
-<p>Aquellas personas que no aprueben y/o no entreguen alguno de los DOS exámenes parciales, deberán presentar un examen final a partir de los conceptos revisados en clase. <strong>Para aprobar el curso es indispensable presentar y aprobar los exámenes parciales y/o el examen final.</strong></p>
-<p>La participación en clase enriquecerá las sesiones, hará más dinámico el desarrollo de éstas y se tomará en cuenta para la evaluación final (se incluyen ejercicios y aportaciones).</p>
-<section id="ponderación" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="ponderación"><span class="header-section-number">5.1</span> Ponderación</h2>
-<ul>
-<li>Exámenes parciales/final: 70%</li>
-<li>Participación en clase/tareas: 30%</li>
-</ul>
-<p>Para la calificación final, solamente se redondeará hacia arriba a partir del 0.6. Por ejemplo, 8.5 se asienta en actas como 8, mientras que 8.6 (o mayor) se asienta como 9. <strong>Una vez asentada la calificación final en plataforma, no habrá cambios.</strong></p>
-</section>
-</section>
-<section id="contenido-temático" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Contenido temático</h1>
-<ol type="1">
-<li><p>Sistemas de ecuaciones lineales</p>
-<p>a)&nbsp;&nbsp;&nbsp; Sistemas lineales</p>
-<p>b)&nbsp;&nbsp;&nbsp; Solución por método de sustitución</p>
-<p>c)&nbsp;&nbsp;&nbsp; Solución por método gráfico</p>
-<p>d)&nbsp;&nbsp;&nbsp; Ejercicios y problemas en economía</p></li>
-<li><p>Matrices</p>
-<p>a)&nbsp;&nbsp;&nbsp; Definición de matriz</p>
-<p>b)&nbsp;&nbsp;&nbsp; Orden de una matriz</p>
-<p>c)&nbsp;&nbsp;&nbsp; Tipos de matrices</p>
-<p>d)&nbsp;&nbsp;&nbsp; Operaciones con matrices</p>
-<p>i.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suma de matrices</p>
-<p>ii.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Multiplicación de un escalar con una matriz</p>
-<p>iii.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Producto punto</p>
-<p>e)&nbsp;&nbsp;&nbsp; Ejercicios y problemas</p></li>
-<li><p>Sistemas lineales</p>
-<p>a)&nbsp;&nbsp;&nbsp; Método de eliminación consecutiva de incógnitas</p>
-<p>b)&nbsp;&nbsp;&nbsp; Método de Gauss-Jordan</p>
-<p>c)&nbsp;&nbsp;&nbsp; Ejercicios y problemas</p></li>
-<li><p>Determinantes</p>
-<p>a)&nbsp;&nbsp;&nbsp; Definición</p>
-<p>b)&nbsp;&nbsp;&nbsp; Propiedades</p>
-<p>c)&nbsp;&nbsp;&nbsp; Cálculo del determinante de una matriz</p>
-<p>d)&nbsp;&nbsp;&nbsp; Solución de sistemas de ecuaciones lineales con regla de Cramer y Expansión de Laplace</p>
-<p>e)&nbsp;&nbsp;&nbsp; Ejercicios y problemas</p></li>
-<li><p>La matriz inversa</p>
-<p>a)&nbsp;&nbsp;&nbsp; Definición</p>
-<p>b)&nbsp;&nbsp;&nbsp; Solución de sistemas de ecuaciones lineales por el método de la matriz inversa</p></li>
-</ol>
-</section>
-<section id="bibliografía" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Bibliografía</h1>
-<ul>
-<li><p>Kolman, Bernard &amp; Hill, David R.. (2006) Álgebra lineal. 8va. Edición Ed. Pearson Educación, México.</p></li>
-<li><p>Grossman, Stanley I.. (1980) Elementary Linear Algebra, International Student Edition.</p></li>
-<li><p>Grossman, Stanley I.. (1993) Álgebra lineal con aplicaciones. 4a edición. Ed. Mc. Graw-Hill. México D.F.</p></li>
-<li><p>Aleskerov, F. T., Ersel, H., &amp; Piontkovski, D. (2011). Linear algebra for economists. Springer Verlag.</p></li>
-<li><p>Anton, H., &amp; Rorres, C. (2014). Elementary linear álgebra: applications version (11th edition). Wiley.</p></li>
-<li><p>Stewart, J., María del Carmen Rodríguez Pedroza, &amp; Stewart, J. (2013).&nbsp;Cálculo de una variable: trascendentes tempranas&nbsp;(Séptima edición). Cengage Learning.</p></li>
-<li><p>Lipschutz, S., Martinez Ontalba, C., &amp; Lipschutz, S. (1992).&nbsp;Algebra lineal&nbsp;(2nd ed.). McGraw-Hill.</p></li>
-</ul>
-<p>La bibliografía se encuentran disponible a través del siguiente código o enlace</p>
-<p><a href="https://drive.google.com/drive/folders/1Py0I2E0FVqk4zD1XO-WQi-co7zvSbp2A?usp=sharing" class="uri">Material de apoyo</a></p>
-<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="01_vectores_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -712,11 +647,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Presentación del Taller de Economía Cuantitativa III">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Presentación del Taller de Economía Cuantitativa III</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_vectores.html" class="pagination-link" aria-label="Vectores">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Vectores</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
