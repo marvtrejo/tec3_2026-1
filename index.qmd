@@ -1,5 +1,5 @@
 ---
-title: "Presentación del Taller de Economía Cuantitativa III"
+title: "Presentación del curso"
 ---
 
 # Bienvenida
@@ -42,7 +42,7 @@ tags$div(
     tags$p("Profesor adjunto"),
     tags$p("marvtrejo@comunidad.unam.mx"),
     tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
-    tags$p("Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. Mis principales líneas de investigación son la política social, monitoreo y evaluación, pobreza y desarrollo económico. Anteriormente me desempeñé como Subdirector de Política Pública Comparada en la Coordinación de Evaluación del CONEVAL y he sido profesor en las materias de Desarrollo Económico y Teoría Microeconómica.")
+    tags$p("Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. Mis principales líneas de investigación son la política social, monitoreo y evaluación, pobreza y desarrollo económico. Me he desempeñado como Subdirector de Política Pública Comparada en la Coordinación de Evaluación del CONEVAL y he sido profesor en las materias de Desarrollo Económico y Teoría Microeconómica.")
   )
 )
 ```

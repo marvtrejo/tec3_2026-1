@@ -1,14 +1,14 @@
 project:
   type: book
   output-dir: docs
+  
+published-title: "Última actualización"
 
 book:
   title: "Taller de Economía Cuantitativa III"
   author: 
     - name: "Eduardo Castro Rabadán"
     - name: "Marvin Ivan Trejo Mendez"
-  date: last-modified
-  date-format: "Última actualización: dd/MM/yyyy"
   search: true
   navbar:
     background: "#003366"
@@ -16,10 +16,15 @@ book:
   sidebar: 
    style: "docked"
    background: "#f5f5f5"
-   collapse-level: 1
+  date: today
+  date-format: "DD/MM/YYYY"
   chapters: 
-    - index.qmd
-    - 01_vectores.qmd
+    - part: "Introducción"
+      chapters: 
+        - index.qmd
+    - part: "Semana 1"
+      # chapters: 
+      # - 01_vectores.qmd
 
 format:
   html:

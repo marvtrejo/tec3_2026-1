@@ -1,6 +1,0 @@
-navbar:
-  background: "#003366"
-foreground: "white"
-sidebar: 
-  style: "docked"
-background: "#f5f5f5"
