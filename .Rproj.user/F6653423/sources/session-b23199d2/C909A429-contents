@@ -7,6 +7,8 @@ book:
   author: 
     - name: "Eduardo Castro Rabadán"
     - name: "Marvin Ivan Trejo Mendez"
+  date: last-modified
+  date-format: "Última actualización: dd/MM/yyyy"
   search: true
   navbar:
     background: "#003366"
