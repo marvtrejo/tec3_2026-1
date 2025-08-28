@@ -1,3 +1,0 @@
-"0",""
-"0","# qr_code <- "
-"0","  qr_code(""https://drive.google.com/drive/folders/1Py0I2E0FVqk4zD1XO-WQi-co7zvSbp2A?usp=sharing"") |> plot()"

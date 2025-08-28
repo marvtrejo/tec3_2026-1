@@ -1,0 +1,313 @@
+---
+title: "Sistemas de ecuaciones lineales"
+editor: visual
+---
+
+```{r librerias, include = FALSE}
+library(highcharter)
+library(webexercises)
+```
+
+## Ecuaciones
+
+Una ecuación es una igualdad matemática en la que existen una o varias incógnitas y que solo es verdadera para determinados valores de las incógnitas.
+
+Las incógnitas se pueden representar con cualquier letras del alfabeto $(a,b,c,..., x, y,z)$ e incluso pueden contener subíndices $(x_1, y_1, ..., Q_d, Q_s)$.
+
+Podemos conocer el valor de una incógnita despejando el resto de los valores, para ello es necesario realizar la misma operación en ambos términos de de la ecuación.
+
+### Ejemplos
+
+$$
+\begin{align}
+2x+3 &= 7 \tag{1}\\
+2x+3 \color{blue}{-3} &= 7\color{blue}{-3} \tag{2}\\ 
+\frac{2x}{\color{blue}{2}} &= \frac{4}{\color{blue}{2}} \tag{3} \\ 
+\mathbf{x} &= \mathbf{2} 
+\end{align}
+$$
+
+$$
+\begin{align}
+7x-5 &= 4x+10 \tag{1}\\
+7x-5 \color{blue}{-4x+5} &= 4x+10\color{blue}{-4x+5} \tag{2}\\ 
+\frac{3x}{\color{blue}{3}} &= \frac{15}{\color{blue}{3}} \tag{3} \\ 
+\mathbf{x} &= \mathbf{5} 
+\end{align}
+$$
+
+$$
+\begin{align}
+3x+2 &= 11 \tag{1}\\
+3x+2 \color{blue}{-2} &= 11 \color{blue}{-2} \tag{2}\\ 
+\frac{3x}{\color{blue}{3}} &= \frac{9}{\color{blue}{3}} \tag{3} \\ 
+\mathbf{x} &= \mathbf{3} 
+\end{align}
+$$
+
+$$
+\begin{align}
+\sqrt{x+5} &= 3 \tag{1}\\
+\left( \sqrt{x+5} \right)^\color{blue}{2} &= 3^\color{blue}{2} \tag{2}\\
+x+5 &= 9 \tag{3}\\
+x+5 \color{blue}{-5} &= 9 \color{blue}{-5} \tag{4} \\
+\mathbf{x} &= \mathbf{4}
+\end{align}
+$$
+
+## Sistemas de Ecuaciones Lineales
+
+Los sistemas de ecuaciones lineales son una herramienta importante para la solución de problemas que involucran a más de dos variables y tienen múltiples aplicaciones en la economía.
+
+Un sistema de ecuaciones lineales consiste en un conjunto de dos o más ecuaciones con varias incógnitas, a través de los cuales es posible encontrar los valores que satisfacen todas las ecuaciones al mismo tiempo. Estos valores se conocen como solución o conjunto solución y se pueden presentar de distintas maneras.
+
+## Tipos de soluciones
+
+::: panel-tabset
+### Solución única
+
+Este tipo de solución cuenta con un único conjunto de valores que satisfacen todas las ecuaciones del sistema. Gráficamente, esta solución se encuentra en el punto de intersección de las rectas del sistema. $$
+\begin{align}
+x+y &= 4 \\
+x-y &= 2
+\end{align}
+$$
+
+```{r sol_unica, echo=FALSE}
+library(highcharter)
+
+# Rango de x
+x_val <- seq(-1, 5, 0.5)
+
+# Ecuaciones
+y1 <- 4 - x_val
+y2 <- x_val - 2
+
+# Solución del sistema
+A <- matrix(c(1,1, 1,-1), nrow=2, byrow=TRUE)
+b <- c(4,2)
+sol <- solve(A,b)
+
+# Gráfica
+df1 <- data.frame(x = x_val, y = y1)
+df2 <- data.frame(x = x_val, y = y2)
+df_sol <- data.frame(x = sol[1], y = sol[2])
+
+highchart() %>%
+  hc_add_series(df1, "line", hcaes(x = x, y = y), name = "x + y = 4", color = "blue") %>%
+  hc_add_series(df2, "line", hcaes(x = x, y = y), name = "x - y = 2", color = "red") %>%
+  hc_add_series(df_sol, "scatter", hcaes(x = x, y = y),
+                name = paste0("Solución (", sol[1], ", ", sol[2], ")"),
+                marker = list(symbol = "circle", radius = 6, fillColor = "black")) %>%
+  hc_title(text = "Solución única",
+           style = list(fontSize = "18px", fontWeight = "bold")) %>%
+  hc_legend(enabled = TRUE) %>% 
+  hc_xAxis(title = list(text = "x")) %>%
+  hc_yAxis(title = list(text = "y")) %>%
+  hc_tooltip(shared = TRUE)
+```
+
+### Soluciones infinitas
+
+Este tipo de solución se caracteriza por contar con más de un conjunto de valores que satisfacen el sistema de ecuaciones, es decir, el conjunto solución comprende todos los puntos de las rectas del sistema y gráficamente se observa como rectas superpuestas.
+
+$$
+\begin{align}
+2x+4y &= 8 \\
+x+2y &= 4
+\end{align}
+$$
+
+```{r sol_inf, echo=FALSE}
+# Rango de x
+x_val <- seq(-1, 5, 0.5)
+
+# Ecuaciones
+y1 <- 2 - x_val/2
+
+
+
+# Gráfica
+df1 <- data.frame(x = x_val, y = y1)
+
+highchart() %>%
+  hc_add_series(df1, "line", hcaes(x = x, y = y), name = "2x + 4y = 8", color = "blue") %>%
+  hc_add_series(df1, "line", hcaes(x = x, y = y), name = "x + 2y = 4", color = "red") %>%
+  
+  hc_title(text = "Soluciones infinitas",
+           style = list(fontSize = "18px", fontWeight = "bold")) %>%
+  hc_legend(enabled = TRUE) %>% 
+  hc_xAxis(title = list(text = "x")) %>%
+  hc_yAxis(title = list(text = "y")) %>%
+  hc_tooltip(shared = TRUE)
+```
+
+### Sin solución
+
+Existen casos en donde el sistema no tiene solución. Esto se debe a que las rectas que componen al sistema no tienen puntos en común, es decir, gráficamente son líneas paralelas.
+
+$$
+\begin{align}
+x+y &= 3 \\
+x+y &= 5
+\end{align}
+$$
+
+```{r sin_solucion, echo=FALSE}
+# Rango de x
+x_val <- seq(-1, 5, 0.5)
+
+# Ecuaciones
+y1 <- 3 - x_val
+y2 <- 5- x_val
+
+# Gráfica
+df1 <- data.frame(x = x_val, y = y1)
+df2 <- data.frame(x = x_val, y = y2)
+
+highchart() %>%
+  hc_add_series(df1, "line", hcaes(x = x, y = y), name = "x + y = 3", color = "blue") %>%
+  hc_add_series(df2, "line", hcaes(x = x, y = y), name = "x + y = 5", color = "red") %>%
+  hc_title(text = "Sin solución",
+           style = list(fontSize = "18px", fontWeight = "bold")) %>%
+  hc_legend(enabled = TRUE) %>% 
+  hc_xAxis(title = list(text = "x")) %>%
+  hc_yAxis(title = list(text = "y")) %>%
+  hc_tooltip(shared = TRUE)
+```
+
+### Ejemplos
+
+Clasifiquen los siguientes sistemas de ecuaciones
+
+$$
+\begin{align}
+x+y &= 6 \\
+2x+2y &= 12
+\end{align}
+$$ `r webexercises::mcq(c("Solución  única", answer = "Soluciones infinitas", "Sin solución"))`
+
+$$
+\begin{align}
+x-y &= 1 \\
+x+y &= 5
+\end{align}
+$$ `r webexercises::mcq(c(answer = "Solución  única", "Soluciones infinitas", "Sin solución"))`
+
+$$
+\begin{align}
+3x+2y &= 7 \\
+6x+4y &= 10
+\end{align}
+$$ `r webexercises::mcq(c("Solución  única", "Soluciones infinitas", answer ="Sin solución"))`
+
+$$
+\begin{align}
+2x+3y &= 9 \\
+\frac{x}{3} + \frac{y}{2} &= \frac{3}{2}
+\end{align}
+$$ `r webexercises::mcq(c("Solución  única", answer = "Soluciones infinitas", "Sin solución"))`
+:::
+
+## Métodos de solución
+
+### Método gráfico
+
+Los sistemas de ecuaciones lineales pueden ser representados como rectas dentro de un plano cartesiano, por ello una forma práctica de encontrar el conjunto solución del sistema es el método gráfico, el cual consiste en asignar valores arbitrarios a las incógnitas en cada ecuación para conocer los puntos por los que pasa la recta. Aunque los valores pueden ser los que sean, se recomienda utilizar el cero porque nos permite identificar los puntos en que la recta corta en el eje $x$ o $y$.
+
+Para resolver el siguiente sistema de ecuaciones
+
+$$
+\begin{align}
+x+y &= 5 \tag{A} \\
+x-y &= 1 \tag{B}
+\end{align}
+$$ Primero sustituimos $x$ y $y$ por cero en la ecuación A para obtener los puntos donde la recta cruza por alguno de los ejes: Cuando $x = 0$, $y=5$ y nuestro punto a graficar es el $(0,5)$ Cuando $y = 0$, $x=5$ y nuestro punto a graficar es el $(5,0)$ Repetimos este proceso en la ecuación B: Cuando $x = 0$, $y=-1$ y nuestro punto a graficar es el $(0,-1)$ Cuando $y = 0$, $x=1$ y nuestro punto a graficar es el $(1,0)$
+
+Con estos cuatro puntos podemos representar ambas rectas y encontrar la solución.
+
+```{r metodo grafico, echo=FALSE}
+library(highcharter)
+
+# Rango de x
+x_val <- seq(-1, 5, 0.5)
+
+# Ecuaciones
+y1 <- 5 - x_val
+y2 <- x_val - 1
+
+# Intersecciones
+puntos_a <- data.frame(x= c(0,5), y=c(5,0))
+puntos_b <- data.frame(x= c(0,1), y=c(-1,0))
+
+# Solución del sistema
+A <- matrix(c(1,1, 1,-1), nrow=2, byrow=TRUE)
+b <- c(5,1)
+sol <- solve(A,b)
+
+# Gráfica
+df1 <- data.frame(x = x_val, y = y1)
+df2 <- data.frame(x = x_val, y = y2)
+df_sol <- data.frame(x = sol[1], y = sol[2])
+
+highchart() %>%
+  hc_add_series(df1, "spline", hcaes(x = x, y = y), name = "x + y = 5", color = "blue",
+                marker = list(enabled = FALSE)) %>%
+  hc_add_series(df2, "spline", hcaes(x = x, y = y), name = "x - y = 1", color = "red",
+                marker = list(enabled = FALSE)) %>%
+  hc_add_series(df_sol, "scatter", hcaes(x = x, y = y),
+                name = paste0("Solución (", sol[1], ", ", sol[2], ")"),
+                marker = list(symbol = "circle", radius = 6, fillColor = "orange")) %>%
+  hc_add_series(puntos_a, "scatter", hcaes(x = x, y = y),
+                name = "Intersección",
+                showInLegend = FALSE, 
+                marker = list(symbol = "diamond", radius = 6, fillColor = "orange")) %>%
+  hc_add_series(puntos_b, "scatter", hcaes(x = x, y = y),
+                name = "Intersección",
+                showInLegend = FALSE,
+                marker = list(symbol = "triangle", radius = 6, fillColor = "orange")) %>%
+  hc_title(text = "Solución por método gráfico",
+           style = list(fontSize = "18px", fontWeight = "bold")) %>%
+  hc_legend(enabled = TRUE) %>% 
+  hc_xAxis(plotLines = list(
+    list(value = 0, color = "darkgrey", width = 2, zIndex = 3))) %>%
+  hc_yAxis(plotLines = list(
+    list(value = 0, color = "darkgrey", width = 2, zIndex = 3))) %>%
+  hc_tooltip(shared = FALSE) %>% 
+    hc_plotOptions(
+    series = list(
+      animation = FALSE,  # Desactiva animación en series
+      states = list(
+        inactive = list(
+          enabled = FALSE  # Evita que las otras series se atenúen al hacer hover
+        ),
+        hover = list(
+          animation = list(duration = 0) # Elimina animación de hover
+        )
+      )
+    )
+  )
+```
+
+### Sustitución
+
+El método de sustitución consiste en despejar alguna de las incógnitas en cualquiera de las ecuaciones y sustituir en alguna de las otras hasta obtener el valor de todas las incógnitas. Utilizando el sistema de ecuaciones previo, podemos despejar $x$ en la ecuación A y posteriormente sustituir ese valor en la ecuación B
+
+$$
+\begin{align}
+x+y &= 5 \tag{A} \\
+x &= 5-y \\
+x-y &= 1 \tag{B} \\
+(5-y) -y &= 1 \\
+-2y &=1-5 \\
+y&=\frac{-4}{-2}=2 \\
+x+y &= 5 \tag{A} \\
+x+2 &=5 \\
+x&=5-2=3 \\
+Solución \quad x=3; y&=2\\
+\end{align}
+$$
+
+------------------------------------------------------------------------
+
+### Ejercicios

@@ -1,0 +1,163 @@
+---
+title: "Presentación del curso"
+---
+
+# Bienvenida
+
+Bienvenidas y bienvenidos a las notas de clase y ejercicios del **Taller de Economía Cuantitativa III.** A lo largo del curso las y los estudiantes conocerán las propiedades matriciales, así como su operación y aplicaciones a la economía, además de estudiar la terminología y métodos del álgebra matricial para formular y resolver modelos económicos que se expresen mediante relaciones lineales.
+
+Al finalizar el semestre, las y los alumnos estarán capacitados para entender y resolver sistemas de ecuaciones lineales a través de métodos de álgebra lineal. Además, utilizarán los métodos matemáticos del álgebra lineal para analizar y resolver problemas económicos.
+
+Este curso está diseñado para estudiantes de la **Licenciatura en Economía** y combina teoría con ejercicios prácticos en **R y RStudio**. En este sitio encontrarás:
+
+-   Apuntes de clase
+
+-   Ejercicios interactivos
+
+-   Recursos adicionales
+
+```{r, include = FALSE}
+
+library(qrcode)
+library(bslib)
+library(shiny)
+```
+
+# Profesores
+
+```{r, echo=FALSE}
+tags$div(
+  style = "display: flex; gap: 20px; flex-wrap: wrap;",
+  tags$div(class = "card",
+    style = "flex: 1 1 300px;",  
+    tags$h3("Eduardo Castro Rabadán"),
+    tags$p("Profesor titular"),
+    tags$p("eduardo.castro@comunidad.unam.mx"),
+    tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
+    tags$p("Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en monitoreo y evaluación de indicadores en política pública. Mis principales líneas de investigación son el mercado laboral, las políticas públicas sobre violencia, salud mental y adicciones. Actualmente, trabajo en el INEGI como Jefe de la Oficina de Apoyo Estratégico en la Dirección General de Integración, Análisis e Investigación.")
+  ),
+  tags$div(class = "card",
+    style = "flex: 1 1 300px;",
+    tags$h3("Marvin Ivan Trejo Mendez"),
+    tags$p("Profesor adjunto"),
+    tags$p("marvtrejo@comunidad.unam.mx"),
+    tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
+    tags$p("Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. Mis principales líneas de investigación son la política social, monitoreo y evaluación, pobreza y desarrollo económico. Me he desempeñado como Subdirector de Política Pública Comparada en la Coordinación de Evaluación del CONEVAL y he sido profesor en las materias de Desarrollo Económico y Teoría Microeconómica.")
+  )
+)
+```
+
+# Metodología del curso
+
+El curso consta de 16 sesiones los viernes a lo largo del semestre, comenzando el 15 de agosto de 2025 y concluyendo el 28 de noviembre de 2025. Las clases se realizarán de manera presencial en la Facultad de Economía, en un horario de 7:00 a 9:00 a.m. Las y los estudiantes deberán presentarse con los temas previamente estudiados de acuerdo con lo acordado en las clases.
+
+# Reglamento interno
+
+-   Es requisito indispensable que las y los alumnos se conduzcan con absoluto respeto con sus compañeras y compañeros, así como con los profesores.
+
+-   Toda persona que se presente al curso será calificada. Sólo la que se presente a 3 o menos clases y no presente ningún trabajo será calificada con NP.
+
+-   Ambos profesores estamos para ayudarles, no duden en preguntar.
+
+-   Entregar en tiempo y forma las actividades. No hay entrega extemporánea de actividades.
+
+-   Por planeación de la materia y por respeto a las personas asistentes a la clase, no hay espacio para temas ajenos a la materia.
+
+-   En caso de detectar plagio en alguna tarea y/o trabajo, perderá la posibilidad de acreditar el curso.
+
+# Criterios de evaluación
+
+Habrá **DOS** exámenes parciales con igual ponderación que se presentarán de manera individual. Fechas tentativas: **3 de octubre y 28 de noviembre.**
+
+Aquellas personas que no aprueben y/o no entreguen alguno de los DOS exámenes parciales, deberán presentar un examen final a partir de los conceptos revisados en clase. **Para aprobar el curso es indispensable presentar y aprobar los exámenes parciales y/o el examen final.**
+
+La participación en clase enriquecerá las sesiones, hará más dinámico el desarrollo de éstas y se tomará en cuenta para la evaluación final (se incluyen ejercicios y aportaciones).
+
+## Ponderación
+
+-   Exámenes parciales/final: 70%
+-   Participación en clase/tareas: 30%
+
+Para la calificación final, solamente se redondeará hacia arriba a partir del 0.6. Por ejemplo, 8.5 se asienta en actas como 8, mientras que 8.6 (o mayor) se asienta como 9. **Una vez asentada la calificación final en plataforma, no habrá cambios.**
+
+# Contenido temático
+
+1.  Sistemas de ecuaciones lineales
+
+    a)    Sistemas lineales
+
+    b)    Solución por método de sustitución
+
+    c)    Solución por método gráfico
+
+    d)    Ejercicios y problemas en economía
+
+2.  Matrices
+
+    a)    Definición de matriz
+
+    b)    Orden de una matriz
+
+    c)    Tipos de matrices
+
+    d)    Operaciones con matrices
+
+    i.        Suma de matrices
+
+    ii.        Multiplicación de un escalar con una matriz
+
+    iii.        Producto punto
+
+    e)    Ejercicios y problemas
+
+3.  Sistemas lineales
+
+    a)    Método de eliminación consecutiva de incógnitas
+
+    b)    Método de Gauss-Jordan
+
+    c)    Ejercicios y problemas
+
+4.  Determinantes
+
+    a)    Definición
+
+    b)    Propiedades
+
+    c)    Cálculo del determinante de una matriz
+
+    d)    Solución de sistemas de ecuaciones lineales con regla de Cramer y Expansión de Laplace
+
+    e)    Ejercicios y problemas
+
+5.  La matriz inversa
+
+    a)    Definición
+
+    b)    Solución de sistemas de ecuaciones lineales por el método de la matriz inversa
+
+# Bibliografía
+
+-   Kolman, Bernard & Hill, David R.. (2006) Álgebra lineal. 8va. Edición Ed. Pearson Educación, México.
+
+-   Grossman, Stanley I.. (1980) Elementary Linear Algebra, International Student Edition.
+
+-   Grossman, Stanley I.. (1993) Álgebra lineal con aplicaciones. 4a edición. Ed. Mc. Graw-Hill. México D.F.
+
+-   Aleskerov, F. T., Ersel, H., & Piontkovski, D. (2011). Linear algebra for economists. Springer Verlag.
+
+-   Anton, H., & Rorres, C. (2014). Elementary linear álgebra: applications version (11th edition). Wiley.
+
+-   Stewart, J., María del Carmen Rodríguez Pedroza, & Stewart, J. (2013). Cálculo de una variable: trascendentes tempranas (Séptima edición). Cengage Learning.
+
+-   Lipschutz, S., Martinez Ontalba, C., & Lipschutz, S. (1992). Algebra lineal (2nd ed.). McGraw-Hill.
+
+La bibliografía se encuentran disponible a través del siguiente código o enlace
+
+[Material de apoyo](https://drive.google.com/drive/folders/1Py0I2E0FVqk4zD1XO-WQi-co7zvSbp2A?usp=sharing){.uri}
+
+```{r, echo = FALSE}
+
+qr_code("https://drive.google.com/drive/folders/1Py0I2E0FVqk4zD1XO-WQi-co7zvSbp2A?usp=sharing") |> plot()
+
+```

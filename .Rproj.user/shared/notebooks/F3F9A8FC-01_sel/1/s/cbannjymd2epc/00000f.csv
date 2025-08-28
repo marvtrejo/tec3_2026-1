@@ -1,0 +1,10 @@
+"0","library(highcharter)"
+"0","library(webexercises)"
+"0","webexercises::add_to_quarto(quarto_dir = ""."", include_dir = ""include"")"
+"2","G3;webex.css, webex.js, and webexercises.qmd updated
+g"
+"2","G2;H2;Warningh in readLines(file, warn = readLines.warn) :
+  incomplete final line found on './_quarto.yml'g
+"
+"2","G3;./_quarto.yml updated
+g"
