@@ -17,40 +17,43 @@ Las incógnitas se pueden representar con cualquier letras del alfabeto $(a,b,c,
 Podemos conocer el valor de una incógnita despejando el resto de los valores, para ello es necesario realizar la misma operación en ambos términos de de la ecuación.
 
 ### Ejemplos
-
 $$
+\displaystyle
 \begin{align}
 2x+3 &= 7 \tag{1}\\
-2x+3 \color{blue}{-3} &= 7\color{blue}{-3} \tag{2}\\ 
+2x+3\,{\color{blue}{-3}} &= 7\,{\color{blue}{-3}} \tag{2}\\ 
 \frac{2x}{\color{blue}{2}} &= \frac{4}{\color{blue}{2}} \tag{3} \\ 
-\mathbf{x} &= \mathbf{2} 
+\mathbf{x} &= \mathbf{2}
 \end{align}
 $$
 
 $$
+\displaystyle
 \begin{align}
 7x-5 &= 4x+10 \tag{1}\\
-7x-5 \color{blue}{-4x+5} &= 4x+10\color{blue}{-4x+5} \tag{2}\\ 
+7x-5\,{\color{blue}{-4x+5}} &= 4x+10\,{\color{blue}{-4x+5}} \tag{2}\\ 
 \frac{3x}{\color{blue}{3}} &= \frac{15}{\color{blue}{3}} \tag{3} \\ 
-\mathbf{x} &= \mathbf{5} 
+\mathbf{x} &= \mathbf{5}
 \end{align}
 $$
 
 $$
+\displaystyle
 \begin{align}
 3x+2 &= 11 \tag{1}\\
-3x+2 \color{blue}{-2} &= 11 \color{blue}{-2} \tag{2}\\ 
+3x+2\,{\color{blue}{-2}} &= 11\,{\color{blue}{-2}} \tag{2}\\ 
 \frac{3x}{\color{blue}{3}} &= \frac{9}{\color{blue}{3}} \tag{3} \\ 
-\mathbf{x} &= \mathbf{3} 
+\mathbf{x} &= \mathbf{3}
 \end{align}
 $$
 
 $$
+\displaystyle
 \begin{align}
 \sqrt{x+5} &= 3 \tag{1}\\
-\left( \sqrt{x+5} \right)^\color{blue}{2} &= 3^\color{blue}{2} \tag{2}\\
+\bigl(\sqrt{x+5}\bigr)^{\color{blue}{2}} &= 3^{\color{blue}{2}} \tag{2}\\
 x+5 &= 9 \tag{3}\\
-x+5 \color{blue}{-5} &= 9 \color{blue}{-5} \tag{4} \\
+x+5\,{\color{blue}{-5}} &= 9\,{\color{blue}{-5}} \tag{4}\\
 \mathbf{x} &= \mathbf{4}
 \end{align}
 $$
@@ -304,7 +307,7 @@ y&=\frac{-4}{-2}=2 \\
 x+y &= 5 \tag{A} \\
 x+2 &=5 \\
 x&=5-2=3 \\
-Solución \quad x=3; y&=2\\
+\mathbf{x} &= \mathbf{3}; \mathbf{y} = \mathbf{2} \tag{Solución}\\
 \end{align}
 $$
 
