@@ -310,7 +310,41 @@ x&=5-2=3 \\
 \mathbf{x} &= \mathbf{3}; \mathbf{y} = \mathbf{2} \tag{Solución}\\
 \end{align}
 $$
-
-------------------------------------------------------------------------
-
 ### Ejercicios
+
+Los siguientes ejercicios fueron resueltos durante la clase.
+
+1.)
+
+$$
+\displaystyle
+\begin{align}
+Q_d &= 100 -2P \\
+Q_s &= 20+3P
+\end{align}
+$$
+2.)
+$$
+\displaystyle
+\begin{align}
+Q_d &= 500 -5P \\
+Q_s &= 100+10P
+\end{align}
+$$
+3.)
+$$
+\displaystyle
+\begin{align}
+Q_d &= 800 -\frac{3P}{2} \\
+Q_s &= 20+2P
+\end{align}
+$$
+4.)
+$$
+\displaystyle
+\begin{align}
+x+y+z &= 6 \\
+2x-y+3z &= 14 \\
+-3x+4y+z &= -2
+\end{align}
+$$
