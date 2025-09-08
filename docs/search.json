@@ -24,56 +24,122 @@
   {
     "objectID": "01_sel.html",
     "href": "01_sel.html",
-    "title": "Sistemas de ecuaciones lineales",
+    "title": "Conceptos",
     "section": "",
     "text": "Ecuaciones\nUna ecuación es una igualdad matemática en la que existen una o varias incógnitas y que solo es verdadera para determinados valores de las incógnitas.\nLas incógnitas se pueden representar con cualquier letras del alfabeto \\((a,b,c,..., x, y,z)\\) e incluso pueden contener subíndices \\((x_1, y_1, ..., Q_d, Q_s)\\).\nPodemos conocer el valor de una incógnita despejando el resto de los valores, para ello es necesario realizar la misma operación en ambos términos de de la ecuación.",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
     ]
   },
   {
     "objectID": "01_sel.html#ecuaciones",
     "href": "01_sel.html#ecuaciones",
-    "title": "Sistemas de ecuaciones lineales",
+    "title": "Conceptos",
     "section": "",
     "text": "Ejemplos\n\\[\n\\displaystyle\n\\begin{align}\n2x+3 &= 7 \\tag{1}\\\\\n2x+3\\,{\\color{blue}{-3}} &= 7\\,{\\color{blue}{-3}} \\tag{2}\\\\\n\\frac{2x}{\\color{blue}{2}} &= \\frac{4}{\\color{blue}{2}} \\tag{3} \\\\\n\\mathbf{x} &= \\mathbf{2}\n\\end{align}\n\\]\n\\[\n\\displaystyle\n\\begin{align}\n7x-5 &= 4x+10 \\tag{1}\\\\\n7x-5\\,{\\color{blue}{-4x+5}} &= 4x+10\\,{\\color{blue}{-4x+5}} \\tag{2}\\\\\n\\frac{3x}{\\color{blue}{3}} &= \\frac{15}{\\color{blue}{3}} \\tag{3} \\\\\n\\mathbf{x} &= \\mathbf{5}\n\\end{align}\n\\]\n\\[\n\\displaystyle\n\\begin{align}\n3x+2 &= 11 \\tag{1}\\\\\n3x+2\\,{\\color{blue}{-2}} &= 11\\,{\\color{blue}{-2}} \\tag{2}\\\\\n\\frac{3x}{\\color{blue}{3}} &= \\frac{9}{\\color{blue}{3}} \\tag{3} \\\\\n\\mathbf{x} &= \\mathbf{3}\n\\end{align}\n\\]\n\\[\n\\displaystyle\n\\begin{align}\n\\sqrt{x+5} &= 3 \\tag{1}\\\\\n\\bigl(\\sqrt{x+5}\\bigr)^{\\color{blue}{2}} &= 3^{\\color{blue}{2}} \\tag{2}\\\\\nx+5 &= 9 \\tag{3}\\\\\nx+5\\,{\\color{blue}{-5}} &= 9\\,{\\color{blue}{-5}} \\tag{4}\\\\\n\\mathbf{x} &= \\mathbf{4}\n\\end{align}\n\\]",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
     ]
   },
   {
     "objectID": "01_sel.html#sistemas-de-ecuaciones-lineales",
     "href": "01_sel.html#sistemas-de-ecuaciones-lineales",
-    "title": "Sistemas de ecuaciones lineales",
+    "title": "Conceptos",
     "section": "Sistemas de Ecuaciones Lineales",
     "text": "Sistemas de Ecuaciones Lineales\nLos sistemas de ecuaciones lineales son una herramienta importante para la solución de problemas que involucran a más de dos variables y tienen múltiples aplicaciones en la economía.\nUn sistema de ecuaciones lineales consiste en un conjunto de dos o más ecuaciones con varias incógnitas, a través de los cuales es posible encontrar los valores que satisfacen todas las ecuaciones al mismo tiempo. Estos valores se conocen como solución o conjunto solución y se pueden presentar de distintas maneras.",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
     ]
   },
   {
     "objectID": "01_sel.html#tipos-de-soluciones",
     "href": "01_sel.html#tipos-de-soluciones",
-    "title": "Sistemas de ecuaciones lineales",
+    "title": "Conceptos",
     "section": "Tipos de soluciones",
     "text": "Tipos de soluciones\n\nSolución únicaSoluciones infinitasSin soluciónEjemplos\n\n\nEste tipo de solución cuenta con un único conjunto de valores que satisfacen todas las ecuaciones del sistema. Gráficamente, esta solución se encuentra en el punto de intersección de las rectas del sistema. \\[\n\\begin{align}\nx+y &= 4 \\\\\nx-y &= 2\n\\end{align}\n\\]\n\n\n\n\n\n\n\n\nEste tipo de solución se caracteriza por contar con más de un conjunto de valores que satisfacen el sistema de ecuaciones, es decir, el conjunto solución comprende todos los puntos de las rectas del sistema y gráficamente se observa como rectas superpuestas.\n\\[\n\\begin{align}\n2x+4y &= 8 \\\\\nx+2y &= 4\n\\end{align}\n\\]\n\n\n\n\n\n\n\n\nExisten casos en donde el sistema no tiene solución. Esto se debe a que las rectas que componen al sistema no tienen puntos en común, es decir, gráficamente son líneas paralelas.\n\\[\n\\begin{align}\nx+y &= 3 \\\\\nx+y &= 5\n\\end{align}\n\\]\n\n\n\n\n\n\n\n\nClasifiquen los siguientes sistemas de ecuaciones\n\\[\n\\begin{align}\nx+y &= 6 \\\\\n2x+2y &= 12\n\\end{align}\n\\] Solución únicaSoluciones infinitasSin solución\n\\[\n\\begin{align}\nx-y &= 1 \\\\\nx+y &= 5\n\\end{align}\n\\] Solución únicaSoluciones infinitasSin solución\n\\[\n\\begin{align}\n3x+2y &= 7 \\\\\n6x+4y &= 10\n\\end{align}\n\\] Solución únicaSoluciones infinitasSin solución\n\\[\n\\begin{align}\n2x+3y &= 9 \\\\\n\\frac{x}{3} + \\frac{y}{2} &= \\frac{3}{2}\n\\end{align}\n\\] Solución únicaSoluciones infinitasSin solución",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
     ]
   },
   {
     "objectID": "01_sel.html#métodos-de-solución",
     "href": "01_sel.html#métodos-de-solución",
-    "title": "Sistemas de ecuaciones lineales",
+    "title": "Conceptos",
     "section": "Métodos de solución",
-    "text": "Métodos de solución\n\nMétodo gráfico\nLos sistemas de ecuaciones lineales pueden ser representados como rectas dentro de un plano cartesiano, por ello una forma práctica de encontrar el conjunto solución del sistema es el método gráfico, el cual consiste en asignar valores arbitrarios a las incógnitas en cada ecuación para conocer los puntos por los que pasa la recta. Aunque los valores pueden ser los que sean, se recomienda utilizar el cero porque nos permite identificar los puntos en que la recta corta en el eje \\(x\\) o \\(y\\).\nPara resolver el siguiente sistema de ecuaciones\n\\[\n\\begin{align}\nx+y &= 5 \\tag{A} \\\\\nx-y &= 1 \\tag{B}\n\\end{align}\n\\] Primero sustituimos \\(x\\) y \\(y\\) por cero en la ecuación A para obtener los puntos donde la recta cruza por alguno de los ejes: Cuando \\(x = 0\\), \\(y=5\\) y nuestro punto a graficar es el \\((0,5)\\) Cuando \\(y = 0\\), \\(x=5\\) y nuestro punto a graficar es el \\((5,0)\\) Repetimos este proceso en la ecuación B: Cuando \\(x = 0\\), \\(y=-1\\) y nuestro punto a graficar es el \\((0,-1)\\) Cuando \\(y = 0\\), \\(x=1\\) y nuestro punto a graficar es el \\((1,0)\\)\nCon estos cuatro puntos podemos representar ambas rectas y encontrar la solución.\n\n\n\n\n\n\n\n\nSustitución\nEl método de sustitución consiste en despejar alguna de las incógnitas en cualquiera de las ecuaciones y sustituir en alguna de las otras hasta obtener el valor de todas las incógnitas. Utilizando el sistema de ecuaciones previo, podemos despejar \\(x\\) en la ecuación A y posteriormente sustituir ese valor en la ecuación B\n\\[\n\\begin{align}\nx+y &= 5 \\tag{A} \\\\\nx &= 5-y \\\\\nx-y &= 1 \\tag{B} \\\\\n(5-y) -y &= 1 \\\\\n-2y &=1-5 \\\\\ny&=\\frac{-4}{-2}=2 \\\\\nx+y &= 5 \\tag{A} \\\\\nx+2 &=5 \\\\\nx&=5-2=3 \\\\\n\\mathbf{x} &= \\mathbf{3}; \\mathbf{y} = \\mathbf{2} \\tag{Solución}\\\\\n\\end{align}\n\\] ### Ejercicios\nLos siguientes ejercicios fueron resueltos durante la clase.\n1.)\n\\[\n\\displaystyle\n\\begin{align}\nQ_d &= 100 -2P \\\\\nQ_s &= 20+3P\n\\end{align}\n\\] 2.) \\[\n\\displaystyle\n\\begin{align}\nQ_d &= 500 -5P \\\\\nQ_s &= 100+10P\n\\end{align}\n\\] 3.) \\[\n\\displaystyle\n\\begin{align}\nQ_d &= 800 -\\frac{3P}{2} \\\\\nQ_s &= 20+2P\n\\end{align}\n\\] 4.) \\[\n\\displaystyle\n\\begin{align}\nx+y+z &= 6 \\\\\n2x-y+3z &= 14 \\\\\n-3x+4y+z &= -2\n\\end{align}\n\\]",
+    "text": "Métodos de solución\n\nMétodo gráfico\nLos sistemas de ecuaciones lineales pueden ser representados como rectas dentro de un plano cartesiano, por ello una forma práctica de encontrar el conjunto solución del sistema es el método gráfico, el cual consiste en asignar valores arbitrarios a las incógnitas en cada ecuación para conocer los puntos por los que pasa la recta. Aunque los valores pueden ser los que sean, se recomienda utilizar el cero porque nos permite identificar los puntos en que la recta corta en el eje \\(x\\) o \\(y\\).\nPara resolver el siguiente sistema de ecuaciones\n\\[\n\\begin{align}\nx+y &= 5 \\tag{A} \\\\\nx-y &= 1 \\tag{B}\n\\end{align}\n\\] Primero sustituimos \\(x\\) y \\(y\\) por cero en la ecuación A para obtener los puntos donde la recta cruza por alguno de los ejes: Cuando \\(x = 0\\), \\(y=5\\) y nuestro punto a graficar es el \\((0,5)\\) Cuando \\(y = 0\\), \\(x=5\\) y nuestro punto a graficar es el \\((5,0)\\) Repetimos este proceso en la ecuación B: Cuando \\(x = 0\\), \\(y=-1\\) y nuestro punto a graficar es el \\((0,-1)\\) Cuando \\(y = 0\\), \\(x=1\\) y nuestro punto a graficar es el \\((1,0)\\)\nCon estos cuatro puntos podemos representar ambas rectas y encontrar la solución.\n\n\n\n\n\n\n\n\nMétodo de sustitución\nEl método de sustitución consiste en despejar alguna de las incógnitas en cualquiera de las ecuaciones y sustituir en alguna de las otras hasta obtener el valor de todas las incógnitas. Utilizando el sistema de ecuaciones previo, podemos despejar \\(x\\) en la ecuación A y posteriormente sustituir ese valor en la ecuación B\n\\[\n\\begin{align}\nx+y &= 5 \\tag{A} \\\\\nx &= 5-y \\\\\nx-y &= 1 \\tag{B} \\\\\n(5-y) -y &= 1 \\\\\n-2y &=1-5 \\\\\ny&=\\frac{-4}{-2}=2 \\\\\nx+y &= 5 \\tag{A} \\\\\nx+2 &=5 \\\\\nx&=5-2=3 \\\\\n\\mathbf{x} &= \\mathbf{3}; \\mathbf{y} = \\mathbf{2} \\tag{Solución}\\\\\n\\end{align}\n\\]\n\n\nEjercicios\nLos siguientes ejercicios fueron resueltos durante la clase.\n1.)\n\\[\n\\displaystyle\n\\begin{align}\nQ_d &= 100 -2P \\\\\nQ_s &= 20+3P\n\\end{align}\n\\]\n2.) \\[\n\\displaystyle\n\\begin{align}\nQ_d &= 500 -5P \\\\\nQ_s &= 100+10P\n\\end{align}\n\\]\n3.) \\[\n\\displaystyle\n\\begin{align}\nQ_d &= 800 -\\frac{3P}{2} \\\\\nQ_s &= 20+2P\n\\end{align}\n\\] 4.) \\[\n\\displaystyle\n\\begin{align}\nx+y+z &= 6 \\\\\n2x-y+3z &= 14 \\\\\n-3x+4y+z &= -2\n\\end{align}\n\\]",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
+    ]
+  },
+  {
+    "objectID": "01_ejercicios.html",
+    "href": "01_ejercicios.html",
+    "title": "Ejercicios",
+    "section": "",
+    "text": "Ejercicio 1.\nDurante esta clase resolvimos, por el método de sustitución, igualación y gráfico, los siguientes ejercicios.\n\\[\n\\begin{align}\n5x-8y &= -\\frac{64}{16} \\tag{A}\\\\\\\\\n2x+3y &= \\frac{153}{40} \\tag{B}\\\\\n\\end{align}\n\\]",
+    "crumbs": [
+      "Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ejercicios</span>"
+    ]
+  },
+  {
+    "objectID": "01_ejercicios.html#ejercicio-1.",
+    "href": "01_ejercicios.html#ejercicio-1.",
+    "title": "Ejercicios",
+    "section": "",
+    "text": "Método de sustituciónMétodo de igualaciónMétodo gráfico\n\n\n\nDespejamos para una variable, en este caso despejamos \\(x\\) de la ecuación A \\[\n\\begin{align}\n5x &= -\\frac{64}{16} +8y \\\\\\\\\n5x &= -4+8y \\\\\\\\\nx &= \\frac{8}{5}y-\\frac{4}{5} \\tag{A1} \\\\\n\\end{align}\n\\]\nSustituimos \\(x\\) en la ecuación B \\[\n\\begin{align}\n2(\\frac{8}{5}y-\\frac{4}{5})+3y &= \\frac{153}{40} \\\\\\\\\n\\frac{16}{5}y-\\frac{8}{5} +3y &= \\frac{153}{40} \\\\\\\\\n\\frac{16}{5}y-\\frac{15}{5}y &= \\frac{153}{40} + \\frac{8}{5} \\\\\\\\\n\\frac{31}{5}y&= \\frac{153+64}{40} = \\frac{217}{40} \\\\\\\\\ny&= \\frac{217}{40}(\\frac{5}{31}) \\\\\\\\\n\\end{align}\n\\] Tip: Cuando trabajen con fracciones grandes, busquen siempre la manera de simplificar o reducir las operaciones que deben realizar. En este caso, para evitar la multiplicación por \\(\\frac{5}{31}\\) podemos replantear \\(\\frac{217}{40}\\) de la siguiente manera\n\n\\[\n\\begin{align}\ny &= \\frac{(7)(\\color{blue}{31})}{(8)(\\color{green}{5})}(\\frac{\\color{green}{5}}{\\color{blue}{31}}) \\\\\n\\mathbf{y} &= \\mathbf{\\frac{7}{8}}\n\\end{align}\n\\] 3) Sustituimos el valor de \\(y\\) en la ecuación A1 \\[\n\\begin{align}\nx &= \\frac{8}{5}y-\\frac{4}{5} \\tag{A1} \\\\\\\\\nx &= \\frac{8}{5}(\\frac{7}{8})-\\frac{4}{5} \\\\\\\\\nx &= \\frac{7}{5}-\\frac{4}{5} \\\\\\\\\n\\mathbf{x} &= \\mathbf{\\frac{3}{5}}\n\\end{align}\n\\] Solución \\[\n\\begin{align}\nx &= \\frac{3}{5} \\\\ \\\\\ny&= \\frac{7}{8}\n\\end{align}\n\\]\n\n\n\nDespejamos una de las incógnitas en ambas ecuaciones, para este ejemplo utilizaremos \\(x\\)\n\n\\[\n\\begin{align}\n5x &= -\\frac{64}{16} +8y \\\\\\\\\n5x &= -4+8y \\\\\\\\\nx &= \\frac{8}{5}y-\\frac{4}{5} \\tag{A1} \\\\\\\\\n\\\\\n\\\\\n2x &= \\frac{153}{40} -3y \\\\\\\\\nx &= (\\frac{1}{2})(\\frac{153}{40}-3y) \\\\\\\\\nx &= \\frac{153}{80} - \\frac{3}{2}y \\tag{B1}\n\\end{align}\n\\]\n\nIgualamos las ecuaciones A1 y B1\n\n\\[\n\\begin{align}\n\\frac{8}{5}y-\\frac{4}{5} &= \\frac{153}{80} - \\frac{3}{2}y \\\\ \\\\\n\\frac{8}{5}y+\\frac{3}{2}y &= \\frac{153}{80} + \\frac{4}{5} \\\\\\\\\n\\frac{16+15}{10}y &= \\frac{765+320}{400} \\\\\\\\\n\\frac{31}{10}y &= \\frac{1085}{400} \\\\\\\\\ny &= \\frac{1085}{400} (\\frac{10}{31})=\\frac{(35)(31)}{(40)(10)} (\\frac{10}{31})  \\\\\\\\\ny &= \\frac{35}{40} = \\frac{(7)(5)}{(8)(5)}  \\\\\\\\\ny&=\\frac{7}{8}\n\\end{align}\n\\]\n\nPor último sustituimos el valor de \\(y\\) en la ecuación A1 para obtener el valor de \\(x\\)\n\n\\[\n\\begin{align}\nx &= \\frac{8}{5}y-\\frac{4}{5} \\tag{A1} \\\\ \\\\\nx &= \\frac{8}{5}(\\frac{7}{8})-\\frac{4}{5} \\\\ \\\\\nx &= \\frac{7}{5}-\\frac{4}{5} \\\\ \\\\\nx &= \\frac{3}{5}\n\\end{align}\n\\] Solución\n\\[\n\\begin{align}\nx &= \\frac{3}{5}\n\\\\\\\\\ny&=\\frac{7}{8}\n\\end{align}\n\\]\n\n\nLa solución por método gráfico requiere que en cada recta conozcamos al menos dos puntos que nos permitan graficar, los más sencillos serían los puntos donde \\(x=0\\) e \\(y=0\\). En la ecuación A tenemos los siguientes puntos \\[\n\\begin{align}\n5x-8y &= -\\frac{64}{16} \\tag{A}\\\\\\\\\n5(0)-8y&=-4 \\\\\\\\\ny&=\\frac{-4}{-8}=\\frac{1}{2} \\\\\\\\\nx=0; \\quad y&=\\frac{1}{2} \\tag{Punto A1} \\\\\\\\\n\\\\\\\\\n5x-8(0)&=-4 \\\\\\\\\nx&=-\\frac{4}{5} \\\\\\\\\n\\quad \\quad x=-\\frac{4}{5}; \\quad y&=0 \\tag{Punto A2}\n\\end{align}\n\\] En la ecuación B tenemos los siguientes puntos \\[\n\\begin{align}\n2x+3y &= \\frac{153}{40} \\tag{B}\\\\\\\\\n2(0)+3y &= \\frac{153}{40} \\\\\\\\\ny&=(\\frac{1}{3})\\frac{153}{40}= \\frac{153}{120} \\tag{Punto B1} \\\\\\\\\n\\\\\\\\\n2x+3(0) &= \\frac{153}{40} \\\\\\\\\ny&=(\\frac{1}{2})\\frac{153}{40}= \\frac{153}{80} \\tag{Punto B2} \\\\\\\\\n\\end{align}\n\\]\nEste conjunto de puntos nos permite graficar y visualizar la solución del sistema de ecuaciones.",
+    "crumbs": [
+      "Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ejercicios</span>"
+    ]
+  },
+  {
+    "objectID": "01_ejercicios.html#ejercicio-2.",
+    "href": "01_ejercicios.html#ejercicio-2.",
+    "title": "Ejercicios",
+    "section": "Ejercicio 2.",
+    "text": "Ejercicio 2.\n\\[\n\\begin{align}\n3x+3y+6z &= 4.5 \\tag{A}\\\\\\\\\n5x-4y-3z &= \\frac{53}{4} \\tag{B}\\\\\\\\\nx+y-2z &= 0.5 \\tag{C}\\\\\n\\end{align}\n\\] 1) Elegimos una ecuación y una incógnita para despejar, en este caso elegimos la ecuación C y la incógnita \\(x\\)\n\\[\nx=-y+2z+\\frac{1}{2} \\tag{C1}\n\\]\nNoten que convertimos el 0.5 en fracción para hacer más sencillas las operaciones en los siguientes pasos.\n\nSustituimos el valor de \\(x\\) en alguna de las ecuaciones restantes, por ejemplo la ecuación A\n\n\\[\n\\begin{align}\n3x+3y+6z &= 4.5 \\tag{A}\\\\\\\\\n3(-y+2z+\\frac{1}{2})+3y+6z &= \\frac{9}{2}\\\\\\\\\n-3y+6z+\\frac{3}{2}+3y+6z &= \\frac{9}{2}\\\\\\\\\n12z&=\\frac{9}{2}-\\frac{3}{2}= \\frac{6}{2}=3 \\\\\\\\\nz &= \\frac{3}{12}= \\frac{1}{4} \\tag{A1}\\\\\n\\end{align}\n\\]\n\nSustituimos los valores de \\(x\\) y \\(y\\), que obtuvimos en las ecuaciones C1 y A1 respectivamente, en la ecuación B\n\n\\[\n\\begin{align}\n5x-4y-3z &= \\frac{53}{4} \\tag{B}\\\\\\\\\n5(-y+2z+\\frac{1}{2})-4y-3(\\frac{1}{4}) &= \\frac{53}{4} \\\\\\\\\n-5y+10z+\\frac{5}{2}-4y-\\frac{3}{4} &= \\frac{53}{4} \\\\\\\\\n-9y+10(\\frac{1}{4}) &= \\frac{53}{4}+ \\frac{3}{4} - \\frac{5}{2}(\\frac{2}{2}) \\\\\\\\\n-9y &= \\frac{56}{4}- \\frac{10}{4} -\\frac{10}{4} = \\frac{36}{4} = \\frac{(9)(4)}{4}  \\\\\\\\\ny&=\\frac{9}{-9}=-1 \\tag{B1}\n\\end{align}\n\\]\n\nPor último, sustituimos en C1 los valores de \\(z\\) e \\(y\\) que obtuvimos en las ecuaciones A1 y B1\n\n\\[\n\\begin{align}\nx&=-y+2z+\\frac{1}{2} \\tag{C1} \\\\\\\\\nx&=-(-1)+2(\\frac{1}{4}) +\\frac{1}{2} \\\\\\\\\nx&=1+\\frac{1}{2}+\\frac{1}{2}=2\n\\end{align}\n\\]\nSolución \\[\n\\begin{align}\nx&=2 \\\\\\\\\ny&=-1 \\\\\\\\\nz &= \\frac{1}{4}\n\\end{align}\n\\]",
+    "crumbs": [
+      "Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ejercicios</span>"
+    ]
+  },
+  {
+    "objectID": "01_ejercicios.html#ejercicio-3.",
+    "href": "01_ejercicios.html#ejercicio-3.",
+    "title": "Ejercicios",
+    "section": "Ejercicio 3.",
+    "text": "Ejercicio 3.\n\\[\n\\begin{align}\n2Q_D+3P &= 100 \\tag{A}\\\\\\\\\nQ_S &= 2P-55 \\tag{B}\\\\\n\\end{align}\n\\]\n\nMétodo de sustituciónMétodo de igualaciónMétodo gráfico\n\n\n\nEn este sistema de ecuaciones ya contamos con una incógnita despejada en la ecuación B, por lo que iniciaremos sustituyendo su valor en la ecuación A. Recuerden que en estos casos \\(Q_S\\) y \\(Q_D\\) refieren a cantidades, el subíndice solo indica si se tratan de cantidades ofrecidas o demandadas, por lo que \\(Q_S=Q=Q_D\\)\n\n\\[\n\\begin{align}\n2Q_D+3P &= 100 \\tag{A}\\\\\\\\\n2(2P-55)+3P&=100\\\\\\\\\n4P-110+3P&=100\\\\\\\\\n7P&=100+110\\\\\\\\\nP&=\\frac{210}{7}=30\\\\\\\\\n\\end{align}\n\\]\n\nPara finalizar, sustituimos el valor de P en la ecuación B\n\n\\[\n\\begin{align}\nQ_S &= 2P-55 \\tag{B}\\\\\\\\\nQ_S &=2(30)-55\\\\\\\\\nQ&=60-55=5\n\\end{align}\n\\]\nSolución\n\\[\n\\begin{align}\nP&=30\\\\\\\\\nQ&=5\n\\end{align}\n\\]\n\n\n\nLa ecuación B ya se encuentra despejada para Q, por lo que hacemos lo mismo con la ecuación A.\n\n\\[\n\\begin{align}\n2Q_D+3P &= 100 \\tag{A}\\\\\\\\\n2Q_D &= 100-3P \\\\\\\\\nQ_D &= \\frac{100-3P}{2}=50-\\frac{3}{2}P \\tag{A1} \\\\\\\\\n\\end{align}\n\\]\n\nIgualamos la ecuación B y A1. Recuerden que para solucionar algebraicamente este sistema se considera que \\(Q_S=Q=Q_D\\)\n\n\\[\n\\begin{align}\nQ_D &= 50-\\frac{3}{2}P \\tag{A1} \\\\\\\\\nQ_S &= 2P-55 \\tag{B}\\\\\\\\\n2P-55 &= 50-\\frac{3}{2}P \\\\\\\\\n2P+\\frac{3}{2}P&= 50+55 \\\\\\\\\n\\frac{4}{2}P+\\frac{3}{2}P&= 105 \\\\\\\\\n\\frac{7}{2}P&= 105 \\\\\\\\\nP&= (\\frac{105}{1})(\\frac{2}{7})=\\frac{210}{7} \\\\\\\\\nP&=30\n\\end{align}\n\\]\n\nSustituimos el valor de \\(P\\) en cualquiera de las ecuaciones del sistema para obtener el valor de \\(Q\\), utilizamos la ecuación B por ser la que requiere menor número de operaciones.\n\n\\[\n\\begin{align}\nQ_S &= 2P-55 \\tag{B}\\\\\nQ&=2(30)-55=60-55\\\\\nQ&=5\n\\end{align}\n\\]\nSolución\n\\[\n\\begin{align}\nP&=30\\\\\nQ&=5\n\\end{align}\n\\]\n\n\n\nEn cada ecuación, identificamos los puntos en los que \\(x=0\\) e \\(y=0\\). En la ecuación B tenemos\n\n\\[\n\\begin{align}\nQ_S &= 2P-55 \\tag{B}\\\\\\\\\nQ_S&=2(0)-55 \\\\\\\\\nP=0; \\quad Q&=-55 \\tag{Punto B1} \\\\\\\\\n\\\\\\\\\n0 &= 2P-55 \\\\\\\\\nP &= \\frac{55}{2} \\\\\\\\\nP=\\frac{55}{2}; \\quad Q&=0 \\tag{Punto B2} \\\\\\\\\n\\end{align}\n\\]\n\nEn la ecuación A tenemos\n\n\\[\n\\begin{align}\n2Q_D+3P &= 100 \\tag{A}\\\\\\\\\n2Q_D+3(0)&=100 \\\\\\\\\nQ_D &= \\frac{100}{2}=50 \\\\\\\\\nP=0; \\quad Q&=50 \\tag{Punto A1} \\\\\\\\\n\\\\\\\\\n2(0)+3P &= 100 \\\\\\\\\nP &= \\frac{100}{3} \\\\\\\\\nP=\\frac{100}{3}; \\quad Q&=0 \\tag{Punto A2} \\\\\\\\\n\\end{align}\n\\]\n\nGraficamos utilizando como referencia los puntos anteriores",
+    "crumbs": [
+      "Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ejercicios</span>"
+    ]
+  },
+  {
+    "objectID": "01_ejercicios.html#ejercicio-4.",
+    "href": "01_ejercicios.html#ejercicio-4.",
+    "title": "Ejercicios",
+    "section": "Ejercicio 4.",
+    "text": "Ejercicio 4.\n\\[\n\\begin{align}\nx+y-z &= -1 \\tag{A}\\\\\\\\\n-x+2y-2z&=-5 \\tag{B}\\\\\\\\\n2x+3y+z&=12 \\tag{C}\\\\\\\\\n\\end{align}\n\\]\n\nElegimos una ecuación y despejamos cualquiera de las incógnitas, en este ejemplo despejamos \\(x\\) de la ecuación A\n\n\\[\n\\begin{align}\nx+y-z &= -1 \\tag{A}\\\\\\\\\nx&=-1-y+z \\tag{A1}\n\\end{align}\n\\] 2) Sustituimos el valor de \\(x\\) en la ecuación B\n\\[\n\\begin{align}\n-x+2y-2z&=-5 \\tag{B}\\\\\\\\\n-(-1-y+z)+2y-2z&=-5 \\\\\\\\\n1+y-z+2y-2z&=-5 \\\\\\\\\n3y-3z&=-5-1 \\\\\\\\\n3(y-z)&=-6 \\\\\\\\\ny-z&=-\\frac{6}{3}=-2 \\\\\\\\\ny&=-2+z \\tag{B1}\n\\end{align}\n\\]\nNoten como se redujo el número de incógnitas entre la ecuación A1 y B1, esto es un indicador importante de que estamos avanzando hacia la solución del sistema.\n\nEn la ecuación C, sustituimos los valores de \\(x\\) e \\(y\\) que obtuvimos en las ecuaciones A1 y B1\n\n\\[\n\\begin{align}\n2x+3y+z&=12 \\tag{C}\\\\\\\\\n2(-1-y+z)+3(-2+z)+z&=12 \\\\\\\\\n-2-2y+2z-6+3z+z&=12 \\\\\\\\\n6z-2y&=12+8 \\tag{*} \\\\\\\\\n6z-2(-2+z)&=20 \\\\\\\\\n6z+4-2z&=20 \\\\\\\\\n4z&=20-4 \\\\\\\\\nz&=\\frac{16}{4}=4 \\tag{C1}\n\\end{align}\n\\]\nEs posible que al sustituir obtengamos como resultado una ecuación con dos incógnitas, como en la ecuación marcada con (*). En estos casos hay que continuar sustituyendo, siempre y cuando conozcamos el valor de alguna de las incógnitas.\n\nLa ecuación C1 nos dio como resultado el valor de \\(z\\), con él podemos obtener el valor de \\(y\\) en la ecuación B1 y posteriormente podremos obtener el valor de \\(x\\) en la ecuación A1.\n\n\\[\n\\begin{align}\ny&=-2+z \\tag{B1} \\\\\ny&=-2+4=2 \\\\\\\\\nx&=-1-y+z \\tag{A1} \\\\\nx&=-1-2+4=1\n\\end{align}\n\\] Solución\n\\[\n\\begin{align}\nx&=1 \\\\\ny&=2 \\\\\nz&=4\n\\end{align}\n\\]",
+    "crumbs": [
+      "Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ejercicios</span>"
+    ]
+  },
+  {
+    "objectID": "01_ejercicios.html#ejercicio-5.",
+    "href": "01_ejercicios.html#ejercicio-5.",
+    "title": "Ejercicios",
+    "section": "Ejercicio 5.",
+    "text": "Ejercicio 5.\n\\[\n\\begin{align}\n2x+3y+z &= 12 \\tag{A}\\\\\\\\\n-x+y-3z&=4 \\tag{B}\\\\\\\\\n14x+21y+7z&=84 \\tag{C}\\\\\\\\\n\\end{align}\n\\]\nEste es un ejemplo de sistema que no tiene solución. Como se ha mencionado en clase, una de las formas para saberlo es identificando que una de las ecuaciones es múltiplo de otra. En este sistema, si multiplicamos la ecuación A por 7 obtenemos la ecuación C.\n\\[\n\\begin{align}\n2x+3y+z &= 12 \\tag{A}\\\\\n7(2x+3y+z) &= 7(12)\\\\\n14x+21y+7z&=84\\\\\\\\\n\\end{align}\n\\]\nTambién podemos hacer la operación inversa (división) en la ecuación C.\n\\[\n\\begin{align}\n14x+21y+7z&=84 \\tag{C}\\\\\\\\\n\\frac{1}{7}(14x+21y+7z)&=\\frac{84}{7} \\\\\\\\\n2x+3y+z &= 12\n\\end{align}\n\\]\nNo importa la operación que realicen o la ecuación que elijan para comprobar, lo importante es que realicen la operación en ambos términos de la ecuación.",
+    "crumbs": [
+      "Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ejercicios</span>"
     ]
   }
 ]
