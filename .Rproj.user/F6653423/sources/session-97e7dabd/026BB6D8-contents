@@ -1,0 +1,1521 @@
+---
+title: "Tarea 1 (05-sept)"
+---
+
+```{r Funciones, include=FALSE}
+library(highcharter)
+
+graficar_sistema2d <- function(A, b, x_range = c(-5, 5), step = 0.1,
+                             eq_labels = c("Ecuación 1", "Ecuación 2"),
+                             puntos_a = NULL, puntos_b = NULL,
+                             titulo = "Método gráfico") {
+  
+  sol <- solve(A, b)
+
+  a1 <- A[1,1]; b1 <- A[1,2]; c1 <- b[1]
+  a2 <- A[2,1]; b2 <- A[2,2]; c2 <- b[2]
+  
+  x_val <- seq(x_range[1], x_range[2], step)
+  
+  y1 <- (c1 - a1*x_val) / b1
+  y2 <- (c2 - a2*x_val) / b2
+  
+  df1 <- data.frame(x = x_val, y = y1)
+  df2 <- data.frame(x = x_val, y = y2)
+  df_sol <- data.frame(x = sol[1], y = sol[2])
+  
+  hc <- highchart() %>%
+    hc_add_series(df1, "spline", hcaes(x = x, y = y), name = eq_labels[1], color = "blue",
+                  marker = list(enabled = FALSE)) %>%
+    hc_add_series(df2, "spline", hcaes(x = x, y = y), name = eq_labels[2], color = "red",
+                  marker = list(enabled = FALSE)) %>%
+    hc_add_series(df_sol, "scatter", hcaes(x = x, y = y),
+                  name = "Solución",
+                    # paste0("Solución (", round(sol[1],3), ", ", round(sol[2],3), ")"),
+                  marker = list(symbol = "circle", radius = 6, fillColor = "black")) %>%
+    hc_title(text = titulo,
+             style = list(fontSize = "18px", fontWeight = "bold")) %>%
+    hc_legend(enabled = TRUE) %>% 
+    hc_xAxis(plotLines = list(list(value = 0, color = "darkgrey", width = 2, zIndex = 3))) %>%
+    hc_yAxis(plotLines = list(list(value = 0, color = "darkgrey", width = 2, zIndex = 3))) %>%
+    hc_tooltip(shared = FALSE) %>%
+    hc_plotOptions(series = list(animation = FALSE,
+                                 states = list(inactive = list(enabled = FALSE),
+                                               hover = list(animation = list(duration = 0)))))
+  
+  if (!is.null(puntos_a)) {
+    hc <- hc %>% hc_add_series(puntos_a, "scatter", hcaes(x = x, y = y, name = label),
+                               showInLegend = FALSE,
+                               marker = list(symbol = "diamond", radius = 6, fillColor = "orange"),
+                               dataLabels = list(enabled = TRUE, format = "{point.name}"))
+  }
+  if (!is.null(puntos_b)) {
+    hc <- hc %>% hc_add_series(puntos_b, "scatter", hcaes(x = x, y = y, name = label),
+                               showInLegend = FALSE,
+                               marker = list(symbol = "triangle", radius = 6, fillColor = "orange"),
+                               dataLabels = list(enabled = TRUE, format = "{point.name}"))
+  }
+  
+  return(hc)
+}
+
+graficar_sistema3d <- function(A, b, 
+                                range = c(-10, 10), step = 1,
+                                eq_labels = c("Ecuación 1", "Ecuación 2", "Ecuación 3"),
+                                titulo = "Sistema 3x3") {
+  
+
+  sol <- solve(A, b)
+  sol_df <- data.frame(x = sol[1], y = sol[2], z = sol[3])
+  
+  x_seq <- seq(range[1], range[2], step)
+  y_seq <- seq(range[1], range[2], step)
+  grid <- expand.grid(x = x_seq, y = y_seq)
+  
+  z1 <- (b[1] - A[1,1]*grid$x - A[1,2]*grid$y) / A[1,3]
+  z2 <- (b[2] - A[2,1]*grid$x - A[2,2]*grid$y) / A[2,3]
+  z3 <- (b[3] - A[3,1]*grid$x - A[3,2]*grid$y) / A[3,3]
+  
+  df1 <- data.frame(x = grid$x, y = grid$y, z = z1)
+  df2 <- data.frame(x = grid$x, y = grid$y, z = z2)
+  df3 <- data.frame(x = grid$x, y = grid$y, z = z3)
+  
+  hc <- highchart() %>%
+    hc_chart(type = "scatter3d", options3d = list(
+      enabled = TRUE, alpha = 10, beta = 30, depth = 500, viewDistance = 25
+    )) %>%
+    hc_add_series(df1, type = "scatter3d", hcaes(x = x, y = y, z = z),
+                  name = eq_labels[1], color = "blue", marker = list(radius = 1.5)) %>%
+    hc_add_series(df2, type = "scatter3d", hcaes(x = x, y = y, z = z),
+                  name = eq_labels[2], color = "red", marker = list(radius = 1.5)) %>%
+    hc_add_series(df3, type = "scatter3d", hcaes(x = x, y = y, z = z),
+                  name = eq_labels[3], color = "green", marker = list(radius = 1.5)) %>%
+    hc_add_series(sol_df, type = "scatter3d", hcaes(x = x, y = y, z = z),
+                  name = paste0("Solución (", round(sol[1],2), ", ", round(sol[2],2), ", ", round(sol[3],2), ")"),
+                  marker = list(symbol = "circle", radius = 6, fillColor = "orange")) %>%
+    hc_title(text = titulo,
+             style = list(fontSize = "18px", fontWeight = "bold"))
+  
+  return(hc)
+}
+```
+
+
+Partiendo de las siguientes funciones de oferta ($Q_S$) y demanda ($Q_D$) determine el precio y cantidad de equilibrio por los **métodos de igualación, sustitución y gráfico**. 
+
+## A1)
+
+$$
+\begin{align}
+Q_D &= 30-4P \tag{A} \\
+Q_S &= 11-3P \tag{B}\\
+\end{align}
+$$
+
+::: {.panel-tabset}
+
+### Igualación
+
+1) Igualamos ambas ecuaciones
+
+$$
+\begin{align}
+30-4P&=11+3P
+\end{align}
+$$
+
+2) Despejamos para $P$
+
+$$
+\begin{align}
+30-4P&=11+3P\\
+4P+3P&=30-11\\
+7P&=19\\
+P&=\frac{19}{7}
+\end{align}
+$$
+
+3) Sustituimos en cualquiera de nuestras ecuaciones iniciales
+
+$$
+\begin{align}
+Q_S&=11+3P\\
+Q_S&=11+3(\frac{19}{7}) \\
+Q_S&=\frac{134}{7}\\
+\end{align}
+$$
+
+#### Solución
+
+$$
+\begin{align}
+P&= \frac{19}{7} \\
+Q&=\frac{134}{7}\\
+\end{align}
+$$
+
+
+### Gráfico
+
+1) Identificamos los puntos donde la ecuación interseca con los ejes $X$ e $Y$, en este caso los ejes $P$ y $Q$ respectivamente. Para la ecuación A tenemos los siguientes puntos:
+
+$$
+\begin{align}
+Q_D &= 30-4P \tag{A}\\
+0&=30-4P\\
+4P&=30\\
+P&=\frac{30}{4}=\frac{15}{2} \\\\
+P&=\frac{15}{2}; \quad Q=0 \tag{Punto A1} \\
+\\\\
+Q_D&=30-4(0) \\
+Q_D&=30 \\\\
+P&=0; \quad Q=30 \tag{Punto A2}
+\end{align}
+$$
+
+2) En la ecuación B tenemos los siguientes puntos
+
+$$
+\begin{align}
+Q_S &= 11+3P \tag{B}\\
+0&=11+3P\\
+3P&=-11\\
+P&=-\frac{11}{3}\\\\
+P&=-\frac{11}{3}; \quad Q=0 \tag{Punto B1} \\
+\\\\
+Q_S&=11+3(0) \\
+Q_S&=11 \\\\
+P&=0; \quad Q=11 \tag{Punto B2}
+\end{align}
+$$
+
+3) Con este conjunto de puntos, graficamos el sistema
+
+```{r A1, echo=FALSE, warning = FALSE, message=FALSE}
+
+a1_A <- matrix(c(4, 1, -3, 1), nrow=2, byrow=TRUE)
+a1_b <- c(30, 11)
+
+int_a1 <- data.frame(x= c(15/2, 0), y=c(0, 30), label= c("Punto A1", "Punto A2"))
+int_b1 <- data.frame(x= c(-11/3, 0), y=c(0, 11), label= c("Punto B1", "Punto B2"))
+
+graficar_sistema2d(A = a1_A,
+                   b = a1_b,
+                   x_range = c(-10,10),
+                   eq_labels = c("Q=30-4P", "Q=11+3P"),
+                   puntos_a = int_a1,
+                   puntos_b = int_b1)
+
+```
+
+:::
+
+## A2)
+
+$$
+\begin{align}
+Q_D &= 35-5P \tag{A} \\
+Q_S &= 14+4P \tag{B}\\
+\end{align}
+$$
+
+::: {.panel-tabset}
+
+### Igualación
+
+1) Igualamos ambas ecuaciones
+
+$$
+\begin{align}
+35-5P&=14+4P
+\end{align}
+$$
+
+2) Despejamos para $P$
+
+$$
+\begin{align}
+35-14&=4P+5P\\
+9P&=21\\
+P&=\frac{21}{9}=\frac{7}{3}
+\end{align}
+$$
+
+3) Sustituimos en cualquiera de nuestras ecuaciones iniciales
+
+$$
+\begin{align}
+Q_S&=14+4(\frac{7}{3})\\
+Q_S&=\frac{42}{3}+\frac{28}{3} \\
+Q_S&=\frac{70}{3}\\
+\end{align}
+$$
+
+#### Solución
+
+$$
+\begin{align}
+P&= \frac{7}{3} \\
+Q&=\frac{70}{3}\\
+\end{align}
+$$
+
+
+### Gráfico
+
+1) Identificamos los puntos donde la ecuación interseca con los ejes $X$ e $Y$, en este caso los ejes $P$ y $Q$ respectivamente. Para la ecuación A tenemos los siguientes puntos:
+
+$$
+\begin{align}
+Q_D &= 35-5P \tag{A}\\
+0&=35-5P\\
+5P&=35\\
+P&=\frac{35}{5}=7 \\\\
+P&=7; \quad Q=0 \tag{Punto A1} \\
+\\\\
+Q_D&=35-5(0) \\
+Q_D&=35 \\\\
+P&=0; \quad Q=35 \tag{Punto A2}
+\end{align}
+$$
+
+2) En la ecuación B tenemos los siguientes puntos
+
+$$
+\begin{align}
+Q_S &= 14+4P \tag{B}\\
+0&=14+4P\\
+4P&=-14\\
+P&=-\frac{14}{4}=-\frac{7}{2} \\\\
+P&=-\frac{7}{2}; \quad Q=0 \tag{Punto B1} \\
+\\\\
+Q_S&=14+4(0) \\
+Q_S&=14 \\\\
+P&=0; \quad Q=14 \tag{Punto B2}
+\end{align}
+$$
+
+3) Con este conjunto de puntos, graficamos el sistema
+
+```{r A2, echo=FALSE, warning = FALSE, message=FALSE}
+
+a2_A <- matrix(c(5, 1, -4, 1), nrow=2, byrow=TRUE)
+a2_b <- c(35, 14)
+
+int_a2 <- data.frame(x= c(7, 0), y=c(0, 35), label= c("Punto A1", "Punto A2"))
+int_b2 <- data.frame(x= c(-7/2, 0), y=c(0, 14), label= c("Punto B1", "Punto B2"))
+
+graficar_sistema2d(A = a2_A,
+                   b = a2_b,
+                   x_range = c(-5,10),
+                   eq_labels = c("Q=35-5P", "Q=14+4P"),
+                   puntos_a = int_a2,
+                   puntos_b = int_b2)
+```
+
+:::
+
+
+## A3)
+
+$$
+\begin{align}
+Q_D &= 45-7P \tag{A} \\
+Q_S &= 20+6P \tag{B}\\
+\end{align}
+$$
+
+::: {.panel-tabset}
+
+### Igualación
+
+1) Igualamos ambas ecuaciones
+
+$$
+\begin{align}
+45-7P&=20+6P
+\end{align}
+$$
+
+2) Despejamos para $P$
+
+$$
+\begin{align}
+45-20&=7P+6P\\
+13P&=25\\
+P&=\frac{25}{13}
+\end{align}
+$$
+
+3) Sustituimos en cualquiera de nuestras ecuaciones iniciales
+
+$$
+\begin{align}
+Q_D&=45-7(\frac{25}{13})\\
+Q_D&=\frac{585}{13}-\frac{175}{13}\\
+Q_D&=\frac{410}{13}\\
+\end{align}
+$$
+
+#### Solución
+
+$$
+\begin{align}
+P&= \frac{25}{13} \\
+Q&=\frac{410}{13}\\
+\end{align}
+$$
+
+
+### Gráfico
+
+1) Identificamos los puntos donde la ecuación interseca con los ejes $X$ e $Y$, en este caso los ejes $P$ y $Q$ respectivamente. Para la ecuación A tenemos los siguientes puntos:
+
+$$
+\begin{align}
+Q_D &= 45-7P \tag{A}\\
+0&=45-7P\\
+7P&=45\\
+P&=\frac{45}{7} \\\\
+P&=\frac{45}{7}; \quad Q=0 \tag{Punto A1} \\
+\\\\
+Q_D&=45-7(0) \\
+Q_D&=45 \\\\
+P&=0; \quad Q=45 \tag{Punto A2}
+\end{align}
+$$
+
+2) En la ecuación B tenemos los siguientes puntos
+
+$$
+\begin{align}
+Q_S &= 20+6P \tag{B}\\
+0&=20+6P\\
+6P&=-20\\
+P&=-\frac{20}{6}=-\frac{10}{3} \\\\
+P&=-\frac{10}{3}; \quad Q=0 \tag{Punto B1} \\
+\\\\
+Q_S&=20+6(0) \\
+Q_S&=20 \\\\
+P&=0; \quad Q=20 \tag{Punto B2}
+\end{align}
+$$
+
+3) Con este conjunto de puntos, graficamos el sistema
+
+```{r A3, echo=FALSE, warning = FALSE, message=FALSE}
+
+a3_A <- matrix(c(7, 1, -6, 1), nrow=2, byrow=TRUE)
+a3_b <- c(45, 20)
+
+int_a3 <- data.frame(x= c(45/7, 0), y=c(0, 45), label= c("Punto A1", "Punto A2"))
+int_b3 <- data.frame(x= c(-10/3, 0), y=c(0, 20), label= c("Punto B1", "Punto B2"))
+
+graficar_sistema2d(A = a3_A,
+                   b = a3_b,
+                   x_range = c(-5,10),
+                   eq_labels = c("Q=45-7P", "Q=20+6P"),
+                   puntos_a = int_a3,
+                   puntos_b = int_b3)
+```
+
+:::
+
+
+## A4)
+
+$$
+\begin{align}
+Q_D &= 25-3P \tag{A} \\
+Q_S &= 2P+8 \tag{B}\\
+\end{align}
+$$
+
+::: {.panel-tabset}
+
+### Igualación
+
+1) Igualamos ambas ecuaciones
+
+$$
+\begin{align}
+25-3P&=2P+8
+\end{align}
+$$
+
+2) Despejamos para $P$
+
+$$
+\begin{align}
+25-8&=2P+3P\\
+5P&=17\\
+P&=\frac{17}{5}
+\end{align}
+$$
+
+3) Sustituimos en cualquiera de nuestras ecuaciones iniciales
+
+$$
+\begin{align}
+Q_S&=2(\frac{17}{5})+8\\
+Q_S&=\frac{34}{5}+\frac{40}{5}\\
+Q_S&=\frac{74}{5}\\
+\end{align}
+$$
+
+#### Solución
+
+$$
+\begin{align}
+P&= \frac{17}{5} \\
+Q&=\frac{74}{5}\\
+\end{align}
+$$
+
+
+### Gráfico
+
+1) Identificamos los puntos donde la ecuación interseca con los ejes $X$ e $Y$, en este caso los ejes $P$ y $Q$ respectivamente. Para la ecuación A tenemos los siguientes puntos:
+
+$$
+\begin{align}
+Q_D &= 25-3P \tag{A}\\
+0&=25-3P\\
+3P&=25\\
+P&=\frac{25}{3} \\\\
+P&=\frac{25}{3}; \quad Q=0 \tag{Punto A1} \\
+\\\\
+Q_D&=25-3(0) \\
+Q_D&=25 \\\\
+P&=0; \quad Q=25 \tag{Punto A2}
+\end{align}
+$$
+
+2) En la ecuación B tenemos los siguientes puntos
+
+$$
+\begin{align}
+Q_S &= 2P+8 \tag{B}\\
+0&=2P+8\\
+2P&=-8\\
+P&=-\frac{8}{2}=-4 \\\\
+P&=-4; \quad Q=0 \tag{Punto B1} \\
+\\\\
+Q_S&=2(0)+8 \\
+Q_S&=8 \\\\
+P&=0; \quad Q=8 \tag{Punto B2}
+\end{align}
+$$
+
+3) Con este conjunto de puntos, graficamos el sistema
+
+```{r A4, echo=FALSE, warning = FALSE, message=FALSE}
+
+a4_A <- matrix(c(3, 1, -2, 1), nrow=2, byrow=TRUE)
+a4_b <- c(25, 8)
+
+int_a4 <- data.frame(x= c(25/3, 0), y=c(0, 25), label= c("Punto A1", "Punto A2"))
+int_b4 <- data.frame(x= c(-4, 0), y=c(0, 8), label= c("Punto B1", "Punto B2"))
+
+graficar_sistema2d(A = a4_A,
+                   b = a4_b,
+                   x_range = c(-5,10),
+                   eq_labels = c("Q=25-3P", "Q=2P+8"),
+                   puntos_a = int_a4,
+                   puntos_b = int_b4)
+```
+
+:::
+
+
+## A5)
+
+$$
+\begin{align}
+2Q_D &= 80-12P \tag{A} \\
+Q_S &= 17+5P \tag{B}\\
+\end{align}
+$$
+
+::: {.panel-tabset}
+
+### Igualación
+
+1) En la ecuación A, despejamos $Q_D$ para poder igualar con la ecuación B
+
+$$
+\begin{align}
+2Q_D&=80-12P\\
+Q_D&=\frac{80-12P}{2}\\
+Q_D&=40-6P
+\end{align}
+$$
+
+2) Igualamos ambas ecuaciones
+
+$$
+\begin{align}
+40-6P&=17+5P
+\end{align}
+$$
+
+3) Despejamos para $P$
+
+$$
+\begin{align}
+40-17&=5P+6P\\
+11P&=23\\
+P&=\frac{23}{11}
+\end{align}
+$$
+
+4) Sustituimos en cualquiera de nuestras ecuaciones iniciales
+
+$$
+\begin{align}
+Q_S&=17+5(\frac{23}{11})\\
+Q_S&=\frac{187}{11}+\frac{115}{11}\\
+Q_S&=\frac{302}{11}\\
+\end{align}
+$$
+
+#### Solución
+
+$$
+\begin{align}
+P&= \frac{23}{11} \\
+Q&=\frac{302}{11}\\
+\end{align}
+$$
+
+### Sustitución
+
+1) Sustituimos el valor de $Q_S$ en la ecuación A
+
+$$
+\begin{align}
+2Q_D &= 80-12P \tag{A} \\
+Q_S &= 17+5P \tag{B}\\\\
+2(17+5P)&=80-12P\\
+34+10P&=80-12P\\
+10P+12P&=80-34\\
+22P&=46\\
+P&= \frac{460}{22}= \frac{23}{11}
+\end{align}
+$$
+
+2) Sustituimos el valor de P en la ecuación B
+
+$$
+\begin{align}
+Q_S &= 17 + 5(\frac{23}{11}) \\
+Q_S &= \frac{187}{11} + \frac{115}{11} \\
+Q_S &= \frac{302}{11}
+\end{align}
+$$
+
+#### Solución
+
+$$
+\begin{align}
+P&= \frac{23}{11} \\
+Q&=\frac{302}{11}\\
+\end{align}
+$$
+
+
+### Gráfico
+
+1) Identificamos los puntos donde la ecuación interseca con los ejes $X$ e $Y$, en este caso los ejes $P$ y $Q$ respectivamente. Para la ecuación A tenemos los siguientes puntos:
+
+$$
+\begin{align}
+2Q_D&=80-12P \tag{A}\\
+2(0)&=80-12P \\
+12P &= 80 \\
+P &= \frac{80}{12} = \frac{20}{3} \\
+\\\\
+P &= \frac{20}{3}; \quad Q=0 \tag{Punto A1} \\
+\\\\
+2Q_D &= 80-12(0) \\
+Q_D &= 40 \\\\
+P&=0; \quad Q=40 \tag{Punto A2}
+\end{align}
+$$
+
+2) En la ecuación B tenemos los siguientes puntos
+
+$$
+\begin{align}
+Q_S &= 17+5P \tag{B}\\
+0&=17+5P\\
+5P&=-17\\
+P&=-\frac{17}{5} \\\\
+P&=-\frac{17}{5}; \quad Q=0 \tag{Punto B1} \\
+\\\\
+Q_S&=17+5(0) \\
+Q_S&=17 \\\\
+P&=0; \quad Q=17 \tag{Punto B2}
+\end{align}
+$$
+
+3) Con este conjunto de puntos, graficamos el sistema
+
+```{r A5, echo=FALSE, warning = FALSE, message=FALSE}
+
+a5_A <- matrix(c(12, 2, -5, 1), nrow=2, byrow=TRUE)
+a5_b <- c(80, 17)
+
+int_a5 <- data.frame(x= c(20/3, 0), y=c(0, 40), label= c("Punto A1", "Punto A2"))
+int_b5 <- data.frame(x= c(-17/5, 0), y=c(0, 17), label= c("Punto B1", "Punto B2"))
+
+graficar_sistema2d(A = a5_A,
+                   b = a5_b,
+                   x_range = c(-5,10),
+                   eq_labels = c("2Q=80-12P", "Q=17+5P"),
+                   puntos_a = int_a5,
+                   puntos_b = int_b5)
+```
+
+:::
+
+## A6)
+
+$$
+\begin{align}
+\frac{Q_D}{2} &= 25-4P \tag{A} \\
+Q_S &= 23+7P \tag{B}\\
+\end{align}
+$$
+
+::: {.panel-tabset}
+
+### Igualación
+
+1) En la ecuación A, despejamos $Q_D$ para poder igualar con la ecuación B
+
+$$
+\begin{align}
+\frac{Q_D}{2} &= 25-4P\\
+Q_D &= 50-8P\\
+\end{align}
+$$
+
+2) Igualamos ambas ecuaciones
+
+$$
+\begin{align}
+23+7P &= 50-8P
+\end{align}
+$$
+
+3) Despejamos para $P$
+
+$$
+\begin{align}
+7P + 8P &= 50 - 23 \\
+15P &= 27 \\
+P&=\frac{27}{15} = \frac{9}{5} 
+\end{align}
+$$
+
+4) Sustituimos en cualquiera de nuestras ecuaciones iniciales
+
+$$
+\begin{align}
+Q_D &= 50 -8(\frac{9}{5}) \\
+Q_D &= \frac{250}{5} - \frac{72}{5} \\
+Q_D &= \frac{178}{5} \\
+\end{align}
+$$
+
+#### Solución
+
+$$
+\begin{align}
+P &= \frac{9}{5} \\
+Q &= \frac{178}{5} \\
+\end{align}
+$$
+
+
+### Gráfico
+
+1) Identificamos los puntos donde la ecuación interseca con los ejes $X$ e $Y$, en este caso los ejes $P$ y $Q$ respectivamente. Para la ecuación A tenemos los siguientes puntos:
+
+$$
+\begin{align}
+\frac{Q_D}{2} &= 25-4P \tag{A}\\
+Q_D &= 50-8P \\
+0 &= 50-8P \\
+8P &= 50 \\
+P &= \frac{50}{8} = \frac{25}{4} \\
+\\\\
+P &= \frac{25}{4}; \quad Q=0 \tag{Punto A1} \\
+\\\\
+Q_D &= 50-8(0) \\
+Q_D &= 50 \\\\
+P&=0; \quad Q=50 \tag{Punto A2}
+\end{align}
+$$
+
+2) En la ecuación B tenemos los siguientes puntos
+
+$$
+\begin{align}
+Q_S &= 23+7P \tag{B}\\
+0 &= 23+7P\\
+7P&=-23\\
+P&=-\frac{23}{7} \\\\
+P&=-\frac{23}{7}; \quad Q=0 \tag{Punto B1} \\
+\\\\
+Q_S&=23+7(0) \\
+Q_S&=23 \\\\
+P&=0; \quad Q=23 \tag{Punto B2}
+\end{align}
+$$
+
+3) Con este conjunto de puntos, graficamos el sistema
+
+```{r A6, echo=FALSE, warning = FALSE, message=FALSE}
+
+a6_A <- matrix(c(8, 1, -7, 1), nrow=2, byrow=TRUE)
+a6_b <- c(50, 23)
+
+int_a6 <- data.frame(x= c(25/4, 0), y=c(0, 50), label= c("Punto A1", "Punto A2"))
+int_b6 <- data.frame(x= c(-23/7, 0), y=c(0, 23), label= c("Punto B1", "Punto B2"))
+
+graficar_sistema2d(A = a6_A,
+                   b = a6_b,
+                   x_range = c(-5,10),
+                   eq_labels = c("Q=50-8P", "Q=23+7P"),
+                   puntos_a = int_a6,
+                   puntos_b = int_b6)
+```
+
+:::
+
+Resuelve los siguientes sistemas de ecuaciones lineales por el método de sustitución
+
+## B1)
+
+$$
+\begin{align}
+-3x+4y+z &= -2 \tag{A} \\
+2x-y+3z &= 14 \tag{B}\\
+x+y &= 6-z \tag{C}\\
+\end{align}
+$$
+
+1) Despejamos $x$ de la ecuación C
+
+$$
+\begin{align}
+x+y &= 6-z \tag{C}\\
+x &= 6-y-z \tag{C1}
+\end{align}
+$$
+
+2) Sustituimos el valor de $x$ en en la ecuación B y despejamos para alguna de las variables que nos resten.
+
+$$
+\begin{align}
+2x-y+3z &= 14 \tag{B}\\
+2(6-y-z)-y+3z &= 14 \\
+12-2y-2z-y+3z &= 14 \\
+-3y+z &= 14-12 \\
+z &= 3y+2 \tag{B1}
+\end{align}
+$$
+
+3) Sustituimos los valores de $x$ y $z$ en la ecuación A
+
+$$
+\begin{align}
+-3x+4y+z &= -2 \tag{A} \\
+-3(6-y-z)+4y+(2+3y)=-2 \\
+-18+3y+3z+4y+2+3y &= -2 \\
+10y +3(2+3y) &= -2+16 \\
+10y+6+9y &0 14 \\
+19y &= 14-6 \\
+y &= \frac{8}{19}
+\end{align}
+$$
+
+4) Obtenemos los valores restantes utilizando las ecuaciones B1 y C1
+
+$$
+\begin{align}
+z &= 3y+2 \tag{B1} \\
+z &= 3(\frac{8}{19}) +2 \\
+z &= \frac{24}{19} + \frac{38}{19} = \frac{62}{19}
+\\\\
+x &= 6-y-z \tag{C1} \\
+x &= 6-\frac{8}{19} - \frac{62}{19} \\
+x &= \frac{114-70}{19} = \frac{44}{19}
+\end{align}
+$$
+
+### Gráfico
+
+```{r, echo=FALSE, warning = FALSE, message=FALSE}
+b1_A <- matrix(c(-3, 4, 1, 2, -1, 3, 1, 1, 1), nrow=3, byrow=TRUE)
+b1_b <- c(-2, 14, 6)
+
+
+graficar_sistema3d(b1_A, 
+                   b1_b,
+                   eq_labels = c("-3x+4y+z=-2", 
+                                 "2x-y+3z=14", 
+                                 "x+y=6-z"))
+```
+
+
+
+#### Solución
+
+$$
+\begin{align}
+x &=  \frac{44}{19} \\
+y &= \frac{8}{19} \\
+z &= \frac{62}{19} \\
+\end{align}
+$$
+
+## B2)
+
+$$
+\begin{align}
+x-y+z &= 3 \tag{A} \\
+3x+2y-10 &= z \tag{B}\\
+2x-3y +z &= 1 \tag{C}\\
+\end{align}
+$$
+
+1) Despejamos $x$ de la ecuación A
+
+$$
+\begin{align}
+x-y+z &= 3 \tag{A} \\
+x &= 3+y-z \tag{A1}
+\end{align}
+$$
+
+2) Sustituimos el valor de $x$ en en la ecuación B y despejamos para alguna de las variables que nos resten.
+
+$$
+\begin{align}
+3x+2y-10 &= z \tag{B}\\
+3(3+y-z)+2y-10 &= z \\
+9+3y-3z+2y-10 &=z \\
+4z &= -1+5y \\
+z &= -\frac{1}{4} + \frac{5}{4}y \tag{B1}\\
+\end{align}
+$$
+
+3) Sustituimos los valores de $x$ y $z$ en la ecuación C
+
+$$
+\begin{align}
+2x-3y +z &= 1 \tag{C} \\
+2(3+y-z)-3y+4(-\frac{1}{4} + \frac{5}{4}y)=1 \\
+6+2y-2z-3y-1+5y &= 1 \\
+4y -2(-\frac{1}{4} + \frac{5}{4}y) &= -4 \\
+4y + \frac{1}{2}-\frac{5}{2}y &= -4  \\
+\frac{3}{2}y &= -\frac{8}{2} - \frac{1}{2} = -\frac{9}{2}  \\
+y &= -\frac{9}{2}(\frac{2}{3}) = -\frac{9}{3} = -3
+\end{align}
+$$
+
+4) Obtenemos los valores restantes utilizando las ecuaciones A1 y B1
+
+$$
+\begin{align}
+z &= -\frac{1}{4} + \frac{5}{4}y \tag{B1} \\
+z &= -\frac{1}{4} + \frac{5}{4}(-3)  \\ 
+z &= -\frac{1}{4} - \frac{15}{4} = -\frac{16}{4} = -4
+\\\\
+x &= 3+y-z \tag{A1} \\
+x &= 3-3-(-4) \\
+x &= 4
+\end{align}
+$$
+
+### Gráfico
+
+```{r, echo=FALSE, warning = FALSE, message=FALSE}
+b2_A <- matrix(c(1, -1, 1, 3, 2, -1, 2, -3, 4), nrow=3, byrow=TRUE)
+b2_b <- c(3, 10, 1)
+
+
+graficar_sistema3d(b2_A, 
+                   b2_b,
+                   eq_labels = c("x-y+z=3", 
+                                 "3x+2y-10=z", 
+                                 "2x-3y+4z=1"))
+```
+
+
+#### Solución
+
+$$
+\begin{align}
+x &=  4 \\
+y &= -3 \\
+z &= -4 \\
+\end{align}
+$$
+
+
+## B3)
+
+$$
+\begin{align}
+2x+3y+z &= 10 \tag{A} \\
+x-y+2z &= 4 \tag{B}\\
+3x+y-z &= 6 \tag{C}\\
+\end{align}
+$$
+
+1) Despejamos $x$ de la ecuación B
+
+$$
+\begin{align}
+x-y+2z &= 4 \tag{B}\\
+x &= 4+y-2z \tag{B1}
+\end{align}
+$$
+
+2) Sustituimos el valor de $x$ en en la ecuación C y despejamos para alguna de las variables que nos resten.
+
+$$
+\begin{align}
+3x+y-z &= 6 \tag{C}\\
+3(4+y-2z)+y-z &= 6 \\
+12+3y-6z+y-z &= 6 \\
+4y-7z &= 6-12 \\
+4y &= -6+7z \\
+y &= -\frac{6}{4} +\frac{7}{4}z  \\
+y &= -\frac{3}{2} +\frac{7}{4}z \tag{C1}
+\end{align}
+$$
+
+3) Sustituimos los valores de $x$ e $y$ en la ecuación A
+
+$$
+\begin{align}
+2x+3y+z &= 10 \tag{A} \\
+2(4+y-2z) +3(-\frac{3}{2} +\frac{7}{4}z)+z &= 10 \\
+8+2y-\frac{16}{4}z-\frac{9}{2}+\frac{21}{4}z +\frac{4}{4}z &= 10 \\
+\frac{9}{4}z +2(-\frac{3}{2} +\frac{7}{4}z) &= \frac{20}{2}-\frac{7}{2} \\
+\frac{9}{4}z -\frac{6}{2} +\frac{14}{4}z &= \frac{13}{2} \\
+\frac{23}{4}z &= \frac{19}{2} \\
+z &= \frac{19}{2}(\frac{2*2}{23}) = \frac{38}{23}
+\end{align}
+$$
+
+4) Obtenemos los valores restantes utilizando las ecuaciones B1 y C1
+
+$$
+\begin{align}
+y &= -\frac{3}{2} +\frac{7}{4}z \tag{C1} \\
+y &= -\frac{3}{2} +\frac{7}{4}(\frac{38}{23}) = -\frac{3}{2} +\frac{7}{2*2}(\frac{2*19}{23})  \\
+y &= -\frac{3}{2}(\frac{23}{23}) +\frac{133}{46} = \frac{64}{46} \\
+y &= \frac{32}{23}
+\\\\
+x &= 4+y-2z \tag{B1} \\
+x &= 4+\frac{32}{23}-2(\frac{38}{23}) = \frac{92+32-76}{23}\\
+x &= \frac{48}{23} 
+\end{align}
+$$
+
+### Gráfico
+
+```{r, echo=FALSE, warning = FALSE, message=FALSE}
+b3_A <- matrix(c(2, 3, 1, 1, -1, 2, 3, 1, -1), nrow=3, byrow=TRUE)
+b3_b <- c(10, 4, 6)
+
+
+graficar_sistema3d(b3_A, 
+                   b3_b,
+                   eq_labels = c("2x+3y+z=10", 
+                                 "x-y+2z=4", 
+                                 "3x+y-z=6"))
+```
+
+
+#### Solución
+
+$$
+\begin{align}
+x &=  \frac{48}{23} \\
+y &= \frac{32}{23} \\
+z &= \frac{38}{23} \\
+\end{align}
+$$
+
+
+## B4)
+
+$$
+\begin{align}
+2x+y-z &= 5 \tag{A} \\
+-x+3y+2z &= 12 \tag{B}\\
+4x-y+z &= 7 \tag{C}\\
+\end{align}
+$$
+
+1) Despejamos $x$ de la ecuación B
+
+$$
+\begin{align}
+-x+3y+2z &= 12 \tag{B}\\
+x &= 3y+2z-12 \tag{B1}
+\end{align}
+$$
+
+2) Sustituimos el valor de $x$ en en la ecuación A y despejamos para alguna de las variables que nos resten.
+
+$$
+\begin{align}
+2x+y-z &= 5 \tag{A} \\
+2(3y+2z-12)+y-z &= 5 \\
+6y+4z-24+y-z &= 5 \\
+7y+3z &= 5+24 \\
+7y &= 29-3z \\
+y &= \frac{29}{7} -\frac{3}{7}z  \tag{A1}
+\end{align}
+$$
+
+3) Sustituimos los valores de $x$ e $y$ en la ecuación C
+
+$$
+\begin{align}
+4x-y+z &= 7 \tag{C} \\
+4(3y+2z-12) -(\frac{29}{7} -\frac{3}{7}z)+z &= 7 \\
+12y+8z-48-\frac{29}{7}+\frac{3}{7}z+z &= 7 \\
+z(\frac{56}{7}+ \frac{3}{7}+\frac{7}{7}) +12(\frac{29}{7} -\frac{3}{7}z) &= \frac{49}{7}+\frac{336}{7}+ \frac{29}{7} \\
+\frac{66}{7}z +\frac{348}{7} -\frac{36}{7}z &= \frac{414}{7} \\
+\frac{30}{7}z &= \frac{66}{7} \\
+z &= \frac{66}{7}(\frac{7}{30}) = \frac{66}{30} = \frac{11}{5}
+\end{align}
+$$
+
+4) Obtenemos los valores restantes utilizando las ecuaciones A1 y B1
+
+$$
+\begin{align}
+y &= \frac{29}{7} -\frac{3}{7}z  \tag{A1} \\
+y &= \frac{29}{7} -\frac{3}{7}(\frac{11}{5})  \\
+y &= \frac{29}{7} - \frac{33}{35}= \frac{145-33}{35} = \frac{112}{35} \\
+y &= \frac{(7)(16)}{(7)(5)}= \frac{16}{5}
+\\\\
+x &= 3y+2z-12 \tag{B1} \\
+x &= 3(\frac{16}{5})+2(\frac{11}{5})- \frac{60}{5} \\
+x &= \frac{48}{5}+\frac{22}{5}- \frac{60}{5} \\
+x &= \frac{10}{5}=2 
+\end{align}
+$$
+
+### Gráfico
+
+```{r, echo=FALSE, warning = FALSE, message=FALSE}
+b4_A <- matrix(c(2, 1, -1, -1, 3, 2, 4, -1, 1), nrow=3, byrow=TRUE)
+b4_b <- c(5, 12, 7)
+
+
+graficar_sistema3d(b4_A, 
+                   b4_b,
+                   eq_labels = c("2x+y-z=5", 
+                                 "-x+3y+2z=12", 
+                                 "4x-y+z=7"))
+```
+
+
+#### Solución
+
+$$
+\begin{align}
+x &=  2 \\
+y &= \frac{16}{5} \\
+z &= \frac{11}{5} \\
+\end{align}
+$$
+
+
+## B5)
+
+$$
+\begin{align}
+5x+y+z &= 20 \tag{A} \\
+3x-2y+2z &= 5 \tag{B}\\
+4y -z &= 3+x \tag{C}\\
+\end{align}
+$$
+
+1) Despejamos $x$ de la ecuación C
+
+$$
+\begin{align}
+4y -z &= 3+x \tag{C}\\
+x &= 4y-z-3 \tag{C1}
+\end{align}
+$$
+
+2) Sustituimos el valor de $x$ en en la ecuación B y despejamos para alguna de las variables que nos resten.
+
+$$
+\begin{align}
+3x-2y+2z &= 5 \tag{B} \\
+3(4y-z-3)-2y+2z &= 5 \\
+12y-3z-9-2y+2z &= 5 \\
+10y-z &= 5+9 \\
+z &= 10y-14 \tag{B1} \\
+\end{align}
+$$
+
+3) Sustituimos los valores de $x$ e $y$ en la ecuación A
+
+$$
+\begin{align}
+5x+y+z &= 20 \tag{A} \\
+5(4y-z-3)+y+(10y-14) &= 20 \\
+20y-5z-15+y+10y-14 &= 20 \\
+31y-5(10y-14) &= 20+15+14 \\
+31y-50y+70 &= 49 \\
+-19y &= -21 \\
+y &= \frac{21}{19}
+\end{align}
+$$
+
+4) Obtenemos los valores restantes utilizando las ecuaciones B1 y C1
+
+$$
+\begin{align}
+z &= 10y-14 \tag{B1} \\
+z &= 10(\frac{21}{19})-14 \\
+z &= \frac{210}{19}-\frac{266}{19} \\
+z &= -\frac{56}{19} \\
+\\\\
+x &= 4y-z-3 \tag{C1} \\
+x &= 4(\frac{21}{19})-(-\frac{56}{19})-\frac{57}{19}\\
+x &= \frac{83}{19} 
+\end{align}
+$$
+
+### Gráfico
+
+```{r, echo=FALSE, warning = FALSE, message=FALSE}
+b5_A <- matrix(c(5, 1, 1, 3, -2, 2, -1, 4, -1), nrow=3, byrow=TRUE)
+b5_b <- c(20, 5, 3)
+
+
+graficar_sistema3d(b5_A, 
+                   b5_b,
+                   eq_labels = c("5x+y+z=20", 
+                                 "3x-2y+2z=5", 
+                                 "4y-z=3+x"))
+```
+
+
+#### Solución
+
+$$
+\begin{align}
+x &=  \frac{83}{19} \\
+y &= \frac{21}{19} \\
+z &= -\frac{56}{19} \\
+\end{align}
+$$
+
+
+## B6)
+
+$$
+\begin{align}
+x+2y+3z &= 12 \tag{A} \\
+2x+z &= 5 +y \tag{B}\\
+4x+y-2z &= 8 \tag{C}\\
+\end{align}
+$$
+
+1) Despejamos $z$ de la ecuación B
+
+$$
+\begin{align}
+2x+z &= 5 +y \tag{B}\\
+z &= 5+y-2x \tag{B1}
+\end{align}
+$$
+
+2) Sustituimos el valor de $x$ en en la ecuación A y despejamos para alguna de las variables que nos resten.
+
+$$
+\begin{align}
+x+2y+3z &= 12 \tag{A}  \\
+x+2y+3(5+y-2x) &= 12 \\
+x+2y+15+3y-6x &= 12 \\
+-5x+5y &= 12-15 \\
+5y &= -3+5x  \\
+y &= -\frac{3}{5}+x \tag{A1}
+\end{align}
+$$
+
+3) Sustituimos los valores de $x$ e $y$ en la ecuación C
+
+$$
+\begin{align}
+4x+y-2z &= 8 \tag{C} \\
+4x+(-\frac{3}{5}+x)-2(5+y-2x) &= 8  \\
+4x-\frac{3}{5}+x-10+2+y-4x &= 8 \\
+9x-2(-\frac{3}{5}+x) &= 8+10 + \frac{3}{5} \\
+9x+\frac{6}{5}-2x &= 18+\frac{3}{5} \\
+7x &= 18-\frac{3}{5}= \frac{90-3}{5} = \frac{87}{5} \\
+x &= \frac{87}{35}
+\end{align}
+$$
+
+4) Obtenemos los valores restantes utilizando las ecuaciones A1 y B1
+
+$$
+\begin{align}
+y &= -\frac{3}{5}+x \tag{A1} \\
+y &= -\frac{3}{5}+\frac{87}{35} \\
+y &= \frac{87-21}{35} \\
+y &= \frac{66}{35} \\
+\\\\
+z &= 5+y-2x \tag{B1} \\
+z &= 5+\frac{66}{35}-2(\frac{87}{35})\\
+z &= \frac{1715+66-174}{35}=\frac{67}{35}
+\end{align}
+$$
+
+### Gráfico
+
+```{r, echo=FALSE, warning = FALSE, message=FALSE}
+b6_A <- matrix(c(1, 2, 3, 2, -1, 1, 4, 1, -2), nrow=3, byrow=TRUE)
+b6_b <- c(12, 5, 8)
+
+
+graficar_sistema3d(b6_A, 
+                   b6_b,
+                   eq_labels = c("x+2y+3z=12", 
+                                 "2x+z=5+y", 
+                                 "4x+y-2z=8"))
+```
+
+
+#### Solución
+
+$$
+\begin{align}
+x &=  \frac{87}{35} \\
+y &= \frac{66}{35} \\
+z &= \frac{67}{35} \\
+\end{align}
+$$
+
+Resuelve y grafica el siguiente sistema de ecuaciones lineales por el método de sustitución.
+
+## D)
+
+$$
+\begin{align}
+x+y+z &= 6 \tag{A} \\
+x+y &= 3 \tag{B} \\
+x-y+z &= 2 \tag{C} \\\\
+\\\\
+x &= 3-y \tag{B1} \\
+(3-y)+y+z &= 6 \tag{A} \\
+z&= 3 \\\\
+(3-y)-y+3 &= 2 \tag{C} \\
+-2y &= 2-6 \\
+y &= \frac{-4}{-2}=2 \\\\
+x &= 3-2=1 \tag{B1}
+\end{align}
+$$
+
+### Solución
+$$
+\begin{align}
+x &= 1 \\
+y &= 2 \\
+z &= 3 
+\end{align}
+$$
+
+### Gráfico
+
+```{r D_graf, echo=FALSE, warning = FALSE, message=FALSE}
+
+d_A <- matrix(c(1, 1, 1, 1, 1, 0, 1, -1, 1), nrow=3, byrow=TRUE)
+d_b <- c(6, 3, 2)
+
+
+graficar_sistema3d(d_A, 
+                   d_b,
+                   eq_labels = c("x+y+z=6", "x+y=3", "x-y+z=2"))
+
+```
+
+
+## E)
+
+Encuentra dos números positivos cuya suma sea 225 y su diferencia sea 135.
+
+$$
+\begin{align}
+x +y &= 225 \\
+x-y &=135 
+\\\\
+x &= 135+y \\
+(135+y)+y &=225 \\
+2y&= 225-135=90 \\
+y &= 45 
+\\\\
+x&=134+45 \\
+x&=180
+\end{align}
+$$
+
+## F)
+
+La suma de dos ángulos suplementarios es de 180°. Si la diferencia entre ambos es de 100° ¿cuál es el valor de cada uno?
+
+$$
+\begin{align}
+x +y &= 180 \\
+x-y &=100 
+\\\\
+x &= 100+y \\
+(100+y)+y &=180 \\
+2y&= 180-100=80 \\
+y &= 40 
+\\\\
+x&=100+40 \\
+x&=140
+\end{align}
+$$
+
+## G)
+
+La diferencia de dos números es 30 y 1/5 de su suma es 26. Determina cuales son los números.
+
+$$
+\begin{align}
+x -y &= 30 \\
+\frac{1}{5} (x-y) &=26 
+\\\\
+x &= 30+y \\
+x+y &=26(5) \\
+30+y+y&= 130 \\
+2y &= 100 \\
+y &= 50
+\\\\
+x&=30+50 \\
+x&=80
+\end{align}
+$$
+
+## H)
+
+Un libro y una USB cuestan $1,300. Si el costo de la USB es de $200 más que el libro ¿Cuánto cuesta cada uno?
+
+$$
+\begin{align}
+x +y &= 1300 \\
+x-y &= 200 
+\\\\
+x &= 1300-y \\
+(1300-y)-y &= 200 \\
+-2y &= -1100 \\
+y &= 550
+\\\\
+x&=1300-550 \\
+x&=750
+\end{align}
+$$
+
+## I)
+
+En el cine, 6 entradas de adulto y 8 de niño cuestan $880, mientras que 4 de adulto y 5 de niño cuestan $570 ¿Cuánto cuesta una entrada de adulto y una de niño?
+
+$$
+\begin{align}
+6x +8y &= 880 \\
+4x+5y &= 570 
+\\\\
+6x+8y-880 &= 4x+5y-570 \\
+6x-4x+8y-5y &= 880-570 \\
+2x+3y &= 310  \\
+2x &= 310-3y \\
+x &= 155- \frac{3}{2}y
+\\\\
+6(155-\frac{3}{2}y)+8y &= 880 \\
+930 -9y+8y &=880 \\
+y &= 50 \\\\
+x &= 155-\frac{3}{2}(50) = 155 -\frac{150}{2} \\
+x &= 80
+\end{align}
+$$
+
+## J)
+
+Un grupo de 12 monedas con valores de $5 y $10 suma la cantidad de $85. Determina la cantidad de monedas de $10 que hay en el grupo
+
+$$
+\begin{align}
+x +y &= 12 \\
+5x+10y &= 85 
+\\\\
+x &= 12-y \\
+5(12-y)+10y &= 85 \\
+60-5y+10y &= 85 \\
+5y &= 25 \\
+y &= 5
+\\\\
+x&=12-5 \\
+x&=7
+\end{align}
+$$
+
+## K)
+
+El hermano de Eduardo es 3 veces mayor que él. Hace 3 años su hermano era 6 veces mayor ¿qué edades tienen actualmente?
+
+$$
+\begin{align}
+y &= 3x \\
+y-3 &= 6(x-3) 
+\\\\
+3x-3 &= 6(x-3) \\
+6x-3x &= 18-3 \\
+3x &= 15 \\
+x &= 5
+\\\\
+y &= 3(5) \\
+y &= 15
+\end{align}
+$$
+
+## L)
+
+La suma de 2/3 de dos números es 92, mientras que 3/8 de su diferencia es 3 ¿qué números son?
+
+$$
+\begin{align}
+\frac{2}{3}(x +y) &= 92 \\
+\frac{3}{8}(x -y) &= 3 
+\\\\
+x +y &= 92(\frac{3}{2}) \\
+x+y &= 138 \\
+x &= 138 -y \\
+x -y &= 3(\frac{8}{3}) \\
+138-y-y &= 8 \\
+-2y &= -130 \\
+y &= 65
+\\\\
+x &= 138-65 \\
+x &= 73
+\end{align}
+$$
