@@ -1,0 +1,894 @@
+---
+title: "Tarea 2 (12-sept)"
+---
+
+## Ejercicio 1
+
+$$
+\begin{aligned}
+-3x+2 &= -4 \\
+-\frac{7}{4}-y &= -2x \\
+\end{aligned} 
+\implies
+\left[
+\begin{array}{cc|c}
+-3 & 4 & -2 \\
+2 & -1 & \frac{7}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{1) } F_1 = F_1+2F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+-3 & 4 & -2 \\
+2 & -1 & \frac{7}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1+2F_2} \;\;
+\left[
+\begin{array}{cc|c}
+1 & 2 & \frac{3}{2} \\
+2 & -1 & \frac{7}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{2) } F_2 = F_2-2F_1
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 2 & \frac{3}{2} \\
+2 & -1 & \frac{7}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-2F_1} \;\;
+\left[
+\begin{array}{cc|c}
+1 & 2 & \frac{3}{2} \\
+0 & -5 & -\frac{5}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{3) } F_2 = -\frac{1}{5}F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 2 & \frac{3}{2} \\
+0 & -5 & -\frac{5}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = -\frac{1}{5}F_2} \;\;
+\left[
+\begin{array}{cc|c}
+1 & 2 & \frac{3}{2} \\
+0 & 1 & \frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{4) } F_1 = F_1 -2F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 2 & \frac{3}{2} \\
+0 & 1 & \frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1 -2F_2} \;\;
+\left[
+\begin{array}{cc|c}
+1 & 0 & 1 \\
+0 & 1 & \frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+### Solución
+$$
+\begin{aligned}
+x &= 1 \\
+y &= \frac{1}{4} \\
+\end{aligned} 
+$$
+
+
+## Ejercicio 2
+
+$$
+\begin{align}
+2x+y &= 5 \\
+x-2y &= -5 \\
+\end{align}
+\implies
+\left[
+\begin{array}{cc|c}
+2 & 1 & 5 \\
+1 & -2 & -5
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{1) } F_1 \leftrightarrow F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+2 & 1 & 5 \\
+1 & -2 & -5
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 \leftrightarrow F_2} \;\;
+\left[
+\begin{array}{cc|c}
+1 & -2 & -5 \\
+2 & 1 & 5
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{2) } F_2 = F_2-2F_1
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & -2 & -5 \\
+2 & 1 & 5
+\end{array}
+\right]
+\;\;\xrightarrow{F_2=F_2-2F_1} \;\;
+\left[
+\begin{array}{cc|c}
+1 & -2 & -5 \\
+0 & 5 & 15
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{3) } F_2 = \frac{1}{5}F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & -2 & -5 \\
+0 & 5 & 15
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = \frac{1}{5}F_2} \;\;
+\left[
+\begin{array}{cc|c}
+1 & -2 & -5 \\
+0 & 1 & 3
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{4) } F_1 = F_1+2F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & -2 & -5 \\
+0 & 1 & 3
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1+2F_2} \;\;
+\left[
+\begin{array}{cc|c}
+1 & 0 & 1 \\
+0 & 1 & 3
+\end{array}
+\right]
+\\\\
+$$
+
+
+### Solución
+$$
+\begin{aligned}
+x &= 1 \\
+y &= 3 \\
+\end{aligned} 
+$$
+
+
+## Ejercicio 3
+
+$$
+\begin{align}
+2x+3y+z &= 10 \\
+x-y+2z &= 4 \\
+3x+y-z &= 6
+\end{align}
+\implies
+\left[
+\begin{array}{ccc|c}
+2 & 3 & 1 & 10 \\
+1 & -1 & 2 & 4 \\
+3 & 1 & -1 & 6 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{1) } F_1 \leftrightarrow F_2
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+2 & 3 & 1 & 10 \\
+1 & -1 & 2 & 4 \\
+3 & 1 & -1 & 6 
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 \leftrightarrow F_2} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+2 & 3 & 1 & 10 \\
+3 & 1 & -1 & 6 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{2) } F_2 = F_2-2F_1
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+2 & 3 & 1 & 10 \\
+3 & 1 & -1 & 6 
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-2F_1} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 5 & -3 & 2 \\
+3 & 1 & -1 & 6 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{3) } F_3 = F_3-3F_1
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 5 & -3 & 2 \\
+3 & 1 & -1 & 6  
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = F_3-3F_1} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 5 & -3 & 2 \\
+0 & 4 & -7 & -6 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{4) } F_2 = \frac{1}{5}F_2
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 5 & -3 & 2 \\
+0 & 4 & -7 & -6 
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = \frac{1}{5}F_2} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 1 & -\frac{3}{5} & \frac{2}{5} \\
+0 & 4 & -7 & -6 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{5) } F_3 = F_3-4F_2
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 1 & -\frac{3}{5} & \frac{2}{5} \\
+0 & 4 & -7 & -6 
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = F_3-4F_2} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 1 & -\frac{3}{5} & \frac{2}{5} \\
+0 & 0 & -\frac{23}{5} & -\frac{38}{5} 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{6) } F_3 = -\frac{5}{23}F_3
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 1 & -\frac{3}{5} & \frac{2}{5} \\
+0 & 0 & -\frac{23}{5} & -\frac{38}{5} 
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = -\frac{5}{23}F_3} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 1 & -\frac{3}{5} & \frac{2}{5} \\
+0 & 0 & 1 & \frac{38}{23} 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{7) } F_2 = F_2 +\frac{3}{5}F_3
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 1 & -\frac{3}{5} & \frac{2}{5} \\
+0 & 0 & 1 & \frac{38}{23} 
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2 +\frac{3}{5}F_3} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 1 & 0 & \frac{32}{23} \\
+0 & 0 & 1 & \frac{38}{23} 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{8) } F_1 = F_1 +F_2
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -1 & 2 & 4 \\
+0 & 1 & 0 & \frac{32}{23} \\
+0 & 0 & 1 & \frac{38}{23} 
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1 +F_2} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & 0 & 2 & \frac{124}{23} \\
+0 & 1 & 0 & \frac{32}{23} \\
+0 & 0 & 1 & \frac{38}{23} 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{9) } F_1 = F_1-2F_3
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & 0 & 2 & \frac{124}{23} \\
+0 & 1 & 0 & \frac{32}{23} \\
+0 & 0 & 1 & \frac{38}{23} 
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1-2F_3} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & 0 & 0 & \frac{48}{23} \\
+0 & 1 & 0 & \frac{32}{23} \\
+0 & 0 & 1 & \frac{38}{23} 
+\end{array}
+\right]
+\\\\
+$$
+
+### Solución
+$$
+\begin{aligned}
+x &= \frac{48}{23}  \\
+y &= \frac{32}{23}  \\
+z &= \frac{38}{23} 
+\end{aligned} 
+$$
+
+## Ejercicio 4
+
+$$
+\begin{align}
+2x+y-z &= 5 \\
+-x+3y+2z &= 12 \\
+4x-y+z &= 7
+\end{align}
+\implies
+\left[
+\begin{array}{ccc|c}
+2 & 1 & -1 & 5 \\
+-1 & 3 & 2 & 12 \\
+4 & -1 & 1 & 7 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{1) } F_1 \leftrightarrow F_2
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+2 & 1 & -1 & 5 \\
+-1 & 3 & 2 & 12 \\
+4 & -1 & 1 & 7 
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 \leftrightarrow F_2} \;\;
+\left[
+\begin{array}{ccc|c}
+-1 & 3 & 2 & 12 \\
+2 & 1 & -1 & 5 \\
+4 & -1 & 1 & 7 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{2) } F_1 =-F_1
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+-1 & 3 & 2 & 12 \\
+2 & 1 & -1 & 5 \\
+4 & -1 & 1 & 7 
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 =-F_1} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+2 & 1 & -1 & 5 \\
+4 & -1 & 1 & 7 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{3) } F_2 =F_2-2F_1
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+2 & 1 & -1 & 5 \\
+4 & -1 & 1 & 7 
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 =F_2-2F_1} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 7 & 3 & 29 \\
+4 & -1 & 1 & 7 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{4) } F_3 =F_3-4F_1
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 7 & 3 & 29 \\
+4 & -1 & 1 & 7 
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 =F_3-4F_1} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 7 & 3 & 29 \\
+0 & 11 & 9 & 55 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{5) } F_2 =\frac{1}{7}F_2
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 7 & 3 & 29 \\
+0 & 11 & 9 & 55  
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 =\frac{1}{7}F_2} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 1 & \frac{3}{7} & \frac{29}{7} \\
+0 & 11 & 9 & 55 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{6) } F_3 =F_3-11F_2
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 1 & \frac{3}{7} & \frac{29}{7} \\
+0 & 11 & 9 & 55 
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 =F_3-11F_2} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 1 & \frac{3}{7} & \frac{29}{7} \\
+0 & 0 & \frac{30}{7} & \frac{66}{7} 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{7) } F_3 =\frac{7}{30}F_3
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 1 & \frac{3}{7} & \frac{29}{7} \\
+0 & 0 & \frac{30}{7} & \frac{66}{7} 
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 =\frac{7}{30}F_3} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 1 & \frac{3}{7} & \frac{29}{7} \\
+0 & 0 & 1 & \frac{11}{5} 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{8) } F_2 =F_2-\frac{3}{7}F_3
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 1 & \frac{3}{7} & \frac{29}{7} \\
+0 & 0 & 1 & \frac{11}{5} 
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 =F_2-\frac{3}{7}F_3} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 1 & 0 & \frac{16}{5} \\
+0 & 0 & 1 & \frac{11}{5} 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{9) } F_1 =F_1+3F_2
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & -3 & -2 & -12 \\
+0 & 1 & 0 & \frac{16}{5} \\
+0 & 0 & 1 & \frac{11}{5} 
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 =F_1+3F_2} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & 0 & -2 & -\frac{12}{5} \\
+0 & 1 & 0 & \frac{16}{5} \\
+0 & 0 & 1 & \frac{11}{5} 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{10) } F_1 =F_1+2F_3
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & 0 & -2 & -\frac{12}{5} \\
+0 & 1 & 0 & \frac{16}{5} \\
+0 & 0 & 1 & \frac{11}{5} 
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 =F_1+2F_3} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & 0 & 0 & 2 \\
+0 & 1 & 0 & \frac{16}{5} \\
+0 & 0 & 1 & \frac{11}{5} 
+\end{array}
+\right]
+\\\\
+$$
+
+### Solución
+$$
+\begin{aligned}
+x &= 2  \\
+y &= \frac{16}{5}  \\
+z &= \frac{11}{5} 
+\end{aligned} 
+$$
+
+
+## Ejercicio 5
+
+$$
+\begin{align}
+-2x+y &= \frac{1}{4} \\
+-4x+4y &= 2
+\end{align}
+\implies
+\left[
+\begin{array}{cc|c}
+-2 & 1 & \frac{1}{4} \\
+-4 & 4 & 2
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{1) } F_1 \leftrightarrow F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+-2 & 1 & \frac{1}{4} \\
+-4 & 4 & 2
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 \leftrightarrow F_2} \;\;
+\left[
+\begin{array}{cc|c}
+-4 & 4 & 2 \\
+-2 & 1 & \frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{2) } F_1 = -\frac{1}{4} F_1
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+-4 & 4 & 2 \\
+-2 & 1 & \frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = -\frac{1}{4} F_1} \;\;
+\left[
+\begin{array}{cc|c}
+1 & -1 & -\frac{2}{4} \\
+-2 & 1 & \frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{3) } F_2 = F_2-2F_1
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & -1 & -\frac{2}{4} \\
+-2 & 1 & \frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-2F_1} \;\;
+\left[
+\begin{array}{cc|c}
+1 & -1 & -\frac{2}{4} \\
+0 & -1 & -\frac{3}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{4) } F_2 = -F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & -1 & -\frac{2}{4} \\
+0 & -1 & -\frac{3}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = -F_2} \;\;
+\left[
+\begin{array}{cc|c}
+1 & -1 & -\frac{2}{4} \\
+0 & 1 & \frac{3}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{5) } F_1 = F_1+F_2
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & -1 & -\frac{2}{4} \\
+0 & 1 & \frac{3}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = -\frac{1}{4} F_1} \;\;
+\left[
+\begin{array}{cc|c}
+1 & 0 & \frac{1}{4} \\
+0 & 1 & \frac{3}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+### Solución
+$$
+\begin{aligned}
+x &= \frac{1}{4} \\
+y &= \frac{3}{4} \\
+\end{aligned} 
+$$
+
+## Ejercicio 6
+
+$$
+\begin{align}
+x+2y+\frac{3}{6}z &= 12 \\
+2x+z &= 5+y \\
+4x+8y+2z &= 2
+\end{align}
+\implies
+\left[
+\begin{array}{ccc|c}
+1 & 2 & \frac{1}{2} & 12 \\
+2 & -1 & 1 & 5 \\
+4 & 8 & 2 & 2 
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\text{1) } F_3=F_3-4F_1
+$$
+
+$$
+\left[
+\begin{array}{ccc|c}
+1 & 2 & \frac{1}{2} & 12 \\
+2 & -1 & 1 & 5 \\
+4 & 8 & 2 & 2 
+\end{array}
+\right]
+\;\;\xrightarrow{F_3=F_3-4F_1} \;\;
+\left[
+\begin{array}{ccc|c}
+1 & 2 & \frac{1}{2} & 12 \\
+2 & -1 & 1 & 5 \\
+0 & 0 & 0 & -46 
+\end{array}
+\right]
+\\\\
+$$
+
+### Solución
+
+El sistema no tiene solución pues el proceso da lugar a una inconsistencia: $0 = -46$

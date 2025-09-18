@@ -24,56 +24,56 @@
   {
     "objectID": "01_sel.html",
     "href": "01_sel.html",
-    "title": "Conceptos",
+    "title": "Apuntes de clase",
     "section": "",
     "text": "Ecuaciones\nUna ecuación es una igualdad matemática en la que existen una o varias incógnitas y que solo es verdadera para determinados valores de las incógnitas.\nLas incógnitas se pueden representar con cualquier letras del alfabeto \\((a,b,c,..., x, y,z)\\) e incluso pueden contener subíndices \\((x_1, y_1, ..., Q_d, Q_s)\\).\nPodemos conocer el valor de una incógnita despejando el resto de los valores, para ello es necesario realizar la misma operación en ambos términos de de la ecuación.",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apuntes de clase</span>"
     ]
   },
   {
     "objectID": "01_sel.html#ecuaciones",
     "href": "01_sel.html#ecuaciones",
-    "title": "Conceptos",
+    "title": "Apuntes de clase",
     "section": "",
     "text": "Ejemplos\n\\[\n\\displaystyle\n\\begin{align}\n2x+3 &= 7 \\tag{1}\\\\\n2x+3\\,{\\color{blue}{-3}} &= 7\\,{\\color{blue}{-3}} \\tag{2}\\\\\n\\frac{2x}{\\color{blue}{2}} &= \\frac{4}{\\color{blue}{2}} \\tag{3} \\\\\n\\mathbf{x} &= \\mathbf{2}\n\\end{align}\n\\]\n\\[\n\\displaystyle\n\\begin{align}\n7x-5 &= 4x+10 \\tag{1}\\\\\n7x-5\\,{\\color{blue}{-4x+5}} &= 4x+10\\,{\\color{blue}{-4x+5}} \\tag{2}\\\\\n\\frac{3x}{\\color{blue}{3}} &= \\frac{15}{\\color{blue}{3}} \\tag{3} \\\\\n\\mathbf{x} &= \\mathbf{5}\n\\end{align}\n\\]\n\\[\n\\displaystyle\n\\begin{align}\n3x+2 &= 11 \\tag{1}\\\\\n3x+2\\,{\\color{blue}{-2}} &= 11\\,{\\color{blue}{-2}} \\tag{2}\\\\\n\\frac{3x}{\\color{blue}{3}} &= \\frac{9}{\\color{blue}{3}} \\tag{3} \\\\\n\\mathbf{x} &= \\mathbf{3}\n\\end{align}\n\\]\n\\[\n\\displaystyle\n\\begin{align}\n\\sqrt{x+5} &= 3 \\tag{1}\\\\\n\\bigl(\\sqrt{x+5}\\bigr)^{\\color{blue}{2}} &= 3^{\\color{blue}{2}} \\tag{2}\\\\\nx+5 &= 9 \\tag{3}\\\\\nx+5\\,{\\color{blue}{-5}} &= 9\\,{\\color{blue}{-5}} \\tag{4}\\\\\n\\mathbf{x} &= \\mathbf{4}\n\\end{align}\n\\]",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apuntes de clase</span>"
     ]
   },
   {
     "objectID": "01_sel.html#sistemas-de-ecuaciones-lineales",
     "href": "01_sel.html#sistemas-de-ecuaciones-lineales",
-    "title": "Conceptos",
+    "title": "Apuntes de clase",
     "section": "Sistemas de Ecuaciones Lineales",
     "text": "Sistemas de Ecuaciones Lineales\nLos sistemas de ecuaciones lineales son una herramienta importante para la solución de problemas que involucran a más de dos variables y tienen múltiples aplicaciones en la economía.\nUn sistema de ecuaciones lineales consiste en un conjunto de dos o más ecuaciones con varias incógnitas, a través de los cuales es posible encontrar los valores que satisfacen todas las ecuaciones al mismo tiempo. Estos valores se conocen como solución o conjunto solución y se pueden presentar de distintas maneras.",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apuntes de clase</span>"
     ]
   },
   {
     "objectID": "01_sel.html#tipos-de-soluciones",
     "href": "01_sel.html#tipos-de-soluciones",
-    "title": "Conceptos",
+    "title": "Apuntes de clase",
     "section": "Tipos de soluciones",
     "text": "Tipos de soluciones\n\nSolución únicaSoluciones infinitasSin soluciónEjemplos\n\n\nEste tipo de solución cuenta con un único conjunto de valores que satisfacen todas las ecuaciones del sistema. Gráficamente, esta solución se encuentra en el punto de intersección de las rectas del sistema. \\[\n\\begin{align}\nx+y &= 4 \\\\\nx-y &= 2\n\\end{align}\n\\]\n\n\n\n\n\n\n\n\nEste tipo de solución se caracteriza por contar con más de un conjunto de valores que satisfacen el sistema de ecuaciones, es decir, el conjunto solución comprende todos los puntos de las rectas del sistema y gráficamente se observa como rectas superpuestas.\n\\[\n\\begin{align}\n2x+4y &= 8 \\\\\nx+2y &= 4\n\\end{align}\n\\]\n\n\n\n\n\n\n\n\nExisten casos en donde el sistema no tiene solución. Esto se debe a que las rectas que componen al sistema no tienen puntos en común, es decir, gráficamente son líneas paralelas.\n\\[\n\\begin{align}\nx+y &= 3 \\\\\nx+y &= 5\n\\end{align}\n\\]\n\n\n\n\n\n\n\n\nClasifiquen los siguientes sistemas de ecuaciones\n\\[\n\\begin{align}\nx+y &= 6 \\\\\n2x+2y &= 12\n\\end{align}\n\\] Solución únicaSoluciones infinitasSin solución\n\\[\n\\begin{align}\nx-y &= 1 \\\\\nx+y &= 5\n\\end{align}\n\\] Solución únicaSoluciones infinitasSin solución\n\\[\n\\begin{align}\n3x+2y &= 7 \\\\\n6x+4y &= 10\n\\end{align}\n\\] Solución únicaSoluciones infinitasSin solución\n\\[\n\\begin{align}\n2x+3y &= 9 \\\\\n\\frac{x}{3} + \\frac{y}{2} &= \\frac{3}{2}\n\\end{align}\n\\] Solución únicaSoluciones infinitasSin solución",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apuntes de clase</span>"
     ]
   },
   {
     "objectID": "01_sel.html#métodos-de-solución",
     "href": "01_sel.html#métodos-de-solución",
-    "title": "Conceptos",
+    "title": "Apuntes de clase",
     "section": "Métodos de solución",
     "text": "Métodos de solución\n\nMétodo gráfico\nLos sistemas de ecuaciones lineales pueden ser representados como rectas dentro de un plano cartesiano, por ello una forma práctica de encontrar el conjunto solución del sistema es el método gráfico, el cual consiste en asignar valores arbitrarios a las incógnitas en cada ecuación para conocer los puntos por los que pasa la recta. Aunque los valores pueden ser los que sean, se recomienda utilizar el cero porque nos permite identificar los puntos en que la recta corta en el eje \\(x\\) o \\(y\\).\nPara resolver el siguiente sistema de ecuaciones\n\\[\n\\begin{align}\nx+y &= 5 \\tag{A} \\\\\nx-y &= 1 \\tag{B}\n\\end{align}\n\\] Primero sustituimos \\(x\\) y \\(y\\) por cero en la ecuación A para obtener los puntos donde la recta cruza por alguno de los ejes: Cuando \\(x = 0\\), \\(y=5\\) y nuestro punto a graficar es el \\((0,5)\\) Cuando \\(y = 0\\), \\(x=5\\) y nuestro punto a graficar es el \\((5,0)\\) Repetimos este proceso en la ecuación B: Cuando \\(x = 0\\), \\(y=-1\\) y nuestro punto a graficar es el \\((0,-1)\\) Cuando \\(y = 0\\), \\(x=1\\) y nuestro punto a graficar es el \\((1,0)\\)\nCon estos cuatro puntos podemos representar ambas rectas y encontrar la solución.\n\n\n\n\n\n\n\n\nMétodo de sustitución\nEl método de sustitución consiste en despejar alguna de las incógnitas en cualquiera de las ecuaciones y sustituir en alguna de las otras hasta obtener el valor de todas las incógnitas. Utilizando el sistema de ecuaciones previo, podemos despejar \\(x\\) en la ecuación A y posteriormente sustituir ese valor en la ecuación B\n\\[\n\\begin{align}\nx+y &= 5 \\tag{A} \\\\\nx &= 5-y \\\\\nx-y &= 1 \\tag{B} \\\\\n(5-y) -y &= 1 \\\\\n-2y &=1-5 \\\\\ny&=\\frac{-4}{-2}=2 \\\\\nx+y &= 5 \\tag{A} \\\\\nx+2 &=5 \\\\\nx&=5-2=3 \\\\\n\\mathbf{x} &= \\mathbf{3}; \\mathbf{y} = \\mathbf{2} \\tag{Solución}\\\\\n\\end{align}\n\\]\n\n\nEjercicios\nLos siguientes ejercicios fueron resueltos durante la clase.\n1.)\n\\[\n\\displaystyle\n\\begin{align}\nQ_d &= 100 -2P \\\\\nQ_s &= 20+3P\n\\end{align}\n\\]\n2.) \\[\n\\displaystyle\n\\begin{align}\nQ_d &= 500 -5P \\\\\nQ_s &= 100+10P\n\\end{align}\n\\]\n3.) \\[\n\\displaystyle\n\\begin{align}\nQ_d &= 800 -\\frac{3P}{2} \\\\\nQ_s &= 20+2P\n\\end{align}\n\\] 4.) \\[\n\\displaystyle\n\\begin{align}\nx+y+z &= 6 \\\\\n2x-y+3z &= 14 \\\\\n-3x+4y+z &= -2\n\\end{align}\n\\]",
     "crumbs": [
       "Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Apuntes de clase</span>"
     ]
   },
   {
@@ -382,6 +382,127 @@
     "crumbs": [
       "Sistemas de ecuaciones lineales",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tarea 1 (05-sept)</span>"
+    ]
+  },
+  {
+    "objectID": "02_matrices.html",
+    "href": "02_matrices.html",
+    "title": "Apuntes de clase",
+    "section": "",
+    "text": "Método de eliminación\nEl método de eliminación es otra forma de resolver sistemas de ecuaciones lineales. Este método consiste en sumar o restar las ecuaciones de nuestro sistema o múltiplos de ellas con el fin de reducir el número de incógnitas y encontrar la solución. Para ello podemos seguir los siguientes pasos.",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Apuntes de clase</span>"
+    ]
+  },
+  {
+    "objectID": "02_matrices.html#matrices",
+    "href": "02_matrices.html#matrices",
+    "title": "Apuntes de clase",
+    "section": "Matrices",
+    "text": "Matrices\nUna matriz es un arreglo rectangular de \\(m\\)x\\(n\\) números reales o complejos ordenados en \\(m\\) filas horizontales y \\(n\\) columnas verticales.\n\n\\(i\\) filas \\(1 \\leq i \\leq m\\)\n\\(j\\) columnas \\(1 \\leq j \\leq m\\)\n\n\\[\nA =\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1n} \\\\\na_{21} & a_{22} & \\cdots & a_{2n} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mn}\n\\end{bmatrix}\n\\]\nUtilizando los ejemplos anteriores, podríamos expresar los sistemas de ecuaciones en sus formas matriciales de la siguiente manera y resolver:\n\\[\n\\begin{aligned}\n2x+3y &= 100 \\\\\nx-2y &= -55\\\\\n\\end{aligned}\n\\implies\n\\left[\n\\begin{array}{cc|c}\n2 & 3 & 100 \\\\\n1 & -2 & -55\n\\end{array}\n\\right]\n\\]\n\nMultiplicamos la fila 1 por 1/2\n\n\\[\n\\left[\n\\begin{array}{cc|c}\n2 & 3 & 100 \\\\\n1 & -2 & -55\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 \\to \\tfrac{1}{2}F_1}\\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & \\tfrac{3}{2} & 50 \\\\\n1 & -2 & -55\n\\end{array}\n\\right]\n\\]\n\nTransformamos la fila 2 al restarla de la fila 1.\n\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & \\frac{3}{2} & 50 \\\\\n1 & -2 & -55\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = F_1-F_2}\\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & \\frac{3}{2} & 50 \\\\\n1 & \\frac{7}{2} & 105\n\\end{array}\n\\right]\n\\]\n\nMultiplicamos la fila 2 por su recíproco \\(\\frac{2}{7}\\)\n\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & \\frac{3}{2} & 50 \\\\\n1 & \\frac{7}{2} & 105\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 \\to \\frac{2}{7}F_2}\\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & \\frac{3}{2} & 50 \\\\\n0 & 1 & \\frac{210}{7}\n\\end{array}\n\\right]\n\\]\n\nTransformamos la fila 1 restandole \\(\\frac{3}{2}\\) de la fila 2 \\(F_1-\\frac{3}{2}F_2\\)\n\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & \\frac{3}{2} & 50 \\\\\n0 & 1 & 30\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 = F_1- \\frac{3}{2}F_2}\\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & 0 & 5 \\\\\n0 & 1 & 30\n\\end{array}\n\\right]\n\\]\nSolución\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & 0 & 5 \\\\\n0 & 1 & 30\n\\end{array}\n\\right]\n\\implies\n\\begin{array}{cc|c}\nx=5 \\\\\ny=30\n\\end{array}\n\\]\n\\[\n\\underbrace{\n\\begin{align}\n5x-8y &= -\\frac{64}{16} \\\\\n2x+3y &= \\frac{153}{40} \\\\\n\\end{align}}\n_{\\mathbf{SEL}}\n\\implies\n\\underbrace{\n\\left[ \\begin{array}{cc|c}\n5 & -8 & -4 \\\\\n2 & 3 & \\frac{153}{40}\n\\end{array} \\right]\n}\n_{\\mathbf{Matriz}}\n\\]\n\nEjemplos\n\n\n\n\\[\n\\left[ \\begin{array}{cc|c}\n2 & 3 & 7 \\\\\n3 & 1 & 7\n\\end{array} \\right]\n\\]\n\n\n\n\\[\n\\left[ \\begin{array}{cc|c}\n2 & 4 & 13 \\\\\n-1 & 3 & \\frac{17}{2}\n\\end{array} \\right]\n\\]\n\n\n\n\\[\n\\left[ \\begin{array}{cc|c}\n1 & \\frac{3}{2} & 2 \\\\\n3 & 6 & 7\n\\end{array} \\right]\n\\]",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Apuntes de clase</span>"
+    ]
+  },
+  {
+    "objectID": "02_matrices.html#propiedades",
+    "href": "02_matrices.html#propiedades",
+    "title": "Apuntes de clase",
+    "section": "Propiedades",
+    "text": "Propiedades\n\nDimensión\nUna matriz \\(m\\)x\\(n\\) o \\(i\\)x\\(j\\) se dice que es de orden o tamaño \\(m\\)x\\(n\\) o \\(i\\)x\\(j\\), donde:\n\n\\(m\\) / \\(i\\) indican el número de filas.\n\\(n\\) / \\(j\\) indican el número de columnas.\n\nPor ejemplo:\n\\[\nA=\n\\underbrace{\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}}\n_{\\substack{2x2 \\\\ \\text{Matriz cuadrada}}}\n\\quad\nB= \\underbrace{\n\\begin{bmatrix}\n-1 & 3 \\\\\n4 & 0 \\\\\n1 & -2\n\\end{bmatrix}}\n_{3x2}\n\\quad\nC= \\underbrace{\n\\begin{bmatrix}\n-1 & 4 & 1 \\\\\n3 & 0 & 2\n\\end{bmatrix}} _{2x3}\n\\]\n\\[\nD= \\underbrace{\n\\begin{bmatrix}\n1 & 6 & -2 \\\\\n3 & 1 & 4 \\\\\n2 & -6 & 5\n\\end{bmatrix}}\n_{\\substack{3x3 \\\\ \\text{Matriz cuadrada}}}\n\\quad\nE= \\underbrace{\n\\begin{bmatrix}\n0 & 0 & 0 & 0 \\\\\n0 & 0 & 0 & 0 \\\\\n\\end{bmatrix}}\n_{\\substack{2x4 \\\\ \\text{Matriz cero}}}\n\\]\nDos matrices \\(A=(a_{ij})\\) y \\(B=(b_{ij})\\) son iguales si y solo si tienen el mismo orden o tamaño.\n\n\nOperaciones con escalares\nSea \\(A\\) una matrix de \\(m\\)x\\(n\\) y \\(\\alpha\\) un escalar:\n\n\\(\\alpha A\\)\n\\(1A=A\\)\n\\(A + \\varnothing = A\\)\n\n\\[\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n\\]\n\n\\(\\varnothing A = \\varnothing\\)\n\n\\[\n\\varnothing\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\]\n\n\nSuma\nDos matrices A y B se pueden sumar si y solo si tienen el mismo tamaño. La suma se realiza elemento por elemento, es decir:\n\\[\n\\begin{bmatrix}\na_{11} & a_{12} \\\\\na_{21} & a_{22}\n\\end{bmatrix}\n+\n\\begin{bmatrix}\nb_{11} & b_{12} \\\\\nb_{21} & b_{22}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\na_{11}+b_{11} & a_{12}+b_{12} \\\\\na_{21}+b_{21} & a_{22}+b_{22}\n\\end{bmatrix}\n\\]\nPara la suma de matrices podemos utilizar las siguientes propiedades.\n\nPropiedad conmutativa: \\(A+B=B+A\\)\n\n\\[\nA+B=\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n3 & -1 \\\\\n2 & -4\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n4 & 2 \\\\\n6 & -2\n\\end{bmatrix}\n\\]\n\\[\nB+A=\n\\begin{bmatrix}\n3 & -1 \\\\\n2 & -4\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n4 & 2 \\\\\n6 & -2\n\\end{bmatrix}\n\\]\n\nPropiedad asociativa: \\((A+B)+C=A+(B+C)\\).\n\n\\[\n(A+B)+C=\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n3 & -1 \\\\\n2 & -4\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n1 & 2 \\\\\n-3 & -2\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n4 & 2 \\\\\n6 & -2\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n1 & 2 \\\\\n-3 & -2\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n5 & 4 \\\\\n3 & -4\n\\end{bmatrix}\n\\]\n\\[\nA+(B+C)=\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n3 & -1 \\\\\n2 & -4\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n1 & 2 \\\\\n-3 & -2\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n4 & 1 \\\\\n-1 & -6\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n5 & 4 \\\\\n3 & -4\n\\end{bmatrix}\n\\]\n\nPropiedad distributiva: \\(\\alpha(A+B)=\\alpha A + \\alpha B\\).\n\n\\[\n2(A+B)=\n2\n\\begin{bmatrix}\n1 & 3 \\\\\n4 & 2\n\\end{bmatrix}\n+\n2\n\\begin{bmatrix}\n3 & -1 \\\\\n2 & -4\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n2 & 6 \\\\\n8 & 4\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n6 & -2 \\\\\n4 & -8\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n8 & 4 \\\\\n12 & -4\n\\end{bmatrix}\n\\]\n\nEjemplos\nA partir de las siguientes matrices, resuelva los ejercicios\n\\[\nA =\n\\begin{bmatrix}\n1 & 3 \\\\\n2 & 5 \\\\\n-1 & 2\n\\end{bmatrix};\n\\quad\nB=\n\\begin{bmatrix}\n-2 & 0 \\\\\n1 & 4 \\\\\n-7 & 5\n\\end{bmatrix};\n\\quad\nC=\n\\begin{bmatrix}\n-1 & 1 \\\\\n4 & 6 \\\\\n-7 & 3\n\\end{bmatrix}\n\\]\n\n\\(3A\\)\n\\(A+B\\)\n\\(A-C\\)\n\\(2C-5A\\)\n\\(A+B+C\\)\n\\(\\varnothing B\\)\n\\(-7A+3B\\)\n\\(C-A-B\\)\n\\(2A-3B+4C\\)\n\\(7C-3B+2A\\)\n\\(2(A+C)\\)\n\\(2B-2C\\)\n\n\n\n\nMultiplicación\nDos matrices, \\(A_{mn}\\) y \\(B_{ij}\\) se pueden multiplicar si y solo si \\(n=i\\), es decir, el número de columnas de A es igual al número de filas de B. Por ejemplo\n\\[\nA =\n\\underbrace{\n\\begin{bmatrix}\n1 & 8 & 0 \\\\\n-3 & 2 & 5\n\\end{bmatrix}}\n_{2x3}\n; \\quad\nB=\n\\underbrace{\n\\begin{bmatrix}\n9 & 0 \\\\\n-6 & 2 \\\\\n8 & 4\n\\end{bmatrix}}\n_{3x2}\n\\]\n\nFila 1 por columna 1\n\n\\[\n\\begin{pmatrix}\n1 & 8 & 0\n\\end{pmatrix}\n\\begin{pmatrix}\n9 \\\\\n-6 \\\\\n8\n\\end{pmatrix}\n=\n9-48+0=-39\n\\]\n\nFila 1 por columna 2\n\n\\[\n\\begin{pmatrix}\n1 & 8 & 0\n\\end{pmatrix}\n\\begin{pmatrix}\n0 \\\\\n2 \\\\\n4\n\\end{pmatrix}\n=\n0+16+0=16\n\\]\n\nFila 2 por columna 1\n\n\\[\n\\begin{pmatrix}\n-3 & 2 & 5\n\\end{pmatrix}\n\\begin{pmatrix}\n9 \\\\\n-6 \\\\\n8\n\\end{pmatrix}\n=\n-27-12+40=1\n\\]\n\nFila 2 por columna 2\n\n\\[\n\\begin{pmatrix}\n-3 & 2 & 5\n\\end{pmatrix}\n\\begin{pmatrix}\n0 \\\\\n2 \\\\\n4\n\\end{pmatrix}\n=\n0+4+20=24\n\\]\nComo resultado de multiplicar las matrices A y B tenemos:\n\\[\nC=\n\\begin{bmatrix}\n-39 & 16 \\\\\n1 & 24\n\\end{bmatrix}\n\\]\nEn la multiplicación de matrices podemos utilizar las siguientes propiedades.\n\nPropiedad distributiva: \\(A(B+C)=AB+AC\\)\nPropiedad asociativa: \\(A(BC)=(AB)C\\)\n\n\nEjemplos\n\\[\nA =\n\\begin{bmatrix}\n4 & 6 \\\\\n8 & 2\n\\end{bmatrix}\n\\qquad\nB=\n\\begin{bmatrix}\n-3 & 9 \\\\\n5 & -7\n\\end{bmatrix}\n\\qquad\nC=\n\\begin{bmatrix}\n-9 & 1 & 3 \\\\\n0 & 4 & -8\n\\end{bmatrix}\n\\]\n\\[\nD=\n\\begin{bmatrix}\n7 & 4 \\\\\n6 & -1 \\\\\n-5 & 2\n\\end{bmatrix}\n\\qquad\nE=\n\\begin{bmatrix}\n1 & 7 & -8 \\\\\n4 & 9 & -7 \\\\\n2 & 0 & 3\n\\end{bmatrix}\n\\]\n\n\\(B+A\\)\n\\(7D\\)\n\\(\\frac{1}{2}A\\)\n\\(8(CD)-B\\)\n\\((ED)(5C)+A\\)\n\\(\\frac{1}{4}AC\\)\n\\((D-(AC))+E\\)\n\\(3(EC)\\)",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Apuntes de clase</span>"
+    ]
+  },
+  {
+    "objectID": "02_tarea.html",
+    "href": "02_tarea.html",
+    "title": "Tarea 2 (12-sept)",
+    "section": "",
+    "text": "Ejercicio 1\n\\[\n\\begin{aligned}\n-3x+2 &= -4 \\\\\n-\\frac{7}{4}-y &= -2x \\\\\n\\end{aligned}\n\\implies\n\\left[\n\\begin{array}{cc|c}\n-3 & 4 & -2 \\\\\n2 & -1 & \\frac{7}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{1) } F_1 = F_1+2F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n-3 & 4 & -2 \\\\\n2 & -1 & \\frac{7}{4}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 = F_1+2F_2} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & 2 & \\frac{3}{2} \\\\\n2 & -1 & \\frac{7}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{2) } F_2 = F_2-2F_1\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & 2 & \\frac{3}{2} \\\\\n2 & -1 & \\frac{7}{4}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = F_2-2F_1} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & 2 & \\frac{3}{2} \\\\\n0 & -5 & -\\frac{5}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{3) } F_2 = -\\frac{1}{5}F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & 2 & \\frac{3}{2} \\\\\n0 & -5 & -\\frac{5}{4}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = -\\frac{1}{5}F_2} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & 2 & \\frac{3}{2} \\\\\n0 & 1 & \\frac{1}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{4) } F_1 = F_1 -2F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & 2 & \\frac{3}{2} \\\\\n0 & 1 & \\frac{1}{4}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 = F_1 -2F_2} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & 0 & 1 \\\\\n0 & 1 & \\frac{1}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 2 (12-sept)</span>"
+    ]
+  },
+  {
+    "objectID": "02_tarea.html#ejercicio-1",
+    "href": "02_tarea.html#ejercicio-1",
+    "title": "Tarea 2 (12-sept)",
+    "section": "",
+    "text": "Solución\n\\[\n\\begin{aligned}\nx &= 1 \\\\\ny &= \\frac{1}{4} \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 2 (12-sept)</span>"
+    ]
+  },
+  {
+    "objectID": "02_tarea.html#ejercicio-2",
+    "href": "02_tarea.html#ejercicio-2",
+    "title": "Tarea 2 (12-sept)",
+    "section": "Ejercicio 2",
+    "text": "Ejercicio 2\n\\[\n\\begin{align}\n2x+y &= 5 \\\\\nx-2y &= -5 \\\\\n\\end{align}\n\\implies\n\\left[\n\\begin{array}{cc|c}\n2 & 1 & 5 \\\\\n1 & -2 & -5\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{1) } F_1 \\leftrightarrow F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n2 & 1 & 5 \\\\\n1 & -2 & -5\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 \\leftrightarrow F_2} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & -2 & -5 \\\\\n2 & 1 & 5\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{2) } F_2 = F_2-2F_1\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & -2 & -5 \\\\\n2 & 1 & 5\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2=F_2-2F_1} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & -2 & -5 \\\\\n0 & 5 & 15\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{3) } F_2 = \\frac{1}{5}F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & -2 & -5 \\\\\n0 & 5 & 15\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = \\frac{1}{5}F_2} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & -2 & -5 \\\\\n0 & 1 & 3\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{4) } F_1 = F_1+2F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & -2 & -5 \\\\\n0 & 1 & 3\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 = F_1+2F_2} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & 0 & 1 \\\\\n0 & 1 & 3\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\nSolución\n\\[\n\\begin{aligned}\nx &= 1 \\\\\ny &= 3 \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 2 (12-sept)</span>"
+    ]
+  },
+  {
+    "objectID": "02_tarea.html#ejercicio-3",
+    "href": "02_tarea.html#ejercicio-3",
+    "title": "Tarea 2 (12-sept)",
+    "section": "Ejercicio 3",
+    "text": "Ejercicio 3\n\\[\n\\begin{align}\n2x+3y+z &= 10 \\\\\nx-y+2z &= 4 \\\\\n3x+y-z &= 6\n\\end{align}\n\\implies\n\\left[\n\\begin{array}{ccc|c}\n2 & 3 & 1 & 10 \\\\\n1 & -1 & 2 & 4 \\\\\n3 & 1 & -1 & 6\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{1) } F_1 \\leftrightarrow F_2\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n2 & 3 & 1 & 10 \\\\\n1 & -1 & 2 & 4 \\\\\n3 & 1 & -1 & 6\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 \\leftrightarrow F_2} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n2 & 3 & 1 & 10 \\\\\n3 & 1 & -1 & 6\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{2) } F_2 = F_2-2F_1\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n2 & 3 & 1 & 10 \\\\\n3 & 1 & -1 & 6\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = F_2-2F_1} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 5 & -3 & 2 \\\\\n3 & 1 & -1 & 6\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{3) } F_3 = F_3-3F_1\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 5 & -3 & 2 \\\\\n3 & 1 & -1 & 6  \n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_3 = F_3-3F_1} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 5 & -3 & 2 \\\\\n0 & 4 & -7 & -6\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{4) } F_2 = \\frac{1}{5}F_2\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 5 & -3 & 2 \\\\\n0 & 4 & -7 & -6\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = \\frac{1}{5}F_2} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 1 & -\\frac{3}{5} & \\frac{2}{5} \\\\\n0 & 4 & -7 & -6\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{5) } F_3 = F_3-4F_2\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 1 & -\\frac{3}{5} & \\frac{2}{5} \\\\\n0 & 4 & -7 & -6\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_3 = F_3-4F_2} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 1 & -\\frac{3}{5} & \\frac{2}{5} \\\\\n0 & 0 & -\\frac{23}{5} & -\\frac{38}{5}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{6) } F_3 = -\\frac{5}{23}F_3\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 1 & -\\frac{3}{5} & \\frac{2}{5} \\\\\n0 & 0 & -\\frac{23}{5} & -\\frac{38}{5}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_3 = -\\frac{5}{23}F_3} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 1 & -\\frac{3}{5} & \\frac{2}{5} \\\\\n0 & 0 & 1 & \\frac{38}{23}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{7) } F_2 = F_2 +\\frac{3}{5}F_3\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 1 & -\\frac{3}{5} & \\frac{2}{5} \\\\\n0 & 0 & 1 & \\frac{38}{23}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = F_2 +\\frac{3}{5}F_3} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 1 & 0 & \\frac{32}{23} \\\\\n0 & 0 & 1 & \\frac{38}{23}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{8) } F_1 = F_1 +F_2\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -1 & 2 & 4 \\\\\n0 & 1 & 0 & \\frac{32}{23} \\\\\n0 & 0 & 1 & \\frac{38}{23}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 = F_1 +F_2} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & 0 & 2 & \\frac{124}{23} \\\\\n0 & 1 & 0 & \\frac{32}{23} \\\\\n0 & 0 & 1 & \\frac{38}{23}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{9) } F_1 = F_1-2F_3\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & 0 & 2 & \\frac{124}{23} \\\\\n0 & 1 & 0 & \\frac{32}{23} \\\\\n0 & 0 & 1 & \\frac{38}{23}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 = F_1-2F_3} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & 0 & 0 & \\frac{48}{23} \\\\\n0 & 1 & 0 & \\frac{32}{23} \\\\\n0 & 0 & 1 & \\frac{38}{23}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\nSolución\n\\[\n\\begin{aligned}\nx &= \\frac{48}{23}  \\\\\ny &= \\frac{32}{23}  \\\\\nz &= \\frac{38}{23}\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 2 (12-sept)</span>"
+    ]
+  },
+  {
+    "objectID": "02_tarea.html#ejercicio-4",
+    "href": "02_tarea.html#ejercicio-4",
+    "title": "Tarea 2 (12-sept)",
+    "section": "Ejercicio 4",
+    "text": "Ejercicio 4\n\\[\n\\begin{align}\n2x+y-z &= 5 \\\\\n-x+3y+2z &= 12 \\\\\n4x-y+z &= 7\n\\end{align}\n\\implies\n\\left[\n\\begin{array}{ccc|c}\n2 & 1 & -1 & 5 \\\\\n-1 & 3 & 2 & 12 \\\\\n4 & -1 & 1 & 7\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{1) } F_1 \\leftrightarrow F_2\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n2 & 1 & -1 & 5 \\\\\n-1 & 3 & 2 & 12 \\\\\n4 & -1 & 1 & 7\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 \\leftrightarrow F_2} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n-1 & 3 & 2 & 12 \\\\\n2 & 1 & -1 & 5 \\\\\n4 & -1 & 1 & 7\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{2) } F_1 =-F_1\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n-1 & 3 & 2 & 12 \\\\\n2 & 1 & -1 & 5 \\\\\n4 & -1 & 1 & 7\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 =-F_1} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n2 & 1 & -1 & 5 \\\\\n4 & -1 & 1 & 7\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{3) } F_2 =F_2-2F_1\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n2 & 1 & -1 & 5 \\\\\n4 & -1 & 1 & 7\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 =F_2-2F_1} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 7 & 3 & 29 \\\\\n4 & -1 & 1 & 7\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{4) } F_3 =F_3-4F_1\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 7 & 3 & 29 \\\\\n4 & -1 & 1 & 7\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_3 =F_3-4F_1} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 7 & 3 & 29 \\\\\n0 & 11 & 9 & 55\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{5) } F_2 =\\frac{1}{7}F_2\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 7 & 3 & 29 \\\\\n0 & 11 & 9 & 55  \n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 =\\frac{1}{7}F_2} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 1 & \\frac{3}{7} & \\frac{29}{7} \\\\\n0 & 11 & 9 & 55\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{6) } F_3 =F_3-11F_2\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 1 & \\frac{3}{7} & \\frac{29}{7} \\\\\n0 & 11 & 9 & 55\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_3 =F_3-11F_2} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 1 & \\frac{3}{7} & \\frac{29}{7} \\\\\n0 & 0 & \\frac{30}{7} & \\frac{66}{7}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{7) } F_3 =\\frac{7}{30}F_3\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 1 & \\frac{3}{7} & \\frac{29}{7} \\\\\n0 & 0 & \\frac{30}{7} & \\frac{66}{7}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_3 =\\frac{7}{30}F_3} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 1 & \\frac{3}{7} & \\frac{29}{7} \\\\\n0 & 0 & 1 & \\frac{11}{5}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{8) } F_2 =F_2-\\frac{3}{7}F_3\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 1 & \\frac{3}{7} & \\frac{29}{7} \\\\\n0 & 0 & 1 & \\frac{11}{5}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 =F_2-\\frac{3}{7}F_3} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 1 & 0 & \\frac{16}{5} \\\\\n0 & 0 & 1 & \\frac{11}{5}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{9) } F_1 =F_1+3F_2\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & -3 & -2 & -12 \\\\\n0 & 1 & 0 & \\frac{16}{5} \\\\\n0 & 0 & 1 & \\frac{11}{5}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 =F_1+3F_2} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & 0 & -2 & -\\frac{12}{5} \\\\\n0 & 1 & 0 & \\frac{16}{5} \\\\\n0 & 0 & 1 & \\frac{11}{5}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{10) } F_1 =F_1+2F_3\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & 0 & -2 & -\\frac{12}{5} \\\\\n0 & 1 & 0 & \\frac{16}{5} \\\\\n0 & 0 & 1 & \\frac{11}{5}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 =F_1+2F_3} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & 0 & 0 & 2 \\\\\n0 & 1 & 0 & \\frac{16}{5} \\\\\n0 & 0 & 1 & \\frac{11}{5}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\nSolución\n\\[\n\\begin{aligned}\nx &= 2  \\\\\ny &= \\frac{16}{5}  \\\\\nz &= \\frac{11}{5}\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 2 (12-sept)</span>"
+    ]
+  },
+  {
+    "objectID": "02_tarea.html#ejercicio-5",
+    "href": "02_tarea.html#ejercicio-5",
+    "title": "Tarea 2 (12-sept)",
+    "section": "Ejercicio 5",
+    "text": "Ejercicio 5\n\\[\n\\begin{align}\n-2x+y &= \\frac{1}{4} \\\\\n-4x+4y &= 2\n\\end{align}\n\\implies\n\\left[\n\\begin{array}{cc|c}\n-2 & 1 & \\frac{1}{4} \\\\\n-4 & 4 & 2\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{1) } F_1 \\leftrightarrow F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n-2 & 1 & \\frac{1}{4} \\\\\n-4 & 4 & 2\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 \\leftrightarrow F_2} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n-4 & 4 & 2 \\\\\n-2 & 1 & \\frac{1}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{2) } F_1 = -\\frac{1}{4} F_1\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n-4 & 4 & 2 \\\\\n-2 & 1 & \\frac{1}{4}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 = -\\frac{1}{4} F_1} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & -1 & -\\frac{2}{4} \\\\\n-2 & 1 & \\frac{1}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{3) } F_2 = F_2-2F_1\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & -1 & -\\frac{2}{4} \\\\\n-2 & 1 & \\frac{1}{4}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = F_2-2F_1} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & -1 & -\\frac{2}{4} \\\\\n0 & -1 & -\\frac{3}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{4) } F_2 = -F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & -1 & -\\frac{2}{4} \\\\\n0 & -1 & -\\frac{3}{4}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_2 = -F_2} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & -1 & -\\frac{2}{4} \\\\\n0 & 1 & \\frac{3}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{5) } F_1 = F_1+F_2\n\\]\n\\[\n\\left[\n\\begin{array}{cc|c}\n1 & -1 & -\\frac{2}{4} \\\\\n0 & 1 & \\frac{3}{4}\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_1 = -\\frac{1}{4} F_1} \\;\\;\n\\left[\n\\begin{array}{cc|c}\n1 & 0 & \\frac{1}{4} \\\\\n0 & 1 & \\frac{3}{4}\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\nSolución\n\\[\n\\begin{aligned}\nx &= \\frac{1}{4} \\\\\ny &= \\frac{3}{4} \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 2 (12-sept)</span>"
+    ]
+  },
+  {
+    "objectID": "02_tarea.html#ejercicio-6",
+    "href": "02_tarea.html#ejercicio-6",
+    "title": "Tarea 2 (12-sept)",
+    "section": "Ejercicio 6",
+    "text": "Ejercicio 6\n\\[\n\\begin{align}\nx+2y+\\frac{3}{6}z &= 12 \\\\\n2x+z &= 5+y \\\\\n4x+8y+2z &= 2\n\\end{align}\n\\implies\n\\left[\n\\begin{array}{ccc|c}\n1 & 2 & \\frac{1}{2} & 12 \\\\\n2 & -1 & 1 & 5 \\\\\n4 & 8 & 2 & 2\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\\[\n\\text{1) } F_3=F_3-4F_1\n\\]\n\\[\n\\left[\n\\begin{array}{ccc|c}\n1 & 2 & \\frac{1}{2} & 12 \\\\\n2 & -1 & 1 & 5 \\\\\n4 & 8 & 2 & 2\n\\end{array}\n\\right]\n\\;\\;\\xrightarrow{F_3=F_3-4F_1} \\;\\;\n\\left[\n\\begin{array}{ccc|c}\n1 & 2 & \\frac{1}{2} & 12 \\\\\n2 & -1 & 1 & 5 \\\\\n0 & 0 & 0 & -46\n\\end{array}\n\\right]\n\\\\\\\\\n\\]\n\nSolución\nEl sistema no tiene solución pues el proceso da lugar a una inconsistencia: \\(0 = -46\\)",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 2 (12-sept)</span>"
+    ]
+  },
+  {
+    "objectID": "02_matrices.html#método-de-eliminación",
+    "href": "02_matrices.html#método-de-eliminación",
+    "title": "Apuntes de clase",
+    "section": "",
+    "text": "Escoger una variable a eliminar\nMultiplicar una o ambas ecuaciones para que los coeficientes de la variable elegida sean iguales.\nSumar o restar las ecuaciones.\nResolver las ecuaciones resultantes.\nSustituir el valor de la incógnita obtenido en otra ecuación para obtener los valores restantes.\n\n\nEjemplo\n\\[\n\\begin{align}\n2x+3y &= 100 \\tag{A}\\\\\nx-2y &= -55 \\tag{B} \\\\\n\\end{align}\n\\]\n\nMultiplicamos por -2 la ecuación A y sumamos ambas ecuaciones\n\n\\[\n\\begin{align}\n2x+3y &= 100 \\\\\n{\\color{blue}{-2}}x+{\\color{blue}{4}}y &= {\\color{blue}{110}} \\\\\n\\hline\n0+7y &= 210\n\\end{align}\n\\]\n\nDespejamos para \\(y\\).\n\n\\[\n\\begin{align}\n7y &= 210\\\\\ny &= \\frac{210}{7}=30\n\\end{align}\n\\]\n\nSustituimos el valor de \\(y\\) en la ecuación B.\n\n\\[\n\\begin{align}\nx-2(30) &= -55\\\\\nx &= -55+60=5\n\\end{align}\n\\]\nSolución\n\\[\n\\begin{align}\nx &= 5\\\\\ny &= 30\n\\end{align}\n\\]",
+    "crumbs": [
+      "Matrices",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Apuntes de clase</span>"
     ]
   }
 ]

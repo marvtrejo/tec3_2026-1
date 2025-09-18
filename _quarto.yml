@@ -25,6 +25,10 @@ book:
     - 01_sel.qmd
     - 01_ejercicios.qmd
     - 01_tarea.qmd
+  - part: Matrices
+    chapters:
+    - 02_matrices.qmd
+    - 02_tarea.qmd
 format:
   html:
     theme: flatly
