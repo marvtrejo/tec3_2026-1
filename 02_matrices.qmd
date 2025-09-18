@@ -93,6 +93,11 @@ x-2y &= -55\\
 \right]
 $$
 
+Para resolver podemos seguir los mismos principios que en el método de eliminación, es decir:
+- Las filas pueden sumarse o restarse entre sí.
+- Cualquier fila se puede multiplicar por un escalar.
+- Las filas se pueden cambiar de lugar
+
 1)  Multiplicamos la fila 1 por 1/2
 
 $$
@@ -182,6 +187,8 @@ x=5 \\
 y=30
 \end{array} 
 $$
+
+**Ejemplo 2**
 
 $$
 \underbrace{
