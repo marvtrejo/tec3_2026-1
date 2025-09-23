@@ -201,6 +201,32 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Determinantes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_determinantes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Apuntes de clase</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_ejercicios.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ejercicios</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_tarea.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tarea 3 (19-sept)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -213,11 +239,11 @@ window.Quarto = {
   <ul>
   <li><a href="#método-de-eliminación" id="toc-método-de-eliminación" class="nav-link active" data-scroll-target="#método-de-eliminación">Método de eliminación</a>
   <ul class="collapse">
-  <li><a href="#ejemplo" id="toc-ejemplo" class="nav-link" data-scroll-target="#ejemplo">Ejemplo</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
   </ul></li>
   <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices">Matrices</a>
   <ul class="collapse">
-  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
+  <li><a href="#ejemplos-1" id="toc-ejemplos-1" class="nav-link" data-scroll-target="#ejemplos-1">Ejemplos</a></li>
   </ul></li>
   <li><a href="#propiedades" id="toc-propiedades" class="nav-link" data-scroll-target="#propiedades">Propiedades</a>
   <ul class="collapse">
@@ -261,17 +287,20 @@ window.Quarto = {
 <li>Resolver las ecuaciones resultantes.</li>
 <li>Sustituir el valor de la incógnita obtenido en otra ecuación para obtener los valores restantes.</li>
 </ol>
-<section id="ejemplo" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo">Ejemplo</h3>
+<section id="ejemplos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos">Ejemplos</h3>
+<ol type="1">
+<li></li>
+</ol>
 <p><span class="math display">\[
 \begin{align}
 2x+3y &amp;= 100 \tag{A}\\
 x-2y &amp;= -55 \tag{B} \\
 \end{align}
 \]</span></p>
-<ol type="1">
+<ul>
 <li>Multiplicamos por -2 la ecuación A y sumamos ambas ecuaciones</li>
-</ol>
+</ul>
 <p><span class="math display">\[
 \begin{align}
 2x+3y &amp;= 100 \\
@@ -280,18 +309,18 @@ x-2y &amp;= -55 \tag{B} \\
 0+7y &amp;= 210
 \end{align}
 \]</span></p>
-<ol start="2" type="1">
+<ul>
 <li>Despejamos para <span class="math inline">\(y\)</span>.</li>
-</ol>
+</ul>
 <p><span class="math display">\[
 \begin{align}
 7y &amp;= 210\\
 y &amp;= \frac{210}{7}=30
 \end{align}
 \]</span></p>
-<ol start="3" type="1">
+<ul>
 <li>Sustituimos el valor de <span class="math inline">\(y\)</span> en la ecuación B.</li>
-</ol>
+</ul>
 <p><span class="math display">\[
 \begin{align}
 x-2(30) &amp;= -55\\
@@ -303,6 +332,65 @@ x &amp;= -55+60=5
 \begin{align}
 x &amp;= 5\\
 y &amp;= 30
+\end{align}
+\]</span></p>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+5x-8y &amp;= -\frac{64}{16} \tag{A}\\
+2x+3y &amp;= \frac{153}{40} \tag{B} \\
+\end{align}
+\]</span></p>
+<ul>
+<li>Multiplicamos por <span class="math inline">\(\frac{5}{2}\)</span> la ecuación B</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+5x-8y &amp;= -\frac{64}{16} \\
+\frac{5}{2}(2x+3y) &amp;= \frac{5}{2}(\frac{153}{40}) \\
+\end{align}
+\implies
+\quad
+\begin{array}
+5x-8y= -4 \\
+5x+\frac{15}{2}y = \frac{153}{16} \\
+\end{array}
+\]</span></p>
+<ul>
+<li>Restamos la ecuación B de la ecuación A</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+5x-8y &amp;= -4 \\
+-5x - \frac{15}{2}y &amp;= -\frac{153}{16} \\
+\hline
+0-\frac{31}{2}y &amp;= 210
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+y &amp;= -\frac{217}{16} \cdot -\frac{2}{31} = \frac{7}{8}
+\end{align}
+\]</span></p>
+<ul>
+<li>Sustituimos el valor de <span class="math inline">\(y\)</span> en la ecuación B</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+2x+3y &amp;= \frac{153}{40} \\
+2x+ 3(\frac{7}{8}) &amp;= \frac{153}{40} \\
+2x + \frac{21}{8} &amp;= \frac{153}{40} \\
+2x &amp;= \frac{153}{40}- \frac{105}{40}= \frac{48}{40}= \frac{6}{5} \\
+x &amp;= \frac{6}{5 \cdot 2}= \frac{3}{5}
+\end{align}
+\]</span></p>
+<p><strong>Solución</strong></p>
+<p><span class="math display">\[
+\begin{align}
+x &amp;= \frac{3}{5} \\
+y &amp;= \frac{7}{8}
 \end{align}
 \]</span></p>
 </section>
@@ -337,6 +425,7 @@ x-2y &amp;= -55\\
 \end{array}
 \right]
 \]</span></p>
+<p>Para resolver podemos seguir los mismos principios que en el método de eliminación, es decir: - Las filas pueden sumarse o restarse entre sí. - Cualquier fila se puede multiplicar por un escalar. - Las filas se pueden cambiar de lugar</p>
 <ol type="1">
 <li>Multiplicamos la fila 1 por 1/2</li>
 </ol>
@@ -423,24 +512,106 @@ x=5 \\
 y=30
 \end{array}
 \]</span></p>
+<p><strong>Ejemplo 2</strong></p>
 <p><span class="math display">\[
-\underbrace{
 \begin{align}
 5x-8y &amp;= -\frac{64}{16} \\
 2x+3y &amp;= \frac{153}{40} \\
-\end{align}}
-_{\mathbf{SEL}}
+\end{align}
 \implies
-\underbrace{
 \left[ \begin{array}{cc|c}
 5 &amp; -8 &amp; -4 \\
 2 &amp; 3 &amp; \frac{153}{40}
 \end{array} \right]
-}
-_{\mathbf{Matriz}}
 \]</span></p>
-<section id="ejemplos" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplos">Ejemplos</h3>
+<ol type="1">
+<li>Multiplicamos la fila 1 por 1/5</li>
+</ol>
+<p><span class="math display">\[
+\left[
+\begin{array}{cc|c}
+5 &amp; -8 &amp; -4 \\
+2 &amp; 3 &amp; \frac{153}{40}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 \to \tfrac{1}{5}F_1}\;\;
+\left[
+\begin{array}{cc|c}
+1 &amp; -\tfrac{8}{5} &amp; -\tfrac{4}{5} \\
+2 &amp; 3 &amp; \frac{153}{40}
+\end{array}
+\right]
+\]</span></p>
+<ol start="2" type="1">
+<li>A la fila 2 le restamos 2 veces la fila 1 <span class="math inline">\(F_2-2F_1\)</span></li>
+</ol>
+<p><span class="math display">\[
+\left[
+\begin{array}{cc|c}
+1 &amp; -\tfrac{8}{5} &amp; -\tfrac{4}{5} \\
+2 &amp; 3 &amp; \frac{153}{40}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2-2F_1}\;\;
+\left[
+\begin{array}{cc|c}
+1 &amp; -\tfrac{8}{5} &amp; -\tfrac{4}{5} \\
+0 &amp; \frac{31}{5} &amp; \frac{217}{40}
+\end{array}
+\right]
+\]</span></p>
+<ol start="3" type="1">
+<li>Multiplicamos la fila 2 por su recíproco <span class="math inline">\(\frac{5}{31}\)</span></li>
+</ol>
+<p><span class="math display">\[
+\left[
+\begin{array}{cc|c}
+1 &amp; -\tfrac{8}{5} &amp; -\tfrac{4}{5} \\
+0 &amp; \frac{31}{5} &amp; \frac{217}{40}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 \to \tfrac{5}{31}F_2}\;\;
+\left[
+\begin{array}{cc|c}
+1 &amp; -\tfrac{8}{5} &amp; -\tfrac{4}{5} \\
+0 &amp; 1 &amp; \frac{7}{8}
+\end{array}
+\right]
+\]</span></p>
+<ol start="4" type="1">
+<li>A la fila 1 le restamos <span class="math inline">\(\frac{8}{5}\)</span> de la fila 2 <span class="math inline">\(F_1-\frac{8}{5} F_2\)</span></li>
+</ol>
+<p><span class="math display">\[
+\left[
+\begin{array}{cc|c}
+1 &amp; -\tfrac{8}{5} &amp; -\tfrac{4}{5} \\
+0 &amp; 1 &amp; \frac{7}{8}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1-\frac{8}{5} F_2}\;\;
+\left[
+\begin{array}{cc|c}
+1 &amp; 0 &amp; \tfrac{3}{5} \\
+0 &amp; 1 &amp; \frac{7}{8}
+\end{array}
+\right]
+\]</span></p>
+<p><strong>Solución</strong></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{cc|c}
+1 &amp; 0 &amp; \frac{3}{5} \\
+0 &amp; 1 &amp; \frac{7}{8}
+\end{array}
+\right]
+\implies
+\begin{array}{cc|c}
+x=\frac{3}{5} \\
+y=\frac{7}{8}
+\end{array}
+\]</span></p>
+<section id="ejemplos-1" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos-1">Ejemplos</h3>
 <ol type="A">
 <li></li>
 </ol>
@@ -717,8 +888,8 @@ A+(B+C)=
 12 &amp; -4
 \end{bmatrix}
 \]</span></p>
-<section id="ejemplos-1" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplos-1">Ejemplos</h4>
+<section id="ejemplos-2" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplos-2">Ejemplos</h4>
 <p>A partir de las siguientes matrices, resuelva los ejercicios</p>
 <p><span class="math display">\[
 A =
@@ -852,8 +1023,8 @@ C=
 <li>Propiedad distributiva: <span class="math inline">\(A(B+C)=AB+AC\)</span></li>
 <li>Propiedad asociativa: <span class="math inline">\(A(BC)=(AB)C\)</span></li>
 </ol>
-<section id="ejemplos-2" class="level4">
-<h4 class="anchored" data-anchor-id="ejemplos-2">Ejemplos</h4>
+<section id="ejemplos-3" class="level4">
+<h4 class="anchored" data-anchor-id="ejemplos-3">Ejemplos</h4>
 <p><span class="math display">\[
 A =
 \begin{bmatrix}

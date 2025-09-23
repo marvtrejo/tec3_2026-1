@@ -1,0 +1,325 @@
+---
+title: "Apuntes de clase"
+---
+
+El determinante de una matriz es un número real compuesto por la suma de todas las permutaciones o combinaciones de los elementos de una matriz A, en las cuales hay exactamente un elemento de cada fila y uno de cada columna. 
+
+El determinante solo se puede calcular en una matrices cuadradas o de $n \times n$
+
+
+## Determinante 2x2
+
+Sea $A$ una matriz de $2 \times 2$ y su determinante $|A|$ ó $detA$.
+
+$$
+|A| = a_{11} \cdot a_{22} - a_{12} \cdot a_{21}
+$$
+
+**Ejemplo** 
+
+$$
+A = 
+\left[
+\begin{array}{cc}
+1 & 4 \\
+3 & 5
+\end{array}
+\right]
+$$
+
+$$
+|A| = 1 \cdot5 -4 \cdot3=5-12=-7 
+$$
+
+## Determinante 3x3
+
+Sea B una matriz de $3 \times 3$ entonces
+
+$$
+|B| = 
+a_{11} 
+\left|
+\begin{array}{cc}
+a_{22} & a_{23} \\
+a_{32} & a_{33}
+\end{array}
+\right|
+-
+a_{12}
+\left|
+\begin{array}{cc}
+a_{21} & a_{23} \\
+a_{31} & a_{33}
+\end{array}
+\right|
++
+a_{13}
+\left|
+\begin{array}{cc}
+a_{21} & a_{22} \\
+a_{31} & a_{32}
+\end{array}
+\right|
+$$
+
+**Ejemplo 1**
+
+$$
+B = 
+\left[
+\begin{array}{ccc}
+3 & 5 & 2 \\
+4 & 2 & 3 \\
+-1 & 2 & 4
+\end{array}
+\right]
+$$
+
+$$
+|B| = 
+3 
+\left|
+\begin{array}{cc}
+2 & 3 \\
+2 & 4
+\end{array}
+\right|
+-
+5
+\left|
+\begin{array}{cc}
+4 & 3 \\
+-1 & 4
+\end{array}
+\right|
++
+2
+\left|
+\begin{array}{cc}
+4 & 2 \\
+-1 & 2
+\end{array}
+\right|
+$$
+
+$$
+|B| = 3 [2 \cdot4 - 2 \cdot 3]-5 [4 \cdot4 - (-1) \cdot 3] + 2[4 \cdot2 - (-1) \cdot 2]
+$$
+
+
+$$
+|B| = 3 \cdot 2-5 \cdot 19 + 2 \cdot10 = 6-95+20
+$$
+
+$$
+|B| = -69
+$$
+
+**Ejemplo 2**
+
+
+$$
+C = 
+\left[
+\begin{array}{ccc}
+2 & -3 & 5 \\
+1 & 0 & 4 \\
+3 & -3 & 9
+\end{array}
+\right]
+$$
+
+$$
+|C| = 
+2 
+\left|
+\begin{array}{cc}
+0 & 4 \\
+-3 & 9
+\end{array}
+\right|
+-
+(-3)
+\left|
+\begin{array}{cc}
+1 & 4 \\
+3 & 9
+\end{array}
+\right|
++
+5
+\left|
+\begin{array}{cc}
+1 & 0 \\
+3 & -3
+\end{array}
+\right|
+$$
+
+$$
+|C| = 2 [0 \cdot 9 - (-3)\cdot4]-(-3) [1 \cdot 9 - 3 \cdot 4] + 5[1(-3) - 3 \cdot 0]
+$$
+
+$$
+|C| = 2 (12) +3(-3) + 5 (-3) = 24-9-15
+$$
+
+$$
+|C| = 0
+$$
+
+En este caso, el determinante es $0$ porque en la matriz $C$ la suma de las filas 1 y 2 da como resultado la fila 3.
+
+$$
+C = 
+\left[
+\begin{array}{ccc}
+2 & -3 & 5 \\
+1 & 0 & 4 \\
+3 & -3 & 9
+\end{array}
+\right]
+\implies +
+\begin{array}{ccc}
+2 & -3 & 5 \\
+1 & 0 & 4 \\
+\hline
+3 & -3 & 9
+\end{array}
+$$
+
+## Regla de Sarrus
+
+Entre los métodos utilizados para calcular determinantes tenemos la regla de Sarrus, el cual consiste en dibujar dos conjuntos de triángulos opuestos a partir de los elementos de la matriz.Tomemos como ejemplo la matriz B, para la cual calculamos el determinante previamente.
+
+$$
+B = 
+\left[
+\begin{array}{ccc}
+3 & 5 & 2 \\
+4 & 2 & 3 \\
+-1 & 2 & 4
+\end{array}
+\right]
+$$
+
+1) Primero identificamos la diagonal principal (verde) y a partir de ahí "dibujamos" dos triángulos con los elementos. Multiplicamos los elementos de cada grupo y sumamos.
+
+$$
+B = 
+\left[
+\begin{array}{ccc}
+{\color{#058789}{3}} & {\color{#d54b1a}{5}} & {\color{#e3a72f}{2}} \\
+{\color{#e3a72f}{4}} & {\color{#058789}{2}} & {\color{#d54b1a}{3}} \\
+{\color{#d54b1a}{-1}} & {\color{#e3a72f}{2}} & {\color{#058789}{4}}
+\end{array}
+\right] 
+\implies
+\color{#058789}{(3 \cdot 2 \cdot 4)}+
+\color{#d54b1a}{(5 \cdot 3 \cdot -1)}+
+\color{#e3a72f}{(4 \cdot 2 \cdot 2)}
+$$
+
+2) Repetimos el proceso pero ahora a partir de la diagonal secundaria.
+
+$$
+B = 
+\left[
+\begin{array}{ccc}
+{\color{#213722}{3}} & {\color{#f8c662}{5}} & {\color{#baaceb}{2}} \\
+{\color{#f8c662}{4}} & {\color{#baaceb}{2}} & {\color{#213722}{3}} \\
+{\color{#baaceb}{-1}} & {\color{#213722}{2}} & {\color{#f8c662}{4}}
+\end{array}
+\right]
+\implies
+\color{#baaceb}{(-1 \cdot 2 \cdot 2)}+
+\color{#213722}{(3 \cdot 2 \cdot 3)}+
+\color{#f8c662}{(4 \cdot 5 \cdot 4)}
+$$
+
+3) Por último, al resultado del primer paso le restamos el resultado del segundo paso
+
+$$
+|B| = [(3 \cdot 2 \cdot 4)+(5 \cdot 3 \cdot -1) + (4 \cdot 2 \cdot 2)]-[(-1 \cdot 2 \cdot 2)+(3 \cdot 2 \cdot 3) + (4 \cdot 5 \cdot 4)]
+$$
+
+$$
+|B| =[24-15+16]-[-4+18+80]
+$$
+
+$$
+|B|=25-94=-69
+$$
+
+
+## Determinante 4x4
+
+$$
+D = 
+\left[
+\begin{array}{ccc}
+1 & 3 & 5 & 2 \\
+0 & -1 & 3 & 4 \\
+2 & 1 & 9 & 6 \\
+3 & 2 & 4 & 8
+\end{array}
+\right]
+$$
+
+$$
+|D| = a_{11} \cdot A_{11}-a_{12} \cdot A_{12} + a_{13} \cdot A_{13}-a_{14} \cdot A_{14}
+$$
+
+$$
+|D| = 
+(1) 
+\left|
+\begin{array}{ccc}
+-1 & 3 & 4 \\
+1 & 9 & 6 \\
+2 & 4 & 8 
+\end{array}
+\right|
+-(3)
+\left|
+\begin{array}{ccc}
+0 & 3 & 4 \\
+2 & 9 & 6 \\
+3 & 4 & 8 
+\end{array}
+\right|
++
+(5)
+\left|
+\begin{array}{ccc}
+0 & -1 & 4 \\
+2 & 2 & 6 \\
+3 & 2 & 8 
+\end{array}
+\right|
+-(2)
+\left|
+\begin{array}{ccc}
+0 & -1 & 3 \\
+2 & 2 & 9 \\
+3 & 2 & 4 
+\end{array}
+\right|
+$$
+
+$$
+|D| = 1(-92)-3(-70)+5(2)-2(-16)= 160
+$$
+Se pueden calcular determinantes para cualquier matriz cuadrada sin importar su tamaño, aunque se volverá una tarea más compleja conforme mayor sea el tamaño de la matriz, por ejemplo:
+- Calcular un determinante de 4x4 implica calcular 4 de 3x3. 
+- Calcular un determinante de 5x5 implica calcular 5 de 4x4 ó 20 de 3x3.
+
+## Propiedades
+
+- $det (A \cdot B)= detA \cdot detB$
+- $det(I) = 1$
+- $det(A^T)=|A|$
+- Si 2 filas o columnas son iguales o proporcionales $|A| = \varnothing$
+- Si $|A| = \varnothing$ la matriz es singular y por lo tanto no tiene matriz inversa
+- $|A^{-1}|= \frac{1}{|A|} $
+- Una matriz $A$ multiplicada por un escalar $\alpha$, $|A|= \alpha |A|$

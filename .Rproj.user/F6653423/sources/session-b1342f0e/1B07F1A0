@@ -1,14 +1,14 @@
 {
-    "id": "E5508577",
+    "id": "1B07F1A0",
     "path": "F:/Github/taller3_2026-1/01_sel.qmd",
     "project_path": "01_sel.qmd",
     "type": "quarto_markdown",
-    "hash": "2712826666",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1758226586402.0,
+    "created": 1758648725176.0,
     "source_on_save": false,
-    "relative_order": 4,
+    "relative_order": 5,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -19,7 +19,7 @@
         "scrollLine": "0",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "50:0"
     },
     "folds": "",
     "lastKnownWriteTime": 1758218862,

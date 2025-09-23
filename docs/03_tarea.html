@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eduardo Castro Rabadán">
-<meta name="author" content="Marvin Ivan Trejo Mendez">
 
-<title>Taller de Economía Cuantitativa III</title>
+<title>Tarea 3 (19-sept) – Taller de Economía Cuantitativa III</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_sel.html" rel="next">
+<link href="./03_determinantes.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -72,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="include/webex.css">
@@ -98,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introducción</a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Presentación del curso</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_determinantes.html">Determinantes</a></li><li class="breadcrumb-item"><a href="./03_tarea.html"><span class="chapter-title">Tarea 3 (19-sept)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -121,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Presentación del curso</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Presentación del curso</span></a>
   </div>
 </li>
       </ul>
@@ -189,12 +216,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_ejercicios.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ejercicios</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./03_tarea.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tarea 3 (19-sept)</span></a>
+  <a href="./03_tarea.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Tarea 3 (19-sept)</span></a>
   </div>
 </li>
       </ul>
@@ -209,45 +231,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenido</h2>
    
   <ul>
-  <li><a href="#bienvenida" id="toc-bienvenida" class="nav-link active" data-scroll-target="#bienvenida">Bienvenida</a></li>
-  <li><a href="#profesores" id="toc-profesores" class="nav-link" data-scroll-target="#profesores">Profesores</a></li>
-  <li><a href="#metodología-del-curso" id="toc-metodología-del-curso" class="nav-link" data-scroll-target="#metodología-del-curso">Metodología del curso</a></li>
-  <li><a href="#reglamento-interno" id="toc-reglamento-interno" class="nav-link" data-scroll-target="#reglamento-interno">Reglamento interno</a></li>
-  <li><a href="#criterios-de-evaluación" id="toc-criterios-de-evaluación" class="nav-link" data-scroll-target="#criterios-de-evaluación">Criterios de evaluación</a>
-  <ul class="collapse">
-  <li><a href="#ponderación" id="toc-ponderación" class="nav-link" data-scroll-target="#ponderación">Ponderación</a></li>
-  </ul></li>
-  <li><a href="#contenido-temático" id="toc-contenido-temático" class="nav-link" data-scroll-target="#contenido-temático">Contenido temático</a></li>
-  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">Bibliografía</a></li>
+  <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link active" data-scroll-target="#ejercicio-1">Ejercicio 1</a></li>
+  <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2">Ejercicio 2</a></li>
+  <li><a href="#ejercicio-3" id="toc-ejercicio-3" class="nav-link" data-scroll-target="#ejercicio-3">Ejercicio 3</a></li>
+  <li><a href="#ejercicio-4" id="toc-ejercicio-4" class="nav-link" data-scroll-target="#ejercicio-4">Ejercicio 4</a></li>
+  <li><a href="#ejercicio-5" id="toc-ejercicio-5" class="nav-link" data-scroll-target="#ejercicio-5">Ejercicio 5</a></li>
+  <li><a href="#ejercicio-6" id="toc-ejercicio-6" class="nav-link" data-scroll-target="#ejercicio-6">Ejercicio 6</a></li>
+  <li><a href="#ejercicio-7" id="toc-ejercicio-7" class="nav-link" data-scroll-target="#ejercicio-7">Ejercicio 7</a></li>
+  <li><a href="#ejercicio-8" id="toc-ejercicio-8" class="nav-link" data-scroll-target="#ejercicio-8">Ejercicio 8</a></li>
+  <li><a href="#ejercicio-9" id="toc-ejercicio-9" class="nav-link" data-scroll-target="#ejercicio-9">Ejercicio 9</a></li>
+  <li><a href="#ejercicio-10" id="toc-ejercicio-10" class="nav-link" data-scroll-target="#ejercicio-10">Ejercicio 10</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introducción</a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Presentación del curso</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_determinantes.html">Determinantes</a></li><li class="breadcrumb-item"><a href="./03_tarea.html"><span class="chapter-title">Tarea 3 (19-sept)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Taller de Economía Cuantitativa III</h1>
+<h1 class="title"><span class="chapter-title">Tarea 3 (19-sept)</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Eduardo Castro Rabadán </p>
-             <p>Marvin Ivan Trejo Mendez </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Última actualización</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">23/09/2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -257,123 +266,797 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bienvenida" class="level1">
-<h1>Bienvenida</h1>
-<p>Bienvenidas y bienvenidos a las notas de clase y ejercicios del <strong>Taller de Economía Cuantitativa III.</strong> A lo largo del curso las y los estudiantes conocerán las propiedades matriciales, así como su operación y aplicaciones a la economía, además de estudiar la terminología y métodos del álgebra matricial para formular y resolver modelos económicos que se expresen mediante relaciones lineales.</p>
-<p>Al finalizar el semestre, las y los alumnos estarán capacitados para entender y resolver sistemas de ecuaciones lineales a través de métodos de álgebra lineal. Además, utilizarán los métodos matemáticos del álgebra lineal para analizar y resolver problemas económicos.</p>
-<p>Este curso está diseñado para estudiantes de la <strong>Licenciatura en Economía</strong> y combina teoría con ejercicios prácticos en <strong>R y RStudio</strong>. En este sitio encontrarás:</p>
-<ul>
-<li><p>Apuntes de clase</p></li>
-<li><p>Ejercicios interactivos</p></li>
-<li><p>Recursos adicionales</p></li>
-</ul>
+<p>A partir de las siguientes matrices, resuelve los ejercicios.</p>
+<p><span class="math display">\[
+A =
+\begin{bmatrix}
+1 &amp; 4 \\
+-2 &amp; 0
+\end{bmatrix}
+\qquad
+B=
+\begin{bmatrix}
+3 &amp; -1 &amp; 5 \\
+0 &amp; 2 &amp; 7
+\end{bmatrix}
+\qquad
+C=
+\begin{bmatrix}
+6 &amp; 0 \\
+-3 &amp; 1 \\
+4 &amp; 2
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+D =
+\begin{bmatrix}
+1 &amp; 0 &amp; -1 \\
+2 &amp; 3 &amp; 4 \\
+-2 &amp; 5 &amp; 6
+\end{bmatrix}
+\qquad
+E=
+\begin{bmatrix}
+7 &amp; 8 \\
+9 &amp; 10
+\end{bmatrix}
+\qquad
+F=
+\begin{bmatrix}
+0 &amp; 1 \\
+-1 &amp; -2 \\
+3 &amp; 4
+\end{bmatrix}
+\]</span></p>
+<section id="ejercicio-1" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h2>
+<p><span class="math display">\[
+A+E =
+\begin{bmatrix}
+1 &amp; 4 \\
+-2 &amp; 0
+\end{bmatrix}
++
+\begin{bmatrix}
+7 &amp; 8 \\
+9 &amp; 10
+\end{bmatrix}
+=
+\begin{bmatrix}
+8 &amp; 12 \\
+7 &amp; 10
+\end{bmatrix}
+\]</span></p>
 </section>
-<section id="profesores" class="level1">
-<h1>Profesores</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-<div class="card" style="flex: 1 1 300px;">
-<h3 class="anchored" data-anchor-id="profesores">Eduardo Castro Rabadán</h3>
-<p>Profesor titular</p>
-<p>eduardo.castro@comunidad.unam.mx</p>
-<div style="border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"></div>
-<p>Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en monitoreo y evaluación de indicadores en política pública. Mis principales líneas de investigación son el mercado laboral, las políticas públicas sobre violencia, salud mental y adicciones. Actualmente, trabajo en el INEGI como Jefe de la Oficina de Apoyo Estratégico en la Dirección General de Integración, Análisis e Investigación.</p>
-</div>
-<div class="card" style="flex: 1 1 300px;">
-<h3 class="anchored">Marvin Ivan Trejo Mendez</h3>
-<p>Profesor adjunto</p>
-<p>marvtrejo@comunidad.unam.mx</p>
-<div style="border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"></div>
-<p>Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. Mis principales líneas de investigación son la política social, monitoreo y evaluación, pobreza y desarrollo económico. Me he desempeñado como Subdirector de Política Pública Comparada en la Coordinación de Evaluación del CONEVAL y he sido profesor en las materias de Desarrollo Económico y Teoría Microeconómica.</p>
-</div>
-</div>
-</div>
-</div>
+<section id="ejercicio-2" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h2>
+<p><span class="math display">\[
+3B =
+3
+\begin{bmatrix}
+3 &amp; -1 &amp; 5 \\
+0 &amp; 2 &amp; 7
+\end{bmatrix}
+=
+\begin{bmatrix}
+9 &amp; -3 &amp; 15 \\
+0 &amp; 6 &amp; 21
+\end{bmatrix}
+\]</span></p>
 </section>
-<section id="metodología-del-curso" class="level1">
-<h1>Metodología del curso</h1>
-<p>El curso consta de 16 sesiones los viernes a lo largo del semestre, comenzando el 15 de agosto de 2025 y concluyendo el 28 de noviembre de 2025. Las clases se realizarán de manera presencial en la Facultad de Economía, en un horario de 7:00 a 9:00 a.m. Las y los estudiantes deberán presentarse con los temas previamente estudiados de acuerdo con lo acordado en las clases.</p>
+<section id="ejercicio-3" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h2>
+<p><span class="math display">\[
+B \cdot C =
+\begin{bmatrix}
+3 &amp; -1 &amp; 5 \\
+0 &amp; 2 &amp; 7
+\end{bmatrix}
+\begin{bmatrix}
+6 &amp; 0 \\
+-3 &amp; 1 \\
+4 &amp; 2
+\end{bmatrix}
+\]</span> Dado que <span class="math inline">\(B_{23}\)</span> tiene el mismo número de columnas que el número de filas de <span class="math inline">\(C_{32}\)</span>, el producto de ambas matrices esta conformado por los siguientes elementos:</p>
+<p><span class="math display">\[
+a_{11}=
+\left(
+\begin{array}{ccc}
+3 &amp; -1 &amp; 5 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+6 \\
+-3 \\
+4
+\end{array}
+\right)
+= 18+3+20=41
+\]</span></p>
+<p><span class="math display">\[
+a_{12}=
+\left(
+\begin{array}{ccc}
+3 &amp; -1 &amp; 5 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+0 \\
+1 \\
+2
+\end{array}
+\right)
+= 0-1+10=9
+\]</span></p>
+<p><span class="math display">\[
+a_{21}=
+\left(
+\begin{array}{ccc}
+0 &amp; 2 &amp; 7 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+6 \\
+-3 \\
+4
+\end{array}
+\right)
+= 0-6+28=22
+\]</span></p>
+<p><span class="math display">\[
+a_{22}=
+\left(
+\begin{array}{ccc}
+0 &amp; 2 &amp; 7 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+0 \\
+1 \\
+2
+\end{array}
+\right)
+= 0+2+14=16
+\]</span></p>
+<p><span class="math display">\[
+B \cdot C=
+\left[
+\begin{array}{ccc}
+41 &amp; 22 \\
+22 &amp; 16
+\end{array}
+\right]
+\]</span></p>
 </section>
-<section id="reglamento-interno" class="level1">
-<h1>Reglamento interno</h1>
-<ul>
-<li><p>Es requisito indispensable que las y los alumnos se conduzcan con absoluto respeto con sus compañeras y compañeros, así como con los profesores.</p></li>
-<li><p>Toda persona que se presente al curso será calificada. Sólo la que se presente a 3 o menos clases y no presente ningún trabajo será calificada con NP.</p></li>
-<li><p>Ambos profesores estamos para ayudarles, no duden en preguntar.</p></li>
-<li><p>Entregar en tiempo y forma las actividades. No hay entrega extemporánea de actividades.</p></li>
-<li><p>Por planeación de la materia y por respeto a las personas asistentes a la clase, no hay espacio para temas ajenos a la materia.</p></li>
-<li><p>En caso de detectar plagio en alguna tarea y/o trabajo, perderá la posibilidad de acreditar el curso.</p></li>
-</ul>
+<section id="ejercicio-4" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h2>
+<p><span class="math display">\[
+C \cdot B =
+\begin{bmatrix}
+6 &amp; 0 \\
+-3 &amp; 1 \\
+4 &amp; 2
+\end{bmatrix}
+\begin{bmatrix}
+3 &amp; -1 &amp; 5 \\
+0 &amp; 2 &amp; 7
+\end{bmatrix}
+\]</span></p>
+<p>Dado que <span class="math inline">\(C_{32}\)</span> tiene el mismo número de columnas que el número de filas de <span class="math inline">\(B_{23}\)</span>, el producto de ambas matrices esta conformado por los siguientes elementos:</p>
+<p><span class="math display">\[
+a_{11}=
+\left(
+\begin{array}{ccc}
+6 &amp; 0
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+0
+\end{array}
+\right)
+= 18+0=18
+\]</span></p>
+<p><span class="math display">\[
+a_{12}=
+\left(
+\begin{array}{ccc}
+6 &amp; 0
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+2
+\end{array}
+\right)
+= -6+0=-6
+\]</span></p>
+<p><span class="math display">\[
+a_{13}=
+\left(
+\begin{array}{ccc}
+6 &amp; 0
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+5 \\
+7
+\end{array}
+\right)
+= 30+0=30
+\]</span></p>
+<p><span class="math display">\[
+a_{21}=
+\left(
+\begin{array}{ccc}
+-3 &amp; 1
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+0
+\end{array}
+\right)
+= -9+0=-9
+\]</span></p>
+<p><span class="math display">\[
+a_{22}=
+\left(
+\begin{array}{ccc}
+-3 &amp; 1
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+2
+\end{array}
+\right)
+= 3+2=5
+\]</span></p>
+<p><span class="math display">\[
+a_{23}=
+\left(
+\begin{array}{ccc}
+-3 &amp; 1
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+5 \\
+7
+\end{array}
+\right)
+= -15+7=-8
+\]</span></p>
+<p><span class="math display">\[
+a_{31}=
+\left(
+\begin{array}{ccc}
+4 &amp; 2
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+0
+\end{array}
+\right)
+= 12+0=12
+\]</span></p>
+<p><span class="math display">\[
+a_{32}=
+\left(
+\begin{array}{ccc}
+4 &amp; 2
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+2
+\end{array}
+\right)
+= -4+4=0
+\]</span></p>
+<p><span class="math display">\[
+a_{33}=
+\left(
+\begin{array}{ccc}
+4 &amp; 2
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+5 \\
+7
+\end{array}
+\right)
+= 20+14=34
+\]</span></p>
+<p><span class="math display">\[
+C \cdot B =
+\left[
+\begin{array}{ccc}
+18 &amp; -6 &amp; 30 \\
+-9 &amp; 5 &amp; -8 \\
+12 &amp; 0 &amp; 34
+\end{array}
+\right]
+\]</span></p>
 </section>
-<section id="criterios-de-evaluación" class="level1">
-<h1>Criterios de evaluación</h1>
-<p>Habrá <strong>DOS</strong> exámenes parciales con igual ponderación que se presentarán de manera individual. Fechas tentativas: <strong>3 de octubre y 28 de noviembre.</strong></p>
-<p>Aquellas personas que no aprueben y/o no entreguen alguno de los DOS exámenes parciales, deberán presentar un examen final a partir de los conceptos revisados en clase. <strong>Para aprobar el curso es indispensable presentar y aprobar los exámenes parciales y/o el examen final.</strong></p>
-<p>La participación en clase enriquecerá las sesiones, hará más dinámico el desarrollo de éstas y se tomará en cuenta para la evaluación final (se incluyen ejercicios y aportaciones).</p>
-<section id="ponderación" class="level2">
-<h2 class="anchored" data-anchor-id="ponderación">Ponderación</h2>
-<ul>
-<li>Exámenes parciales/final: 70%</li>
-<li>Participación en clase/tareas: 30%</li>
-</ul>
-<p>Para la calificación final, solamente se redondeará hacia arriba a partir del 0.6. Por ejemplo, 8.5 se asienta en actas como 8, mientras que 8.6 (o mayor) se asienta como 9. <strong>Una vez asentada la calificación final en plataforma, no habrá cambios.</strong></p>
+<section id="ejercicio-5" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-5">Ejercicio 5</h2>
+<p><span class="math display">\[
+-2D =
+-2
+\left[
+\begin{array}{ccc}
+1 &amp; 0 &amp; -1 \\
+2 &amp; 3 &amp; 4 \\
+-2 &amp; 5 &amp; 6
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+-2 &amp; 0 &amp; 2 \\
+-4 &amp; -6 &amp; -8 \\
+4 &amp; -10 &amp; -12
+\end{array}
+\right]
+\]</span></p>
 </section>
+<section id="ejercicio-6" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-6">Ejercicio 6</h2>
+<p><span class="math display">\[
+C+F=
+\begin{bmatrix}
+6 &amp; 0 \\
+-3 &amp; 1 \\
+4 &amp; 2
+\end{bmatrix}
++
+\begin{bmatrix}
+0 &amp; 1 \\
+-1 &amp; -2 \\
+3 &amp; 4
+\end{bmatrix}
+=
+\begin{bmatrix}
+6 &amp; 1 \\
+-4 &amp; -1 \\
+7 &amp; 6
+\end{bmatrix}
+\]</span></p>
 </section>
-<section id="contenido-temático" class="level1">
-<h1>Contenido temático</h1>
-<ol type="1">
-<li><p>Sistemas de ecuaciones lineales</p>
-<p>a)&nbsp;&nbsp;&nbsp; Sistemas lineales</p>
-<p>b)&nbsp;&nbsp;&nbsp; Solución por método de sustitución</p>
-<p>c)&nbsp;&nbsp;&nbsp; Solución por método gráfico</p>
-<p>d)&nbsp;&nbsp;&nbsp; Ejercicios y problemas en economía</p></li>
-<li><p>Matrices</p>
-<p>a)&nbsp;&nbsp;&nbsp; Definición de matriz</p>
-<p>b)&nbsp;&nbsp;&nbsp; Orden de una matriz</p>
-<p>c)&nbsp;&nbsp;&nbsp; Tipos de matrices</p>
-<p>d)&nbsp;&nbsp;&nbsp; Operaciones con matrices</p>
-<p>i.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suma de matrices</p>
-<p>ii.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Multiplicación de un escalar con una matriz</p>
-<p>iii.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Producto punto</p>
-<p>e)&nbsp;&nbsp;&nbsp; Ejercicios y problemas</p></li>
-<li><p>Sistemas lineales</p>
-<p>a)&nbsp;&nbsp;&nbsp; Método de eliminación consecutiva de incógnitas</p>
-<p>b)&nbsp;&nbsp;&nbsp; Método de Gauss-Jordan</p>
-<p>c)&nbsp;&nbsp;&nbsp; Ejercicios y problemas</p></li>
-<li><p>Determinantes</p>
-<p>a)&nbsp;&nbsp;&nbsp; Definición</p>
-<p>b)&nbsp;&nbsp;&nbsp; Propiedades</p>
-<p>c)&nbsp;&nbsp;&nbsp; Cálculo del determinante de una matriz</p>
-<p>d)&nbsp;&nbsp;&nbsp; Solución de sistemas de ecuaciones lineales con regla de Cramer y Expansión de Laplace</p>
-<p>e)&nbsp;&nbsp;&nbsp; Ejercicios y problemas</p></li>
-<li><p>La matriz inversa</p>
-<p>a)&nbsp;&nbsp;&nbsp; Definición</p>
-<p>b)&nbsp;&nbsp;&nbsp; Solución de sistemas de ecuaciones lineales por el método de la matriz inversa</p></li>
-</ol>
+<section id="ejercicio-7" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-7">Ejercicio 7</h2>
+<p><span class="math display">\[
+F \cdot C =
+\begin{bmatrix}
+6 &amp; 1 \\
+-4 &amp; -1 \\
+7 &amp; 6
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+6 &amp; 0 \\
+-3 &amp; 1 \\
+4 &amp; 2
+\end{bmatrix}
+\]</span></p>
+<p>En este caso, <span class="math inline">\(F_{32}\)</span> tiene un número menor de columnas que el número de filas de <span class="math inline">\(C_{32}\)</span>, por lo que no se puede realizar la multiplicación.</p>
 </section>
-<section id="bibliografía" class="level1">
-<h1>Bibliografía</h1>
-<ul>
-<li><p>Kolman, Bernard &amp; Hill, David R.. (2006) Álgebra lineal. 8va. Edición Ed. Pearson Educación, México.</p></li>
-<li><p>Grossman, Stanley I.. (1980) Elementary Linear Algebra, International Student Edition.</p></li>
-<li><p>Grossman, Stanley I.. (1993) Álgebra lineal con aplicaciones. 4a edición. Ed. Mc. Graw-Hill. México D.F.</p></li>
-<li><p>Aleskerov, F. T., Ersel, H., &amp; Piontkovski, D. (2011). Linear algebra for economists. Springer Verlag.</p></li>
-<li><p>Anton, H., &amp; Rorres, C. (2014). Elementary linear álgebra: applications version (11th edition). Wiley.</p></li>
-<li><p>Stewart, J., María del Carmen Rodríguez Pedroza, &amp; Stewart, J. (2013).&nbsp;Cálculo de una variable: trascendentes tempranas&nbsp;(Séptima edición). Cengage Learning.</p></li>
-<li><p>Lipschutz, S., Martinez Ontalba, C., &amp; Lipschutz, S. (1992).&nbsp;Algebra lineal&nbsp;(2nd ed.). McGraw-Hill.</p></li>
-</ul>
-<p>La bibliografía se encuentran disponible a través del siguiente código o enlace</p>
-<p><a href="https://drive.google.com/drive/folders/1Py0I2E0FVqk4zD1XO-WQi-co7zvSbp2A?usp=sharing" class="uri">Material de apoyo</a></p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="ejercicio-8" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-8">Ejercicio 8</h2>
+<p><span class="math display">\[
+D \cdot D =
+\begin{bmatrix}
+1 &amp; 0 &amp; -1 \\
+2 &amp; 3 &amp; 4 \\
+-2 &amp; 5 &amp; 6
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+1 &amp; 0 &amp; -1 \\
+2 &amp; 3 &amp; 4 \\
+-2 &amp; 5 &amp; 6
+\end{bmatrix}
+\]</span></p>
+<p>Dado que <span class="math inline">\(D_{33}\)</span> es una matriz cuadrada, la multiplicación por si misma esta conformada por los siguientes elementos:</p>
+<p><span class="math display">\[
+a_{11}=
+\left(
+\begin{array}{ccc}
+1 &amp; 0 &amp; -1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+1 \\
+2 \\
+-2
+\end{array}
+\right)
+= 1+0+2=3
+\]</span></p>
+<p><span class="math display">\[
+a_{12}=
+\left(
+\begin{array}{ccc}
+1 &amp; 0 &amp; -1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+0 \\
+3 \\
+5
+\end{array}
+\right)
+= 0+0-5=-5
+\]</span></p>
+<p><span class="math display">\[
+a_{13}=
+\left(
+\begin{array}{ccc}
+1 &amp; 0 &amp; -1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+4 \\
+6
+\end{array}
+\right)
+= -1+0-6=-7
+\]</span></p>
+<p><span class="math display">\[
+a_{21}=
+\left(
+\begin{array}{ccc}
+2 &amp; 3 &amp; 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+1 \\
+2 \\
+-2
+\end{array}
+\right)
+= 2+6-8=0
+\]</span></p>
+<p><span class="math display">\[
+a_{22}=
+\left(
+\begin{array}{ccc}
+2 &amp; 3 &amp; 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+0 \\
+3 \\
+5
+\end{array}
+\right)
+= 0+9+20=29
+\]</span></p>
+<p><span class="math display">\[
+a_{23}=
+\left(
+\begin{array}{ccc}
+2 &amp; 3 &amp; 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+4 \\
+6
+\end{array}
+\right)
+= -2+12+24=34
+\]</span></p>
+<p><span class="math display">\[
+a_{31}=
+\left(
+\begin{array}{ccc}
+-2 &amp; 5 &amp; 6 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+1 \\
+2 \\
+-2
+\end{array}
+\right)
+= -2+10-12=-4
+\]</span></p>
+<p><span class="math display">\[
+a_{32}=
+\left(
+\begin{array}{ccc}
+-2 &amp; 5 &amp; 6 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+0 \\
+3 \\
+5
+\end{array}
+\right)
+= 0+15+30=45
+\]</span></p>
+<p><span class="math display">\[
+a_{33}=
+\left(
+\begin{array}{ccc}
+-2 &amp; 5 &amp; 6 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+4 \\
+6
+\end{array}
+\right)
+= 2+20+36=58
+\]</span></p>
+<p><span class="math display">\[
+D \cdot D =
+\begin{bmatrix}
+3 &amp; -5 &amp; -7 \\
+0 &amp; 29 &amp; 34 \\
+-4 &amp; 45 &amp; 58
+\end{bmatrix}
+\]</span></p>
+</section>
+<section id="ejercicio-9" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-9">Ejercicio 9</h2>
+<p><span class="math display">\[
+A \cdot B =
+\begin{bmatrix}
+1 &amp; 4 \\
+-2 &amp; 0
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+3 &amp; -1 &amp; 5 \\
+0 &amp; 2 &amp; 7
+\end{bmatrix}
+\]</span></p>
+<p>La matriz <span class="math inline">\(A_{22}\)</span> tiene el mismo número de columnas que el número de filas de <span class="math inline">\(B_{23}\)</span>, el producto de ambas matrices esta conformado por los siguientes elementos:</p>
+<p><span class="math display">\[
+a_{11}=
+\left(
+\begin{array}{ccc}
+1 &amp; 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+0
+\end{array}
+\right)
+= 3+0=3
+\]</span></p>
+<p><span class="math display">\[
+a_{12}=
+\left(
+\begin{array}{ccc}
+1 &amp; 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+2
+\end{array}
+\right)
+= -1+8=7
+\]</span></p>
+<p><span class="math display">\[
+a_{13}=
+\left(
+\begin{array}{ccc}
+1 &amp; 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+5 \\
+7
+\end{array}
+\right)
+= 5+28=33
+\]</span></p>
+<p><span class="math display">\[
+a_{21}=
+\left(
+\begin{array}{ccc}
+-2 &amp; 0 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+0
+\end{array}
+\right)
+= -6+0=-6
+\]</span></p>
+<p><span class="math display">\[
+a_{22}=
+\left(
+\begin{array}{ccc}
+-2 &amp; 0 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+2
+\end{array}
+\right)
+= 2+0=2
+\]</span></p>
+<p><span class="math display">\[
+a_{23}=
+\left(
+\begin{array}{ccc}
+-2 &amp; 0 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+5 \\
+7
+\end{array}
+\right)
+= -10+0=-10
+\]</span></p>
+<p><span class="math display">\[
+A \cdot B =
+\left[
+\begin{array}{ccc}
+3 &amp; 7 &amp; 33 \\
+-6 &amp; 2 &amp; -10
+\end{array}
+\right]
+\]</span></p>
+</section>
+<section id="ejercicio-10" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-10">Ejercicio 10</h2>
+<p><span class="math display">\[
+C \cdot E =
+\begin{bmatrix}
+6 &amp; 0 \\
+-3 &amp; 1 \\
+4 &amp; 2
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+7 &amp; 8 \\
+9 &amp; 10
+\end{bmatrix}
+\]</span></p>
+<p>La matriz <span class="math inline">\(C_{32}\)</span> tiene el mismo número de columnas que el número de filas de <span class="math inline">\(E_{22}\)</span>, el producto de ambas matrices esta conformado por los siguientes elementos:</p>
+<p><span class="math display">\[
+a_{11}=
+\left(
+\begin{array}{ccc}
+6 &amp; 0 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+7 \\
+9
+\end{array}
+\right)
+= 42+0=42
+\]</span></p>
+<p><span class="math display">\[
+a_{12}=
+\left(
+\begin{array}{ccc}
+6 &amp; 0 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+8 \\
+10
+\end{array}
+\right)
+= 48+0=48
+\]</span></p>
+<p><span class="math display">\[
+a_{21}=
+\left(
+\begin{array}{ccc}
+-3 &amp; 1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+7 \\
+9
+\end{array}
+\right)
+= -21+9=-12
+\]</span></p>
+<p><span class="math display">\[
+a_{22}=
+\left(
+\begin{array}{ccc}
+-3 &amp; 1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+8 \\
+10
+\end{array}
+\right)
+= -24+10=-14
+\]</span></p>
+<p><span class="math display">\[
+a_{31}=
+\left(
+\begin{array}{ccc}
+4 &amp; 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+7 \\
+9
+\end{array}
+\right)
+= 28+18=46
+\]</span></p>
+<p><span class="math display">\[
+a_{32}=
+\left(
+\begin{array}{ccc}
+4 &amp; 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+8 \\
+10
+\end{array}
+\right)
+= 32+20=52
+\]</span></p>
+<p><span class="math display">\[
+C \cdot E =
+\left[
+\begin{array}{ccc}
+42 &amp; 48 \\
+-12 &amp; -14 \\
+46 &amp; 52
+\end{array}
+\right]
+\]</span></p>
 
 
 </section>
@@ -986,11 +1669,11 @@ window.onload = function() {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./03_determinantes.html" class="pagination-link" aria-label="Apuntes de clase">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Apuntes de clase</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_sel.html" class="pagination-link" aria-label="Apuntes de clase">
-        <span class="nav-page-text"><span class="chapter-title">Apuntes de clase</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
