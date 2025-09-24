@@ -554,21 +554,10 @@
     "href": "03_determinantes.html#propiedades",
     "title": "Apuntes de clase",
     "section": "Propiedades",
-    "text": "Propiedades\n\n\\(det (A \\cdot B)= detA \\cdot detB\\)\n\\(det(I) = 1\\)\n\\(det(A^T)=|A|\\)\nSi 2 filas o columnas son iguales o proporcionales \\(|A| = \\varnothing\\)\nSi \\(|A| = \\varnothing\\) la matriz es singular y por lo tanto no tiene matriz inversa\n$|A^{-1}|= $\nUna matriz \\(A\\) multiplicada por un escalar \\(\\alpha\\), \\(|A|= \\alpha |A|\\)",
+    "text": "Propiedades\n\n\\(det (A \\cdot B)= detA \\cdot detB\\)\n\\(det(I) = 1\\)\n\\(det(A^T)=|A|\\)\nSi 2 filas o columnas son iguales o proporcionales \\(|A| = \\varnothing\\)\nSi \\(|A| = \\varnothing\\) la matriz es singular y por lo tanto no tiene matriz inversa\n\\(|A^{-1}|= \\frac{1}{|A|}\\)\nUna matriz \\(A\\) multiplicada por un escalar \\(\\alpha\\), \\(|A|= \\alpha |A|\\)",
     "crumbs": [
       "Determinantes",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
-    "objectID": "03_ejercicios.html",
-    "href": "03_ejercicios.html",
-    "title": "Ejercicios",
-    "section": "",
-    "text": "\\[\n\\left|\n\\begin{array}{ccc}\n1 & 0 & 3 \\\\\n0 & 1 & 4 \\\\\n2 & 1 & 0\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n-1 & 1 & 0 \\\\\n2 & 1 & 4 \\\\\n1 & 5 & 6\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n3 & -1 & 4 \\\\\n6 & 3 & 5 \\\\\n2 & -1 & 6\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n-1 & 0 & 6 \\\\\n0 & 2 & 4 \\\\\n1 & 2 & -3\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n-2 & 3 & 1 \\\\\n4 & 6 & 5 \\\\\n0 & 2 & 1\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n5 & -2 & 1 \\\\\n6 & 0 & 3 \\\\\n-2 & 1 & 4\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n2 & 4  \\\\\n\\frac{1}{2} & 1\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n9 & 2  \\\\\n7 & -3\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n\\frac{1}{16} & \\frac{2}{8}  \\\\\n\\frac{1}{4} & 1\n\\end{array}\n\\right|\n\\]\n\n\n\n\\[\n\\left|\n\\begin{array}{ccc}\n6 & 3 & 5 \\\\\n12 & 0 & 1 \\\\\n2 & 1 & \\frac{5}{3}\n\\end{array}\n\\right|\n\\]",
-    "crumbs": [
-      "Determinantes",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Ejercicios</span>"
     ]
   },
   {

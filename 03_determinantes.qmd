@@ -321,5 +321,5 @@ Se pueden calcular determinantes para cualquier matriz cuadrada sin importar su 
 - $det(A^T)=|A|$
 - Si 2 filas o columnas son iguales o proporcionales $|A| = \varnothing$
 - Si $|A| = \varnothing$ la matriz es singular y por lo tanto no tiene matriz inversa
-- $|A^{-1}|= \frac{1}{|A|} $
+- $|A^{-1}|= \frac{1}{|A|}$
 - Una matriz $A$ multiplicada por un escalar $\alpha$, $|A|= \alpha |A|$
