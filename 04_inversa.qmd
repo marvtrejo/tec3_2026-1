@@ -1,0 +1,421 @@
+---
+title: "Inversa"
+---
+
+Una matriz $A$ es no singular e invertible si existe una matriz $B$ de $n \times n$ tal que $A \cdot B = B \cdot A = I$.
+La matriz B se denomina **inversa de A**
+
+Sean:
+
+$$
+A =
+\left[
+\begin{array}{ccc}
+2 & 3 \\
+2 & 2 \\
+\end{array}
+\right] ; \quad
+B =
+\left[
+\begin{array}{ccc}
+-1 & \frac{3}{2} \\
+1 & -1 \\
+\end{array}
+\right]
+$$
+
+Comprobemos que $A \cdot B = B \cdot A = I$.
+
+1) $A \cdot B$
+
+$$
+a_{11}=
+\left(
+\begin{array}{ccc}
+2 & 3 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+1 \\ 
+\end{array}
+\right)
+= -2+3=1
+$$
+
+$$
+a_{12}=
+\left(
+\begin{array}{ccc}
+2 & 3 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+\frac{3}{2} \\
+-1 \\ 
+\end{array}
+\right)
+= 3+(-3)=0
+$$
+
+$$
+a_{21}=
+\left(
+\begin{array}{ccc}
+2 & 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+1 \\ 
+\end{array}
+\right)
+= -2+2=0
+$$
+
+$$
+a_{22}=
+\left(
+\begin{array}{ccc}
+2 & 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+\frac{3}{2} \\
+-1 \\ 
+\end{array}
+\right)
+= 3+(-2)=1
+$$
+
+$$
+A \cdot B =
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+2) $B \cdot A$
+
+$$
+a_{11}=
+\left(
+\begin{array}{ccc}
+-1 & \frac{3}{2} \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+2 \\
+2 \\ 
+\end{array}
+\right)
+= -2+3=1
+$$
+
+$$
+a_{12}=
+\left(
+\begin{array}{ccc}
+-1 & \frac{3}{2} \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+2 \\ 
+\end{array}
+\right)
+= -3+3=0
+$$
+
+$$
+a_{21}=
+\left(
+\begin{array}{ccc}
+1 & -1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+2 \\
+2 \\ 
+\end{array}
+\right)
+= 2-2=0
+$$
+
+$$
+a_{22}=
+\left(
+\begin{array}{ccc}
+1 & -1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+2 \\ 
+\end{array}
+\right)
+= 3-2=1
+$$
+
+$$
+B \cdot A =
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+Dado que $A \cdot B = B \cdot A$ podemos concluir que $B$ es inversa de $A$ y $A$ es invertible (no singular).
+
+Si una matriz tiene inversa, la inversa es única.
+
+La inversa de $A$ se escribe como $A^{-1}$ de forma que $A \cdot A^{-1}=I$ y $A^{-1} \cdot A=I$.
+
+## Cálculo de la inversa 
+
+Sea 
+
+$$
+A =
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+3 & 4
+\end{array}
+\right]
+$$
+
+Para determinar $A^{-1}$, empezamos definiendola como:
+
+$$
+A^{-1} =
+\left[
+\begin{array}{ccc}
+a & b \\
+c & d
+\end{array}
+\right]
+$$
+
+Entonces
+
+$$
+A \cdot A^{-1}=
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+3 & 4
+\end{array}
+\right]
+\cdot
+\left[
+\begin{array}{ccc}
+a & b \\
+c & d
+\end{array}
+\right] =
+I_2 =
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+$$
+A \cdot A^{-1}=
+\left[
+\begin{array}{ccc}
+a+2c & b+2d \\
+3a+4c & 3b+4d
+\end{array}
+\right]=
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+De lo anterior obtenemos dos sistemas de ecuaciones que nos permiten encontrar los valores de $a,b,c,d$
+
+$$
+\begin{align}
+a+2c &= 1 \tag{Sistema 1} \\
+3a+4c&= 0 \\
+\\
+b+2d&=0 \tag{Sistema 2}\\
+3b+4d&=1
+\end{align}
+$$
+
+1) Sistema 1
+
+$$
+\begin{align}
+a+2c &= 1 \\
+3a+4c&= 0 \\
+\\
+a &= 1-2c \\
+3(1-2c)+4c&=0 \\
+3-6c+4c &= 0 \\
+-2c &=-3 \\
+\mathbf{c} &= \mathbf{\frac{3}{2}} \\ \\
+a &= 1-2(\frac{3}{2}) \\
+\mathbf{a} &= \mathbf{-2}
+\end{align}
+$$
+
+2) Sistema 2
+
+$$
+\begin{align}
+b+2d&=0 \\
+3b+4d&=1 \\\\
+b&=-2d \\
+3(-2d)+4d &=1 \\
+-6d+4d &=1 \\
+-2d &=1 \\
+\mathbf{d}&= \mathbf{-\frac{1}{2}} \\\\
+b &= -2(-\frac{1}{2}) \\
+\mathbf{b}&= \mathbf{1}
+\end{align}
+$$
+
+Los valores de $a,b,c,d$ corresponden a los valores de la matriz inversa de A, recordemos que iniciamos definiendola como
+
+$$
+A^{-1} =
+\left[
+\begin{array}{ccc}
+a & b \\
+c & d
+\end{array}
+\right]
+$$
+
+Por lo tanto
+
+$$
+A^{-1} =
+\left[
+\begin{array}{ccc}
+a & b \\
+c & d
+\end{array}
+\right] =
+\left[
+\begin{array}{ccc}
+-2 & 1 \\
+\frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+$$
+
+Esta matriz cumple  con la $A \cdot A^{-1}=I$ y $A^{-1} \cdot A=I$
+
+$$
+A \cdot A^{-1}=
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+3 & 4
+\end{array}
+\right]
+\cdot
+\left[
+\begin{array}{ccc}
+-2 & 1 \\
+\frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+$$
+
+$$
+a_{11}=
+\left(
+\begin{array}{ccc}
+1 & 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-2 \\
+\frac{3}{2} \\ 
+\end{array}
+\right)
+= -2+3=1
+$$
+
+$$
+a_{12}=
+\left(
+\begin{array}{ccc}
+1 & 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+1 \\
+-\frac{1}{2}\\ 
+\end{array}
+\right)
+= 1+(-1)=0
+$$
+
+$$
+a_{21}=
+\left(
+\begin{array}{ccc}
+3 & 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-2 \\
+\frac{3}{2} \\ 
+\end{array}
+\right)
+= -6+6=0
+$$
+
+$$
+a_{22}=
+\left(
+\begin{array}{ccc}
+3 & 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+1 \\
+-\frac{1}{2} \\ 
+\end{array}
+\right)
+= 3+(-2)=1
+$$
+
+$$
+A \cdot A^{-1}=
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$

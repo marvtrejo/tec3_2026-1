@@ -34,6 +34,11 @@ book:
     - 03_determinantes.qmd
     # - 03_ejercicios.qmd
     - 03_tarea.qmd
+  - part: Inversa
+    chapters:
+    - 04_inversa.qmd
+    - 04_tarea.qmd
+    
 format:
   html:
     theme: flatly
