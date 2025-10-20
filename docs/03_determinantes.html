@@ -233,7 +233,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_inversa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inversa</span></a>
+  <a href="./04_inversa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Apuntes de clase</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -257,6 +257,7 @@ window.Quarto = {
   <li><a href="#determinante-3x3" id="toc-determinante-3x3" class="nav-link" data-scroll-target="#determinante-3x3">Determinante 3x3</a></li>
   <li><a href="#regla-de-sarrus" id="toc-regla-de-sarrus" class="nav-link" data-scroll-target="#regla-de-sarrus">Regla de Sarrus</a></li>
   <li><a href="#determinante-4x4" id="toc-determinante-4x4" class="nav-link" data-scroll-target="#determinante-4x4">Determinante 4x4</a></li>
+  <li><a href="#representación-gráfica" id="toc-representación-gráfica" class="nav-link" data-scroll-target="#representación-gráfica">Representación gráfica</a></li>
   <li><a href="#propiedades" id="toc-propiedades" class="nav-link" data-scroll-target="#propiedades">Propiedades</a></li>
   </ul>
 </nav>
@@ -560,6 +561,57 @@ D =
 <p><span class="math display">\[
 |D| = 1(-92)-3(-70)+5(2)-2(-16)= 160
 \]</span> Se pueden calcular determinantes para cualquier matriz cuadrada sin importar su tamaño, aunque se volverá una tarea más compleja conforme mayor sea el tamaño de la matriz, por ejemplo: - Calcular un determinante de 4x4 implica calcular 4 de 3x3. - Calcular un determinante de 5x5 implica calcular 5 de 4x4 ó 20 de 3x3.</p>
+</section>
+<section id="representación-gráfica" class="level2">
+<h2 class="anchored" data-anchor-id="representación-gráfica">Representación gráfica</h2>
+<p>La representación gráfica del determinante de una matriz corresponde al área de un paralelogramo, en matrices de <span class="math inline">\(2\times 2\)</span>, o el volumen de un paralelepípedo, en matrices de <span class="math inline">\(3\times 3\)</span>, formado por los vectores de las columnas de la matriz. El valor absoluto del determinante corresponde a esta medida geométrica.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Paralelogramo</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Paralelepípedo</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><span class="math display">\[
+A =
+\left[
+\begin{array}{cc}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_determinantes_files/figure-html/paralelogramo-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><span class="math display">\[
+B =
+\left[
+\begin{array}{ccc}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_determinantes_files/figure-html/paralelepipedo-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Cuando el determinante es cero, los vectores son linealmente dependientes y la figura se colapsa a un área o volumen nulo.</p>
 </section>
 <section id="propiedades" class="level2">
 <h2 class="anchored" data-anchor-id="propiedades">Propiedades</h2>

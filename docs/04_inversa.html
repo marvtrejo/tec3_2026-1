@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Inversa – Taller de Economía Cuantitativa III</title>
+<title>Apuntes de clase – Taller de Economía Cuantitativa III</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_inversa.html">Inversa</a></li><li class="breadcrumb-item"><a href="./04_inversa.html"><span class="chapter-title">Inversa</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_inversa.html">Inversa</a></li><li class="breadcrumb-item"><a href="./04_inversa.html"><span class="chapter-title">Apuntes de clase</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -233,7 +233,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_inversa.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Inversa</span></a>
+  <a href="./04_inversa.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Apuntes de clase</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,15 +254,16 @@ window.Quarto = {
    
   <ul>
   <li><a href="#cálculo-de-la-inversa" id="toc-cálculo-de-la-inversa" class="nav-link active" data-scroll-target="#cálculo-de-la-inversa">Cálculo de la inversa</a></li>
+  <li><a href="#propiedades-de-la-inversa" id="toc-propiedades-de-la-inversa" class="nav-link" data-scroll-target="#propiedades-de-la-inversa">Propiedades de la inversa</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_inversa.html">Inversa</a></li><li class="breadcrumb-item"><a href="./04_inversa.html"><span class="chapter-title">Inversa</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_inversa.html">Inversa</a></li><li class="breadcrumb-item"><a href="./04_inversa.html"><span class="chapter-title">Apuntes de clase</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Inversa</span></h1>
+<h1 class="title"><span class="chapter-title">Apuntes de clase</span></h1>
 </div>
 
 
@@ -661,6 +662,305 @@ A \cdot A^{-1}=
 \end{array}
 \right]
 \]</span></p>
+<p>Otra forma para calcular la inversa de una matriz esta dado por la siguiente fórmula, sin embargo <strong>solo puede utilizarse en matrices de 2x2</strong></p>
+<p><span class="math display">\[
+A^{-1}_{2 \times 2}=
+\frac{1}{ad-bc}
+\left[
+\begin{array}{ccc}
+d &amp; -b \\
+-c &amp; a
+\end{array}
+\right]
+\]</span></p>
+<p>Retomando el ejemplo anterior, tenemos que</p>
+<p><span class="math display">\[
+A =
+\left[
+\begin{array}{ccc}
+1 &amp; 2 \\
+3 &amp; 4
+\end{array}
+\right]
+\]</span></p>
+<p>Por lo tanto</p>
+<p><span class="math display">\[
+A^{-1}=
+\frac{1}{(1)(4)-(2)(3)}
+\left[
+\begin{array}{ccc}
+4 &amp; -2 \\
+-3 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<p><span class="math display">\[
+A^{-1}=
+-\frac{1}{2}
+\left[
+\begin{array}{ccc}
+4 &amp; -2 \\
+-3 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<p><span class="math display">\[
+A^{-1}=
+\left[
+\begin{array}{ccc}
+-2 &amp; 1 \\
+\frac{3}{2} &amp; -\frac{1}{2}
+\end{array}
+\right]
+\]</span></p>
+<p>Por último, podemos calcular la inversa de una matriz igualandola con la matriz identidad y resolviendo mediante el método de Gauss-Jordan</p>
+<p><span class="math display">\[
+A =
+\left[
+\begin{array}{cc|cc}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+3 &amp; 4 &amp; 0 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{cc|cc}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+3 &amp; 4 &amp; 0 &amp; 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-3F_1} \;\;
+\left[
+\begin{array}{cc|cc}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+0 &amp; -2 &amp; -3 &amp; 1
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{cc|cc}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+0 &amp; -2 &amp; -3 &amp; 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = -\frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{cc|cc}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; \frac{3}{2} &amp; -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{cc|cc}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; \frac{3}{2} &amp; -\frac{1}{2}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = -\frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{cc|cc}
+1 &amp; 0 &amp; -2 &amp; 1 \\
+0 &amp; 1 &amp; \frac{3}{2} &amp; -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+A^{-1}=
+\left[
+\begin{array}{cc}
+-2 &amp; 1 \\
+\frac{3}{2} &amp; -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p>Este método también se puede utilizar en matrices de <span class="math inline">\(3 \times 3\)</span>, por ejemplo</p>
+<p><span class="math display">\[
+B =
+\left[
+\begin{array}{ccc}
+1 &amp; 1 &amp; 1 \\
+0 &amp; 2 &amp; 3 \\
+5 &amp; 5 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<p><span class="math display">\[
+B =
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
+5 &amp; 5 &amp; 1 &amp; 0 &amp; 0 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
+5 &amp; 5 &amp; 1 &amp; 0 &amp; 0 &amp; 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = F_3-5F_1} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; -4 &amp; -5 &amp; 0 &amp; 1
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; -4 &amp; -5 &amp; 0 &amp; 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = -\frac{1}{4}F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-3F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; -\frac{15}{4} &amp; 1 &amp; \frac{3}{4} \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 &amp; -\frac{15}{4} &amp; 1 &amp; \frac{3}{4} \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = \frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; -\frac{15}{8} &amp; \frac{1}{2} &amp; \frac{3}{8} \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; -\frac{15}{8} &amp; \frac{1}{2} &amp; \frac{3}{8} \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1-F_2} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 0 &amp; 1 &amp; \frac{23}{8} &amp; -\frac{1}{2} &amp; -\frac{3}{8} \\
+0 &amp; 1 &amp; 0 &amp; -\frac{15}{8} &amp; \frac{1}{2} &amp; \frac{3}{8} \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 0 &amp; 1 &amp; \frac{23}{8} &amp; -\frac{1}{2} &amp; -\frac{3}{8} \\
+0 &amp; 1 &amp; 0 &amp; -\frac{15}{8} &amp; \frac{1}{2} &amp; \frac{3}{8} \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1-F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 &amp; 0 &amp; 0 &amp; \frac{13}{8} &amp; -\frac{1}{2} &amp; -\frac{1}{8} \\
+0 &amp; 1 &amp; 0 &amp; -\frac{15}{8} &amp; \frac{1}{2} &amp; \frac{3}{8} \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p><span class="math display">\[
+B^{-1}=
+\left[
+\begin{array}{ccc}
+\frac{13}{8} &amp; -\frac{1}{2} &amp; -\frac{1}{8} \\
+-\frac{15}{8} &amp; \frac{1}{2} &amp; \frac{3}{8} \\
+\frac{5}{4} &amp; 0 &amp; -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+\]</span></p>
+<p>Consideren que para resolver sistemas lineales <span class="math inline">\(A^{-1} \cdot b=x\)</span> donde: - <span class="math inline">\(b\)</span> es el vector de soluciones - <span class="math inline">\(x\)</span> es el resultado de las incógnitas</p>
+<p>Es importante señalar que <strong>no todas las matrices tienen inversa</strong>, tomemos el siguiente ejemplo</p>
+<p><span class="math display">\[
+A=
+\left[
+\begin{array}{ccc}
+1 &amp; 2 \\
+2 &amp; 4
+\end{array}
+\right]
+\]</span></p>
+<p><span class="math display">\[
+A^{-1}=
+\frac{1}{(1)(4)-(2)(2)}
+\left[
+\begin{array}{ccc}
+4 &amp; -2 \\
+-2 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<p><span class="math display">\[
+A^{-1}=
+\color{red}{\frac{1}{0}}
+\left[
+\begin{array}{ccc}
+4 &amp; -2 \\
+-2 &amp; 1
+\end{array}
+\right]
+\]</span></p>
+<p>En este caso, el cálculo de la matriz inversa tiene como resultado un valor indeterminado ¿por qué? En la matriz A, la segunda fila es múltiplo de la primera lo que ocasiona que el determinante sea cero, por lo tanto - Cuando <span class="math inline">\(|A|= \varnothing\)</span> la matriz no tiene inversa</p>
+</section>
+<section id="propiedades-de-la-inversa" class="level2">
+<h2 class="anchored" data-anchor-id="propiedades-de-la-inversa">Propiedades de la inversa</h2>
+<ul>
+<li>Si una matriz tiene inversa, entonces la inversa también tiene inversa: <span class="math inline">\((A^{-1})^{-1}=A\)</span></li>
+<li>Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son matrices no singulares, entonces <span class="math inline">\(A \cdot B\)</span> es no singular: <span class="math inline">\((AB)^{-1}=B^{-1} \cdot A^{-1}\)</span></li>
+<li>La inversa de la matriz transpuesta es igual a la matriz inversa transpuesta: <span class="math inline">\((A^T)^{-1}=(A^{-1})^{T}\)</span></li>
+</ul>
 
 
 </section>

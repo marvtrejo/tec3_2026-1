@@ -1,5 +1,5 @@
 ---
-title: "Inversa"
+title: "Apuntes de clase"
 ---
 
 Una matriz $A$ es no singular e invertible si existe una matriz $B$ de $n \times n$ tal que $A \cdot B = B \cdot A = I$.
@@ -419,3 +419,343 @@ A \cdot A^{-1}=
 \end{array}
 \right]
 $$
+
+Otra forma para calcular la inversa de una matriz esta dado por la siguiente fórmula, sin embargo **solo puede utilizarse en matrices de 2x2**
+
+$$
+A^{-1}_{2 \times 2}=
+\frac{1}{ad-bc}
+\left[
+\begin{array}{ccc}
+d & -b \\
+-c & a
+\end{array}
+\right]
+$$
+
+Retomando el ejemplo anterior, tenemos que
+
+$$
+A =
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+3 & 4
+\end{array}
+\right]
+$$
+
+Por lo tanto
+
+$$
+A^{-1}=
+\frac{1}{(1)(4)-(2)(3)}
+\left[
+\begin{array}{ccc}
+4 & -2 \\
+-3 & 1
+\end{array}
+\right]
+$$
+
+$$
+A^{-1}=
+-\frac{1}{2}
+\left[
+\begin{array}{ccc}
+4 & -2 \\
+-3 & 1
+\end{array}
+\right]
+$$
+
+$$
+A^{-1}=
+\left[
+\begin{array}{ccc}
+-2 & 1 \\
+\frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+$$
+
+Por último, podemos calcular la inversa de una matriz igualandola con la matriz identidad y resolviendo mediante el método de Gauss-Jordan
+
+$$
+A =
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+3 & 4 & 0 & 1
+\end{array}
+\right]
+$$
+
+
+$$
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+3 & 4 & 0 & 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-3F_1} \;\;
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+0 & -2 & -3 & 1
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+0 & -2 & -3 & 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = -\frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+0 & 1 & \frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+0 & 1 & \frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = -\frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{cc|cc}
+1 & 0 & -2 & 1 \\
+0 & 1 & \frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+A^{-1}=
+\left[
+\begin{array}{cc}
+-2 & 1 \\
+\frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+$$
+
+Este método también se puede utilizar en matrices de $3 \times 3$, por ejemplo
+
+$$
+B = 
+\left[
+\begin{array}{ccc}
+1 & 1 & 1 \\
+0 & 2 & 3 \\
+5 & 5 & 1
+\end{array}
+\right]
+$$
+
+$$
+B = 
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+5 & 5 & 1 & 0 & 0 & 1
+\end{array}
+\right]
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+5 & 5 & 1 & 0 & 0 & 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = F_3-5F_1} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+0 & 0 & -4 & -5 & 0 & 1
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+0 & 0 & -4 & -5 & 0 & 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = -\frac{1}{4}F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-3F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 0 & -\frac{15}{4} & 1 & \frac{3}{4} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 0 & -\frac{15}{4} & 1 & \frac{3}{4} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = \frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1-F_2} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 0 & 1 & \frac{23}{8} & -\frac{1}{2} & -\frac{3}{8} \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 0 & 1 & \frac{23}{8} & -\frac{1}{2} & -\frac{3}{8} \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1-F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 0 & 0 & \frac{13}{8} & -\frac{1}{2} & -\frac{1}{8} \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+B^{-1}=
+\left[
+\begin{array}{ccc}
+\frac{13}{8} & -\frac{1}{2} & -\frac{1}{8} \\
+-\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+\frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+Consideren que para resolver sistemas lineales $A^{-1} \cdot b=x$ donde:
+- $b$ es el vector de soluciones
+- $x$ es el resultado de las incógnitas
+
+
+Es importante señalar que **no todas las matrices tienen inversa**, tomemos el siguiente ejemplo
+
+$$
+A=
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+2 & 4
+\end{array}
+\right]
+$$
+
+$$
+A^{-1}=
+\frac{1}{(1)(4)-(2)(2)}
+\left[
+\begin{array}{ccc}
+4 & -2 \\
+-2 & 1
+\end{array}
+\right]
+$$
+
+
+$$
+A^{-1}=
+\color{red}{\frac{1}{0}}
+\left[
+\begin{array}{ccc}
+4 & -2 \\
+-2 & 1
+\end{array}
+\right]
+$$
+
+En este caso, el cálculo de la matriz inversa tiene como resultado un valor indeterminado ¿por qué? En la matriz A, la segunda fila es múltiplo de la primera lo que ocasiona que el determinante sea cero, por lo tanto
+- Cuando $|A|= \varnothing$ la matriz no tiene inversa
+
+## Propiedades de la inversa
+
+- Si una matriz tiene inversa, entonces la inversa también tiene inversa: $(A^{-1})^{-1}=A$
+- Si $A$ y $B$ son matrices no singulares, entonces $A \cdot B$ es no singular: $(AB)^{-1}=B^{-1} \cdot A^{-1}$
+- La inversa de la matriz transpuesta es igual a la matriz inversa transpuesta: $(A^T)^{-1}=(A^{-1})^{T}$

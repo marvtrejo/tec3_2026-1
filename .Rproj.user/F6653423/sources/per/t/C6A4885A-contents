@@ -314,6 +314,155 @@ Se pueden calcular determinantes para cualquier matriz cuadrada sin importar su 
 - Calcular un determinante de 4x4 implica calcular 4 de 3x3. 
 - Calcular un determinante de 5x5 implica calcular 5 de 4x4 ó 20 de 3x3.
 
+## Representación gráfica
+
+La representación gráfica del determinante de una matriz corresponde al área de un paralelogramo, en matrices de  $2\times 2$, o el volumen de un paralelepípedo, en matrices de  $3\times 3$, formado por los vectores de las columnas de la matriz. El valor absoluto del determinante corresponde a esta medida geométrica. 
+
+::: {.panel-tabset}
+
+### Paralelogramo
+
+$$
+A = 
+\left[
+\begin{array}{cc}
+1 & 0 \\
+0 & 1 
+\end{array}
+\right]
+$$
+
+```{r paralelogramo, echo=FALSE, warning = FALSE, message=FALSE}
+library(ggplot2)
+
+v1 <- c(1, 0) 
+v2 <- c(0, 1) 
+
+poly <- data.frame(
+  x = c(0, v1[1], v1[1] + v2[1], v2[1]),
+  y = c(0, v1[2], v1[2] + v2[2], v2[2]),
+  id = 1
+)
+
+vecs <- data.frame(
+  x = c(0, 0),
+  y = c(0, 0),
+  xend = c(v1[1], v2[1]),
+  yend = c(v1[2], v2[2]),
+  label = c("u (1,0)", "v (0,1)")
+)
+
+
+ggplot() +
+  geom_polygon(data = poly, aes(x = x, y = y, group = id),
+               fill = "steelblue", alpha = 0.25, color = "steelblue") +
+
+  geom_segment(data = vecs, aes(x = x, y = y, xend = xend, yend = yend),
+               arrow = arrow(length = unit(0.25, "cm")),
+               size = 1.1, color = "#003366") +
+
+  geom_text(data = vecs, aes(x = xend, y = yend, label = label),
+            nudge_x = 0.08, nudge_y = 0.08, size = 5) +
+
+  annotate("text", x = 0.5, y = 0.5, label = expression(1 * u^2),
+           size = 6, color = "black") +
+
+  geom_point(data = poly, aes(x = x, y = y), size = 1.5) +
+
+  coord_equal(xlim = c(-0.2, 1.2), ylim = c(-0.2, 1.2)) +
+  theme_minimal(base_size = 14) +
+
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank()
+  ) +
+  labs(
+    title = "Paralelogramo generado por A",
+    subtitle = bquote("Área =|A|= 1")
+  )
+```
+
+### Paralelepípedo
+
+$$
+B = 
+\left[
+\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array}
+\right]
+$$
+
+```{r paralelepipedo, echo=FALSE, warning = FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
+
+vertices <- data.frame(
+  x = c(0, 1, 1, 0, 0, 1, 1, 0),
+  y = c(0, 0, 1, 1, 0, 0, 1, 1),
+  z = c(0, 0, 0, 0, 1, 1, 1, 1)
+)
+
+vertices <- vertices %>%
+  mutate(
+    X = x + 0.5 * y,   
+    Y = z + 0.5 * y    
+  )
+
+caras <- list(
+  c(1,2,3,4), 
+  c(5,6,7,8), 
+  c(1,2,6,5), 
+  c(2,3,7,6), 
+  c(3,4,8,7), 
+  c(4,1,5,8)
+  )
+
+df_caras <- do.call(rbind, lapply(seq_along(caras), function(i) {
+  v <- vertices[caras[[i]], c("X", "Y")]
+  data.frame(v, id = i)
+}))
+
+vectores <- data.frame(
+  xend = c(1, 0.5, 0),
+  yend = c(0, 0.5, 1),
+  label = c("u", "v", "w")
+)
+
+ggplot() +
+  
+  geom_polygon(data = df_caras, aes(X, Y, group = id),
+               fill = "skyblue", color = "black", alpha = 0.4) +
+  
+  geom_segment(aes(x = 0, y = 0, xend = 1, yend = 0),
+               color = "red", size = 1.2, arrow = arrow(length = unit(0.2, "cm"))) +
+  geom_segment(aes(x = 0, y = 0, xend = 0.5, yend = 0.5),
+               color = "green", size = 1.2, arrow = arrow(length = unit(0.2, "cm"))) +
+  geom_segment(aes(x = 0, y = 0, xend = 0, yend = 1),
+               color = "blue", size = 1.2, arrow = arrow(length = unit(0.2, "cm"))) +
+  
+  geom_text(data = vectores, aes(x = xend, y = yend, label = label),
+            vjust = -0.5, fontface = "bold", size = 5) +
+  
+  annotate("text", x = 0.4, y = 0.4, label = "1u³", size = 6, fontface = "bold") +
+  
+  coord_fixed() +
+  theme_void() +
+  theme(panel.background = element_rect(fill = "white", color = NA)) +
+  labs(
+    title = "Paralelepípedo generado por B",
+    subtitle = bquote("Volumen = |B| = 1")
+  )
+```
+:::
+
+
+Cuando el determinante es cero, los vectores son linealmente dependientes y la figura se colapsa a un área o volumen nulo.
+
 ## Propiedades
 
 - $det (A \cdot B)= detA \cdot detB$
