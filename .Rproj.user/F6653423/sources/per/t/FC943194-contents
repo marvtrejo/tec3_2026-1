@@ -256,6 +256,10 @@ $$\tan^{-1}-\frac{1}{\sqrt{3}} = -30^\circ$$
 
 $$-30^\circ \cdot \frac{\pi}{180^\circ} = -\frac{\pi}{6} \text{ radianes}$$
 
+En este caso, el valor es negativo porque el vector se ubica en el segundo cuadrante e indica el ángulo desde la parte *negativa* del eje X. Para obtener el valor completo, desde la parte *positiva* del eje X, restamos el valor obtenido de $\pi$ considerando que $\pi= 180^\circ$.
+
+$$\pi-\frac{\pi}{6}=\frac{5\pi}{6}$$
+
 ```{r vector iii, echo=FALSE, warning = FALSE, message=FALSE}
 # (-2*sqrt(3), 2) -> Ángulo 5*pi/6
 graf_vector(c(-2*sqrt(3), 2), 
@@ -272,6 +276,10 @@ $$\tan^{-1}1 = 45^\circ$$
 
 $$45^\circ \cdot \frac{\pi}{180^\circ} = \frac{\pi}{4} \text{ radianes}$$
 
+Para obtener el valor completo, desde la parte *positiva* del eje X, sumamos el valor obtenido con $\pi$ considerando que $\pi= 180^\circ$.
+
+$$\pi+\frac{\pi}{4}=\frac{5\pi}{4}$$
+
 ```{r vector iv, echo=FALSE, warning = FALSE, message=FALSE}
 # (-3, -3) -> Ángulo 7*pi/4
 graf_vector(c(-3, -3), 
@@ -287,6 +295,10 @@ $$\theta = \tan^{-1} \frac{-6}{6} = -1$$
 $$\tan^{-1}-1 = -45^\circ$$
 
 $$-45^\circ \cdot \frac{\pi}{180^\circ} = -\frac{\pi}{4} \text{ radianes}$$
+
+En este caso, el valor es negativo porque el vector se ubica en el cuarto cuadrante. Para obtener el valor completo, desde la parte *positiva* del eje X, restamos el valor obtenido de $2\pi$ considerando que $\pi= 180^\circ$.
+
+$$2\pi-\frac{\pi}{4}=\frac{7\pi}{4}$$
 
 ```{r vector v, echo=FALSE, warning = FALSE, message=FALSE}
 # (6, -6) -> Ángulo 7*pi/4

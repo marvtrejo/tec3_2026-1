@@ -792,17 +792,6 @@
     ]
   },
   {
-    "objectID": "05_vectores.html#representación-gráfica-y-componentes",
-    "href": "05_vectores.html#representación-gráfica-y-componentes",
-    "title": "Apuntes de clase",
-    "section": "Representación gráfica y componentes",
-    "text": "Representación gráfica y componentes\nEl segmento que describe el vector \\(u\\) se denota mediante \\(\\vec{OP}\\) y tiene una dirección que corresponde al ángulo formado entre \\(u\\) y el eje \\(X\\) (la parte positiva).\nA la magnitud del segmento se le conoce como longitud. Por su parte, a los valores de \\(x_1\\) y \\(y_1\\) en \\(u\\) se les conoce como componentes. Por ejemplo, el vector \\(u = \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}\\) tendría como componentes a los valores 2 y 3.",
-    "crumbs": [
-      "Vectores",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
     "objectID": "05_vectores.html#longitud",
     "href": "05_vectores.html#longitud",
     "title": "Apuntes de clase",
@@ -814,88 +803,22 @@
     ]
   },
   {
+    "objectID": "05_vectores.html#dirección",
+    "href": "05_vectores.html#dirección",
+    "title": "Apuntes de clase",
+    "section": "Dirección",
+    "text": "Dirección\nDefinimos la dirección del vector \\(u = (a, b)\\) como el ángulo \\(\\theta\\), medido en radianes, que se forma entre el eje X y el vector \\(u\\). Por convención, definimos \\(\\theta\\) entre \\(0\\) y \\(2\\pi\\).\n\\[\\tan \\theta = \\frac{b}{a}\\] \\[\\theta = \\tan^{-1} \\left( \\frac{b}{a} \\right)\\]\n\nEjemplos\n\nIIIIIIIVV\n\n\n\n\\(i = (2, 2)\\):\n\n\\[\\theta = \\tan^{-1} \\frac{2}{2} = 1\\] \\[\\tan^{-1}1 = 45^\\circ\\]\n\\[45^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{4} \\text{ radianes}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\(ii = (2, 2\\sqrt{3})\\)\n\n\\[\\theta = \\tan^{-1} \\frac{2\\sqrt{3}}{2} = {\\sqrt{3}}\\]\n\\[\\tan^{-1}{\\sqrt{3}} = 60^\\circ\\]\n\\[60^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{3} \\text{ radianes}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\(iii = (-2\\sqrt{3}, 2)\\)\n\n\\[\\theta = \\tan^{-1} \\frac{2}{-2\\sqrt{3}} = -\\frac{1}{\\sqrt{3}}\\]\n\\[\\tan^{-1}-\\frac{1}{\\sqrt{3}} = -30^\\circ\\]\n\\[-30^\\circ \\cdot \\frac{\\pi}{180^\\circ} = -\\frac{\\pi}{6} \\text{ radianes}\\]\nEn este caso, el valor es negativo porque el vector se ubica en el segundo cuadrante e indica el ángulo desde la parte negativa del eje X. Para obtener el valor completo, desde la parte positiva del eje X, restamos el valor obtenido de \\(\\pi\\) considerando que \\(\\pi= 180^\\circ\\).\n\\[\\pi-\\frac{\\pi}{6}=\\frac{5\\pi}{6}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\(iv = (-3, -3)\\)\n\n\\[\\theta = \\tan^{-1} \\frac{-3}{-3} = 1\\]\n\\[\\tan^{-1}1 = 45^\\circ\\]\n\\[45^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{4} \\text{ radianes}\\]\nPara obtener el valor completo, desde la parte positiva del eje X, sumamos el valor obtenido con \\(\\pi\\) considerando que \\(\\pi= 180^\\circ\\).\n\\[\\pi+\\frac{\\pi}{4}=\\frac{5\\pi}{4}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\(v = (6, -6)\\)\n\n\\[\\theta = \\tan^{-1} \\frac{-6}{6} = -1\\]\n\\[\\tan^{-1}-1 = -45^\\circ\\]\n\\[-45^\\circ \\cdot \\frac{\\pi}{180^\\circ} = -\\frac{\\pi}{4} \\text{ radianes}\\]\nEn este caso, el valor es negativo porque el vector se ubica en el cuarto cuadrante. Para obtener el valor completo, desde la parte positiva del eje X, restamos el valor obtenido de \\(2\\pi\\) considerando que \\(\\pi= 180^\\circ\\).\n\\[2\\pi-\\frac{\\pi}{4}=\\frac{7\\pi}{4}\\]",
+    "crumbs": [
+      "Vectores",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
+    ]
+  },
+  {
     "objectID": "05_vectores.html#operaciones-con-vectores",
     "href": "05_vectores.html#operaciones-con-vectores",
     "title": "Apuntes de clase",
     "section": "Operaciones con Vectores",
     "text": "Operaciones con Vectores\n\nSuma\nSean \\(u\\) y \\(v\\) dos vectores, la suma de ambos esta dada por \\(u + v=(x_1+x_2, y_1+y_2)\\).\nPor ejemplo, si \\(u = (1, 2)\\) y \\(v = (3, -4)\\), entonces \\[u+v = (1 + 3, 2 -4) = (4, -2)\\]\nGráficamente, \\(u + v\\) es la diagonal del paralelogramo definido por los vectores \\(u\\) y \\(v\\).\n\n\n\n\n\n\n\n\n\nEs importante recordar que los vectores \\(u\\) y \\(v\\) conforman un paralelogramo cuya área se puede calcular a través del valor absoluto del determinante de la matriz de ambos vectores\n\\[A = det \\begin{pmatrix} 1 & 3 \\\\ 2 & -4 \\end{pmatrix} = (1)(-4) - (3)(2)= -10 \\]\n\\[A=|-10|=10u^2\\]\nAsimismo, la longitud de cada vector esta dada por:\n\n\\[\\|u\\| = \\sqrt{1^2 + 2^2} = \\sqrt{1+4} = \\sqrt{5}\\]\n\\[\\|v\\| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9+16} = \\sqrt{25} = 5\\]\n\n\n\nMultiplicación por escalar\n\\[2u = 2(1, 2) = (2, 4)\\]\n\n\nProducto escalar\nSean \\(a = (a_1, a_2, \\dots, a_n)\\) y \\(b = \\begin{pmatrix} b_1 \\\\ b_2 \\\\ \\vdots \\\\ b_n \\end{pmatrix}\\), el producto escalar de ellos se define como: \\[a \\cdot b = a_1 b_1 + a_2 b_2 + \\dots + a_n b_n\\]\n\nTambién se le llama producto punto porque el producto de vectores tiene como resultado un escalar o número.\nEs importante que los vectores tengan el mismo número de componentes para poder realizar la operación.\n\n\nEjemplos\n\n\\(u = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}\\), \\(v = \\begin{pmatrix} 3 \\\\ -4 \\end{pmatrix}\\) \\[u \\cdot v = (1)(3) + (2)(-4) = 3 - 8 = -5\\]\n\\(a = (2, -3, 4, -6)\\); \\(b = (1, 2, 0, 3)\\) \\[a \\cdot b = (2)(1) + (-3)(2) + (4)(0) + (-6)(3)\\] \\[a \\cdot b = 2 - 6 + 0 - 18 = -22\\]\n\nSuponga que un productor produce 4 bienes distintos: \\(w, x, y, z\\). La demanda de bienes está dada por el vector \\(d = (30, 20, 40, 10)\\). El precio por unidad está dado por el vector \\(p = (20, 15, 18, 40)\\). Si el productor conoce su demanda:\n\n¿Cuánto dinero va a recibir por vender? El ingreso total del productor esta dado por el producto punto del vector de demanda y el vector de precios: \\[\\text{Ingreso} = d \\cdot p\\] \\[\\text{Ingreso} = (30)(20) + (20)(15) + (40)(18) + (10)(40)\\] \\[\\text{Ingreso} = 600 + 300 + 720 + 400 = 2020\\]\nRepresente en forma vectorial la operación si el precio tiene 15% de descuento El nuevo vector de precios es \\(0.85p\\) (ya que \\(100\\% - 15\\% = 85\\%\\)).\n\n\\[\\text{Ingreso con descuento} = d \\cdot (0.85 p)\\] O también: \\[\\text{Ingreso con descuento} = 0.85 (d \\cdot p)\\]\n\\[\\text{Ingreso con descuento} = 0.85 (2020) = 1717\\]",
-    "crumbs": [
-      "Vectores",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
-    "objectID": "05_vectores.html#ejercicios-magnitud-de-vectores",
-    "href": "05_vectores.html#ejercicios-magnitud-de-vectores",
-    "title": "Apuntes de clase",
-    "section": "Ejercicios: Magnitud de Vectores",
-    "text": "Ejercicios: Magnitud de Vectores\nCalcula las magnitudes de los vectores:\n\n\\(\\vec{i} = (2, 2)\\) \\[\\|\\vec{i}\\| = \\sqrt{2^2 + 2^2} = \\sqrt{4 + 4} = \\sqrt{8} = 2\\sqrt{2}\\]\n\\(\\vec{j} = (2, 2\\sqrt{3})\\) \\[\\|\\vec{j}\\| = \\sqrt{2^2 + (2\\sqrt{3})^2} = \\sqrt{4 + 4(3)} = \\sqrt{4 + 12} = \\sqrt{16} = 4\\]\n\\(\\vec{iii} = (-2\\sqrt{3}, 2)\\) \\[\\|\\vec{iii}\\| = \\sqrt{(-2\\sqrt{3})^2 + 2^2} = \\sqrt{4(3) + 4} = \\sqrt{12 + 4} = \\sqrt{16} = 4\\]\n\\(\\vec{iv} = (-3, -3)\\) \\[\\|\\vec{iv}\\| = \\sqrt{(-3)^2 + (-3)^2} = \\sqrt{9 + 9} = \\sqrt{18} = 3\\sqrt{2}\\]\n\\(\\vec{v} = (6, -6)\\) \\[\\|\\vec{v}\\| = \\sqrt{6^2 + (-6)^2} = \\sqrt{36 + 36} = \\sqrt{72} = 6\\sqrt{2}\\]",
-    "crumbs": [
-      "Vectores",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
-    "objectID": "05_vectores.html#dirección-de-un-vector-vecu-a-b",
-    "href": "05_vectores.html#dirección-de-un-vector-vecu-a-b",
-    "title": "Apuntes de clase",
-    "section": "Dirección de un Vector \\(\\vec{U} = (a, b)\\)",
-    "text": "Dirección de un Vector \\(\\vec{U} = (a, b)\\)\nDefinimos la dirección del vector \\(\\vec{U} = (a, b)\\) como el ángulo \\(\\theta\\), medido en radianes, que se forma a partir del ángulo del eje X. Por convención, definimos \\(\\theta\\) entre \\(0\\) y \\(2\\pi\\).\n\\[\\tan \\theta = \\frac{b}{a}\\] \\[\\theta = \\tan^{-1} \\left( \\frac{b}{a} \\right)\\]\nNota: Se debe ajustar el cuadrante según los signos de \\(a\\) y \\(b\\).\n\nEjemplo de Dirección\nSi \\(\\vec{U} = (2, 2)\\): \\[\\tan \\theta = \\frac{2}{2} = 1\\] \\[\\tan^{-1}(1) = 45^\\circ\\]\nPara convertir a radianes: \\[45^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{4} \\text{ radianes}\\]\n\n\nEjercicio de Dirección\nCalcula la dirección de los vectores \\(\\vec{ii}\\), \\(\\vec{iii}\\), \\(\\vec{iv}\\), \\(\\vec{v}\\) y dibújalos en el plano.\n\n\\(\\vec{ii} = (2, 2) \\rightarrow \\frac{\\pi}{4}\\) (1er Cuadrante)\n\\(\\vec{iii} = (-2\\sqrt{3}, 2) \\rightarrow \\frac{5\\pi}{6}\\) (2º Cuadrante)\n\\(\\vec{iv} = (-3, -3) \\rightarrow \\frac{5\\pi}{4}\\) (3er Cuadrante)\n\\(\\vec{v} = (6, -6) \\rightarrow \\frac{7\\pi}{4}\\) (4º Cuadrante)",
-    "crumbs": [
-      "Vectores",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
-    "objectID": "05_vectores.html#transformación-lineal",
-    "href": "05_vectores.html#transformación-lineal",
-    "title": "Apuntes de clase",
-    "section": "Transformación Lineal",
-    "text": "Transformación Lineal\nUna transformación lineal es una función asignada a cada vector. \\(L(u)\\) de modo que \\(L(u + v) = L(u) + L(v)\\).\nSean \\(u = (1, 2)\\) y \\(v = (3, -2)\\). Si \\(L(\\vec{U}) = (x, y)\\) y \\(L(\\vec{V}) = (c_1, c_2)\\), la matriz de transformación \\(L\\) es: \\[L = \\begin{bmatrix} x & c_1 \\\\ y & c_2 \\end{bmatrix}\\]",
-    "crumbs": [
-      "Vectores",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
-    "objectID": "05_vectores.html#suma-de-vectores-gráfico-y-determinante",
-    "href": "05_vectores.html#suma-de-vectores-gráfico-y-determinante",
-    "title": "Apuntes de clase",
-    "section": "Suma de Vectores (Gráfico y Determinante)",
-    "text": "Suma de Vectores (Gráfico y Determinante)\nSean \\(\\vec{U} = (1, 2)\\) y \\(\\vec{V} = (3, -4)\\). \\[\\vec{U} + \\vec{V} = (1+3, 2-4) = (4, -2)\\]\nEl área del paralelogramo formado por \\(\\vec{U}\\) y \\(\\vec{V}\\) se puede calcular con el determinante: \\[A = \\det \\begin{pmatrix} 1 & 3 \\\\ 2 & -4 \\end{pmatrix} = (1)(-4) - (3)(2) = -4 - 6 = -10\\] (El área es el valor absoluto, \\(10 u^2\\). El signo negativo indica la orientación).\nMagnitudes: \\[\\|\\vec{U}\\| = \\sqrt{1^2 + 2^2} = \\sqrt{1+4} = \\sqrt{5}\\] \\[\\|\\vec{V}\\| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9+16} = \\sqrt{25} = 5\\]\nMultiplicación por escalar: \\[2\\vec{U} = 2(1, 2) = (2, 4)\\]",
-    "crumbs": [
-      "Vectores",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
-    "objectID": "05_vectores.html#producto-escalar-producto-punto",
-    "href": "05_vectores.html#producto-escalar-producto-punto",
-    "title": "Apuntes de clase",
-    "section": "Producto Escalar (Producto Punto)",
-    "text": "Producto Escalar (Producto Punto)\nEl producto escalar de dos vectores, \\(\\vec{U}\\) y \\(\\vec{V}\\), se define como: \\[\\vec{a} \\cdot \\vec{b} = a_1 b_1 + a_2 b_2 + \\dots + a_n b_n\\]\n\nTambién se le llama producto punto.\nEl resultado es un escalar (un número).\nEs importante que \\(\\vec{U}\\) y \\(\\vec{V}\\) tengan el mismo número de componentes.\n\nSi \\(\\vec{a} = (a_1, a_2, \\dots, a_n)\\) y \\(\\vec{b} = \\begin{pmatrix} b_1 \\\\ b_2 \\\\ \\vdots \\\\ b_n \\end{pmatrix}\\): \\[\\vec{a} \\cdot \\vec{b} = a_1 b_1 + a_2 b_2 + \\dots + a_n b_n\\]\n\nEjemplos de Producto Escalar\n\n\\(\\vec{U} = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}\\), \\(\\vec{V} = \\begin{pmatrix} 2 \\\\ -4 \\end{pmatrix}\\) \\[\\vec{U} \\cdot \\vec{V} = (1)(2) + (3)(-4) = 2 - 12 = -10\\]\n\\(\\vec{a} = (2, -3, 4, -6)\\) y \\(\\vec{b} = (1, 2, 0, 3)\\) \\[\\vec{a} \\cdot \\vec{b} = (2)(1) + (-3)(2) + (4)(0) + (-6)(3)\\] \\[\\vec{a} \\cdot \\vec{b} = 2 - 6 + 0 - 18 = -22\\]",
-    "crumbs": [
-      "Vectores",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
-    "objectID": "05_vectores.html#problema-de-aplicación-producto-escalar",
-    "href": "05_vectores.html#problema-de-aplicación-producto-escalar",
-    "title": "Apuntes de clase",
-    "section": "Problema de Aplicación (Producto Escalar)",
-    "text": "Problema de Aplicación (Producto Escalar)\nSuponga que un productor produce 4 bienes distintos: \\(w, x, y, z\\).\n\nLa demanda de bienes está dada por el vector: \\(\\vec{d} = (30, 20, 40, 10)\\)\nEl precio por unidad está dado por el vector: \\(\\vec{p} = (20, 15, 18, 40)\\)\n\n\n¿Cuánto dinero va a recibir por vender?\nEl ingreso total es el producto punto del vector de demanda y el vector de precios: \\[\\text{Ingreso} = \\vec{d} \\cdot \\vec{p}\\] \\[\\text{Ingreso} = (30)(20) + (20)(15) + (40)(18) + (10)(40)\\] \\[\\text{Ingreso} = 600 + 300 + 720 + 400 = \\$2020\\] (Nota: El apunte escrito tiene \\(20 \\cdot 20\\) al inicio, pero usa \\(\\vec{d}=(30,...)\\) así que se corrige a \\(30 \\cdot 20\\)).\n\n\nRepresente la operación si el precio tiene 15% de descuento\nEl nuevo vector de precios es \\(0.85\\vec{p}\\) (ya que \\(100\\% - 15\\% = 85\\%\\)).\n\\[\\text{Ingreso con descuento} = \\vec{d} \\cdot (0.85 \\vec{p})\\] O también: \\[\\text{Ingreso con descuento} = 0.85 (\\vec{d} \\cdot \\vec{p})\\]\n\\[\\text{Ingreso con descuento} = 0.85 (2020) = \\$1717\\]",
-    "crumbs": [
-      "Vectores",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
-    ]
-  },
-  {
-    "objectID": "05_vectores.html#dirección",
-    "href": "05_vectores.html#dirección",
-    "title": "Apuntes de clase",
-    "section": "Dirección",
-    "text": "Dirección\nDefinimos la dirección del vector \\(u = (a, b)\\) como el ángulo \\(\\theta\\), medido en radianes, que se forma entre el eje X y el vector \\(u\\). Por convención, definimos \\(\\theta\\) entre \\(0\\) y \\(2\\pi\\).\n\\[\\tan \\theta = \\frac{b}{a}\\] \\[\\theta = \\tan^{-1} \\left( \\frac{b}{a} \\right)\\]\n\nEjemplos\n\nIIIIIIIVV\n\n\n\n\\(i = (2, 2)\\):\n\n\\[\\theta = \\tan^{-1} \\frac{2}{2} = 1\\] \\[\\tan^{-1}1 = 45^\\circ\\]\n\\[45^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{4} \\text{ radianes}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\(ii = (2, 2\\sqrt{3})\\)\n\n\\[\\theta = \\tan^{-1} \\frac{2\\sqrt{3}}{2} = {\\sqrt{3}}\\]\n\\[\\tan^{-1}{\\sqrt{3}} = 60^\\circ\\]\n\\[60^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{3} \\text{ radianes}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\(iii = (-2\\sqrt{3}, 2)\\)\n\n\\[\\theta = \\tan^{-1} \\frac{2}{-2\\sqrt{3}} = -\\frac{1}{\\sqrt{3}}\\]\n\\[\\tan^{-1}-\\frac{1}{\\sqrt{3}} = -30^\\circ\\]\n\\[-30^\\circ \\cdot \\frac{\\pi}{180^\\circ} = -\\frac{\\pi}{6} \\text{ radianes}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\(iv = (-3, -3)\\)\n\n\\[\\theta = \\tan^{-1} \\frac{-3}{-3} = 1\\]\n\\[\\tan^{-1}1 = 45^\\circ\\]\n\\[45^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{4} \\text{ radianes}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\(v = (6, -6)\\)\n\n\\[\\theta = \\tan^{-1} \\frac{-6}{6} = -1\\]\n\\[\\tan^{-1}-1 = -45^\\circ\\]\n\\[-45^\\circ \\cdot \\frac{\\pi}{180^\\circ} = -\\frac{\\pi}{4} \\text{ radianes}\\]",
     "crumbs": [
       "Vectores",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Apuntes de clase</span>"
