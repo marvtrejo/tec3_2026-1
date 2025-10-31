@@ -38,6 +38,9 @@ book:
     chapters:
     - 04_inversa.qmd
     - 04_tarea.qmd
+  - part: Vectores
+    chapters:
+    - 05_vectores.qmd
     
 format:
   html:

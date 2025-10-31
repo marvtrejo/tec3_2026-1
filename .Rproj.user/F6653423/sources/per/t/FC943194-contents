@@ -1,0 +1,420 @@
+---
+title: "Apuntes de clase"
+---
+
+## Definición
+
+Los vectores son una entidad matemática con **magnitud (tamaño)** y **dirección**. Representada gráficamente como un **segmento de línea dirigido** en un plano.
+
+Comunmente, se denotan por las letras $u, v, w, y, z$.
+
+Para un vector $u = \begin{bmatrix} x_1 \\ y_1 \end{bmatrix}$, $x_1$ y $y_1$ son números reales. Con $u$ asociamos un segmento de recta dirigido con punto inicial en el origen $(0, 0)$ y punto terminal en $P(x_1, y_1)$.
+
+El segmento que describe el vector $u$ se denota mediante $\vec{OP}$ y tiene una **dirección** que corresponde al ángulo formado entre $u$ y el eje $X$ (la parte positiva).
+
+
+```{r vectores, echo=FALSE, warning = FALSE, message=FALSE}
+library(ggplot2)
+library(grid)
+
+v1 <- c(2, 3)
+v2 <- c(6, 3)
+
+vecs <- data.frame(
+  x = c(0, 0),
+  y = c(0, 0),
+  xend = c(v1[1], v2[1]),
+  yend = c(v1[2], v2[2]),
+  label = c("", "")
+)
+
+ggplot() +
+
+  geom_segment(data = vecs, aes(x = x, y = y, xend = xend, yend = yend),
+               arrow = arrow(length = unit(0.25, "cm")),
+               size = 1.1, color = "#003366") +
+
+  geom_text(data = vecs, aes(x = xend, y = yend, label = label),
+            nudge_x = 0.3, nudge_y = 0.3, size = 5) +
+
+  annotate("text", x = 0, y = 0, label = "(0, 0)", hjust = 1.2, vjust = 1.2, size = 5) +
+  annotate("text", x = v1[1], y = v1[2], label = "P(2, 3)", hjust = -0.3, vjust = -0.5, size = 5) +
+  annotate("text", x = v2[1], y = v2[2], label = "P(x1, y1)", hjust = -0.1, vjust = -0.5, size = 5) +
+  annotate("text", x = 6.5, y = -0.3, label = "X", size = 6, fontface = "bold") +
+  annotate("text", x = -0.4, y = 5, label = "Y", size = 6, fontface = "bold") +
+
+  geom_segment(aes(x = -1, xend = 7, y = 0, yend = 0), color = "black", linewidth = 0.5,
+               arrow = arrow(length = unit(0.2, "cm"))) +
+  geom_segment(aes(x = 0, xend = 0, y = -1, yend = 5), color = "black", linewidth = 0.5,
+               arrow = arrow(length = unit(0.2, "cm"))) +
+
+  coord_equal(xlim = c(-1, 7), ylim = c(-1, 5)) +
+  theme_minimal(base_size = 14) +
+  theme(
+    panel.grid = element_blank(),
+    axis.title = element_blank()
+  )
+```
+
+Los valores de $x_1$ y $y_1$ en $u$ se les conoce como **componentes**. Por ejemplo, el vector $u = \begin{bmatrix} 2 \\ 3 \end{bmatrix}$ tendría como componentes a los valores 2 y 3.
+
+## Longitud 
+
+A la **magnitud** del segmento se le conoce como **longitud**. Para calcular la **longitud** de un vector, con punto inicial en el origen $(0,0)$, utilizamos la fórmula $$\| u \| = \sqrt{x_1^2 + y_1^2}$$.
+
+Por otra parte, cuando el vector parte del punto $P_1(x_1, y_1)$ y termina en $P_2(x_2, y_2)$, el cálculo de la longitud considera la diferencia que existe entre ambos puntos.
+
+$$\| \vec{P_1 P_2} \| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+
+#### Ejemplos 
+
+* $u = (2, -5)$.
+  $$\| u \| = \sqrt{2^2 + (-5)^2} = \sqrt{4 + 25} = \sqrt{29}$$
+    
+* Sean $P(3, 2)$ y $Q(-1, 5)$. 
+  $$\| PQ \| = \sqrt{(-1 - 3)^2 + (5 - 2)^2} = \sqrt{(-4)^2 + (3)^2} = \sqrt{25} = 5$$
+
+* $i = (2, 2)$
+  $$\|i\| = \sqrt{2^2 + 2^2} = \sqrt{4 + 4} = \sqrt{8} = 2\sqrt{2}$$
+
+* $ii = (2, 2\sqrt{3})$
+  $$\|ii\| = \sqrt{2^2 + (2\sqrt{3})^2} = \sqrt{4 + 4(3)} = \sqrt{4 + 12} = \sqrt{16} = 4$$
+
+* $iii = (-2\sqrt{3}, 2)$
+  $$\|iii\| = \sqrt{(-2\sqrt{3})^2 + 2^2} = \sqrt{4(3) + 4} = \sqrt{12 + 4} = \sqrt{16} = 4$$
+
+* $iv = (-3, -3)$
+  $$\|iv\| = \sqrt{(-3)^2 + (-3)^2} = \sqrt{9 + 9} = \sqrt{18} = 3\sqrt{2}$$
+
+* $v = (6, -6)$
+  $$\|v\| = \sqrt{6^2 + (-6)^2} = \sqrt{36 + 36} = \sqrt{72} = 6\sqrt{2}$$
+
+## Dirección
+
+Definimos la **dirección** del vector $u = (a, b)$ como el **ángulo $\theta$**, medido en **radianes**, que se forma entre el eje X y el vector $u$. Por convención, definimos $\theta$ entre $0$ y $2\pi$.
+
+$$\tan \theta = \frac{b}{a}$$
+$$\theta = \tan^{-1} \left( \frac{b}{a} \right)$$
+
+```{r grafica direccion}
+
+```
+
+#### Ejemplos
+
+```{r funcion, echo=FALSE, warning = FALSE, message=FALSE, include = FALSE}
+library(ggplot2)
+library(grid)
+library(ggrepel)
+
+graf_vector <- function(v, 
+                        v_label = NULL,
+                        color_vec = "#003366", 
+                        color_theta = "red", 
+                        titulo = NULL) {
+
+  if (length(v) != 2) stop("El vector debe tener dos componentes (x, y).")
+  
+  mag <- sqrt(sum(v^2))
+  ang <- atan2(v[2], v[1])
+  if (ang < 0) ang <- ang + 2 * pi 
+  
+  .gcd <- function(a, b) {
+    a <- round(abs(a))
+    b <- round(abs(b))
+    if (b == 0) a else .gcd(b, a %% b)
+  }
+
+  if (ang == 0) {
+    expr_theta <- expression(theta == 0)
+  } else {
+    frac_pi <- ang / pi
+    denominador_base <- 12 
+    numerador <- round(frac_pi * denominador_base)
+    
+    divisor_comun <- .gcd(numerador, denominador_base)
+    num_simple <- numerador / divisor_comun
+    den_simple <- denominador_base / divisor_comun
+    
+    if (den_simple == 1) {
+      expr_theta <- if (num_simple == 1) expression(theta == pi) else bquote(theta == .(num_simple) * pi)
+    } else {
+      expr_theta <- if (num_simple == 1) bquote(theta == pi / .(den_simple)) else bquote(theta == .(num_simple) * pi / .(den_simple))
+    }
+  }
+  
+  theta_seq <- seq(0, ang, length.out = 100)
+  arco <- data.frame(x = cos(theta_seq) * (mag * 0.3),
+                     y = sin(theta_seq) * (mag * 0.3))
+  
+  lim <- max(abs(v), 1) * 1.4 
+  xlims <- c(-lim, lim)
+  ylims <- c(-lim, lim)
+  
+  parse_v_label <- FALSE
+  if (is.null(v_label)) {
+    label_to_plot <- paste0("(", round(v[1], 2), ", ", round(v[2], 2), ")")
+  } else {
+    label_to_plot <- v_label
+    parse_v_label <- TRUE
+  }
+  
+  vector_label_df <- data.frame(
+    x = v[1], 
+    y = v[2], 
+    label = label_to_plot
+  )
+
+  angle_label_df <- data.frame(
+    x = cos(ang / 2) * mag * 0.7,
+    y = sin(ang / 2) * mag * 0.65,
+    label = as.character(as.expression(expr_theta))
+  )
+
+  # --- Gráfico ---
+  ggplot() +
+    # Ejes
+    geom_hline(yintercept = 0, color = "gray60", linetype = "dashed") +
+    geom_vline(xintercept = 0, color = "gray60", linetype = "dashed") +
+    
+    # Vector principal
+    geom_segment(aes(x = 0, y = 0, xend = v[1], yend = v[2]),
+                 arrow = arrow(length = unit(0.3, "cm")),
+                 color = color_vec, linewidth = 1.3) +
+    
+    # Arco del ángulo
+    geom_path(data = arco, aes(x, y), color = color_theta, linewidth = 1.1) +
+    
+    # Etiqueta del ángulo
+    geom_text_repel(data = angle_label_df,
+                    aes(x = x, y = y, label = label),
+                    parse = TRUE, 
+                    color = color_theta,
+                    size = 5,
+                    box.padding = 0.5,
+                    segment.color = 'white') + 
+    
+    # Etiqueta del vector
+    geom_text_repel(data = vector_label_df,
+                    aes(x = x, y = y, label = label),
+                    parse = parse_v_label,
+                    size = 5,
+                    fontface = "bold",
+                    color = color_vec,
+                    box.padding = 0.5,    
+                    point.padding = 1,  
+                    segment.color = 'white') +
+    
+    coord_fixed(xlim = xlims, ylim = ylims) +
+    labs(x = "X", y = "Y", title = titulo) +
+    theme_minimal(base_size = 14) +
+    theme(panel.grid = element_blank())
+}
+```
+
+
+::: {.panel-tabset}
+### I
+
+* $i = (2, 2)$:
+
+$$\theta = \tan^{-1} \frac{2}{2} = 1$$
+$$\tan^{-1}1 = 45^\circ$$
+
+$$45^\circ \cdot \frac{\pi}{180^\circ} = \frac{\pi}{4} \text{ radianes}$$
+
+```{r vector i, echo=FALSE, warning = FALSE, message=FALSE}
+# (2, 2) -> Ángulo pi/4
+graf_vector(c(2, 2), 
+            v_label = "list(2, 2)", 
+            titulo = "Dirección del vector (2, 2)")
+```
+
+
+### II
+* $ii = (2, 2\sqrt{3})$
+
+$$\theta = \tan^{-1} \frac{2\sqrt{3}}{2} = {\sqrt{3}}$$
+
+$$\tan^{-1}{\sqrt{3}} = 60^\circ$$
+
+$$60^\circ \cdot \frac{\pi}{180^\circ} = \frac{\pi}{3} \text{ radianes}$$
+
+```{r vector ii, echo=FALSE, warning = FALSE, message=FALSE}
+# (2, 2*sqrt(3)) -> Ángulo pi/3
+graf_vector(c(2, 2*sqrt(3)), 
+            v_label = "list(2, 2*sqrt(3))", 
+            titulo = "Dirección del vector (2, 2√3)")
+```
+
+### III 
+* $iii = (-2\sqrt{3}, 2)$
+
+$$\theta = \tan^{-1} \frac{2}{-2\sqrt{3}} = -\frac{1}{\sqrt{3}}$$
+
+$$\tan^{-1}-\frac{1}{\sqrt{3}} = -30^\circ$$
+
+$$-30^\circ \cdot \frac{\pi}{180^\circ} = -\frac{\pi}{6} \text{ radianes}$$
+
+```{r vector iii, echo=FALSE, warning = FALSE, message=FALSE}
+# (-2*sqrt(3), 2) -> Ángulo 5*pi/6
+graf_vector(c(-2*sqrt(3), 2), 
+            v_label = "list(-2*sqrt(3), 2)", 
+            titulo = "Dirección del vector (-2√3, 2)")
+```
+
+### IV
+* $iv = (-3, -3)$
+
+$$\theta = \tan^{-1} \frac{-3}{-3} = 1$$
+
+$$\tan^{-1}1 = 45^\circ$$
+
+$$45^\circ \cdot \frac{\pi}{180^\circ} = \frac{\pi}{4} \text{ radianes}$$
+
+```{r vector iv, echo=FALSE, warning = FALSE, message=FALSE}
+# (-3, -3) -> Ángulo 7*pi/4
+graf_vector(c(-3, -3), 
+            v_label = "list(-3, -3)", 
+            titulo = "Dirección del vector (-3, -3)")
+```
+
+### V
+* $v = (6, -6)$
+
+$$\theta = \tan^{-1} \frac{-6}{6} = -1$$
+
+$$\tan^{-1}-1 = -45^\circ$$
+
+$$-45^\circ \cdot \frac{\pi}{180^\circ} = -\frac{\pi}{4} \text{ radianes}$$
+
+```{r vector v, echo=FALSE, warning = FALSE, message=FALSE}
+# (6, -6) -> Ángulo 7*pi/4
+graf_vector(c(6, -6), 
+            v_label = "list(6, -6)", 
+            titulo = "Dirección del vector (6, -6)")
+```
+:::
+
+## Operaciones con Vectores
+
+### Suma 
+
+Sean $u$ y $v$ dos vectores, la suma de ambos esta dada por $u + v=(x_1+x_2, y_1+y_2)$.
+
+Por ejemplo, si $u = (1, 2)$ y $v = (3, -4)$, entonces $$u+v = (1 + 3, 2 -4) = (4, -2)$$
+
+Gráficamente, $u + v$ es la **diagonal del paralelogramo** definido por los vectores $u$ y $v$.
+
+```{r grafico suma, echo=FALSE, warning = FALSE, message=FALSE}
+library(ggplot2)
+library(grid)
+
+u <- c(1, 2)
+v <- c(3, -4)
+u_plus_v  <- u + v
+
+poly <- data.frame(
+  x = c(0, u[1], u[1] + v[1], v[1]),
+  y = c(0, u[2], u[2] + v[2], v[2]),
+  id = 1
+)
+
+vecs <- data.frame(
+  x = 0, y = 0,
+  xend = c(u[1], v[1], u_plus_v[1]),
+  yend = c(u[2], v[2], u_plus_v[2]),
+  label = c("u", "v", "u + v"),
+  color = c("#003366", "#006600", "#990000")
+  )
+
+# --- Gráfico ---
+ggplot() +
+  geom_polygon(data = poly, aes(x = x, y = y, group = id),
+               fill = "steelblue", alpha = 0.2, color = "steelblue") +
+  
+  geom_segment(data = vecs,
+             aes(x = x, y = y, xend = xend, yend = yend, color = I(color)),
+             arrow = arrow(length = unit(0.25, "cm")), linewidth = 1.2) +
+  
+  geom_text(data = vecs,
+          aes(x = xend, y = yend, label = label, color = I(color)),
+          nudge_x = 0.7, nudge_y = 0.4, size = 5, show.legend = FALSE) +
+
+  geom_segment(aes(x = -4, xend = 6, y = 0, yend = 0),
+               color = "black", linewidth = 0.5,
+               arrow = arrow(length = unit(0.2, "cm"))) +
+  geom_segment(aes(x = 0, xend = 0, y = -5, yend = 7),
+               color = "black", linewidth = 0.5,
+               arrow = arrow(length = unit(0.2, "cm"))) +
+
+  annotate("text", x = 6.2, y = -0.3, label = "X", size = 6) +
+  annotate("text", x = -0.4, y = 7.2, label = "Y", size = 6) +
+
+  coord_equal(xlim = c(-4, 6.5), ylim = c(-5, 7.5)) +
+  scale_color_identity() +
+  theme_minimal(base_size = 14) +
+  labs(
+    title = "Suma de vectores"
+  ) +
+  theme(
+    panel.grid = element_blank(),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    legend.position = "none"
+  )
+
+```
+
+
+Es importante recordar que los vectores $u$ y $v$ conforman un paralelogramo cuya área se puede calcular a través del valor absoluto del determinante de la matriz de ambos vectores 
+
+$$A = det \begin{pmatrix} 1 & 3 \\ 2 & -4 \end{pmatrix} = (1)(-4) - (3)(2)= -10 $$
+
+$$A=|-10|=10u^2$$
+
+Asimismo, la longitud de cada vector esta dada por:
+
+* $$\|u\| = \sqrt{1^2 + 2^2} = \sqrt{1+4} = \sqrt{5}$$
+
+* $$\|v\| = \sqrt{3^2 + (-4)^2} = \sqrt{9+16} = \sqrt{25} = 5$$
+
+### Multiplicación por escalar
+
+$$2u = 2(1, 2) = (2, 4)$$
+
+
+### Producto escalar
+
+Sean $a = (a_1, a_2, \dots, a_n)$ y $b = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix}$, el producto escalar de ellos se define como:
+$$a \cdot b = a_1 b_1 + a_2 b_2 + \dots + a_n b_n$$
+
+* También se le llama **producto punto** porque el producto de vectores tiene como resultado un escalar o número.
+* Es importante que los vectores tengan el **mismo número de componentes** para poder realizar la operación.
+
+#### Ejemplos
+
+* $u = \begin{pmatrix} 1 \\ 2 \end{pmatrix}$, $v = \begin{pmatrix} 3 \\ -4 \end{pmatrix}$
+  $$u \cdot v = (1)(3) + (2)(-4) = 3 - 8 = -5$$
+
+* $a = (2, -3, 4, -6)$; $b = (1, 2, 0, 3)$
+  $$a \cdot b = (2)(1) + (-3)(2) + (4)(0) + (-6)(3)$$
+  $$a \cdot b = 2 - 6 + 0 - 18 = -22$$
+  
+Suponga que un productor produce 4 bienes distintos: $w, x, y, z$. La demanda de bienes está dada por el vector $d = (30, 20, 40, 10)$. El precio por unidad está dado por el vector $p = (20, 15, 18, 40)$. Si el productor conoce su demanda:
+
+* ¿Cuánto dinero va a recibir por vender?
+El ingreso total del productor esta dado por el producto punto del vector de demanda y el vector de precios:
+$$\text{Ingreso} = d \cdot p$$
+$$\text{Ingreso} = (30)(20) + (20)(15) + (40)(18) + (10)(40)$$
+$$\text{Ingreso} = 600 + 300 + 720 + 400 = 2020$$
+
+* Represente en forma vectorial la operación si el precio tiene 15% de descuento
+El nuevo vector de precios es $0.85p$ (ya que $100\% - 15\% = 85\%$).
+
+$$\text{Ingreso con descuento} = d \cdot (0.85 p)$$
+O también:
+$$\text{Ingreso con descuento} = 0.85 (d \cdot p)$$
+
+$$\text{Ingreso con descuento} = 0.85 (2020) = 1717$$
